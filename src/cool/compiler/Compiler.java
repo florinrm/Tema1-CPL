@@ -122,6 +122,82 @@ public class Compiler {
         }
 
         // must do Print tree
-        // var tree = new ASTNode<>()
+        var printTree = new ASTVisitor<Void>() {
+
+            @Override
+            public Void visit(Id id) {
+                return null;
+            }
+
+            @Override
+            public Void visit(Int intt) {
+                return null;
+            }
+
+            @Override
+            public Void visit(If iff) {
+                return null;
+            }
+
+            @Override
+            public Void visit(AddSub sum) {
+                return null;
+            }
+
+            @Override
+            public Void visit(Program prog) {
+                return null;
+            }
+
+            @Override
+            public Void visit(MultDivNode prod) {
+                return null;
+            }
+
+            @Override
+            public Void visit(BoolNode bool) {
+                return null;
+            }
+
+            @Override
+            public Void visit(FunctionCall call) {
+                return null;
+            }
+
+            @Override
+            public Void visit(CompareNode comp) {
+                return null;
+            }
+
+            @Override
+            public Void visit(FloatNode flt) {
+                return null;
+            }
+
+            @Override
+            public Void visit(FuncDefNode func) {
+                return null;
+            }
+
+            @Override
+            public Void visit(UnaryMinusNode minus) {
+                return null;
+            }
+
+            @Override
+            public Void visit(VarDef var) {
+                return null;
+            }
+
+            @Override
+            public Void visit(AssignmentNode assignmentNode) {
+                return null;
+            }
+
+            @Override
+            public Void visit(ClassNode classNode) {
+                return null;
+            }
+        };
     }
 }
