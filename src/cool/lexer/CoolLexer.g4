@@ -46,6 +46,7 @@ TYPE : 'Int' | 'Float' | 'Bool';
  */
 fragment LETTER : [a-zA-Z];
 ID : (LETTER | '_')(LETTER | '_' | DIGIT)*;
+TYPE_ID: TYPE | [A-Z](LETTER | '_' | DIGIT)*;
 
 /* Număr întreg.
  *
@@ -76,6 +77,8 @@ STRING : '"' ('\\"' | .)*? '"'
 
 SEMI : ';';
 
+COLON: ':';
+
 COMMA : ',';
 
 ASSIGN : '<-';
@@ -92,7 +95,7 @@ PLUS : '+';
 
 MINUS : '-';
 
-MULT : '*';
+MUL : '*';
 
 DIV : '/';
 
