@@ -2,11 +2,7 @@ lexer grammar CoolLexer;
 
 tokens { ERROR } 
 
-@header{
-    package cool.lexer;	
-}
-
-@members{    
+@members{
     private void raiseError(String msg) {
         setText(msg);
         setType(ERROR);
@@ -19,7 +15,9 @@ IF : 'if';
 THEN : 'then';
 ELSE : 'else';
 FI: 'fi';
-NOT: 'not';ls
+
+NEGATION: '~';
+NOT: 'not';
 
 NEW : 'new';
 CLASS : 'class';
@@ -38,14 +36,17 @@ CASE: 'case';
 OF: 'of';
 ESAC: 'esac';
 
+ISVOID: 'isvoid';
+
 BOOL : 'true' | 'false';
 
 TYPE : 'Int' | 'Float' | 'Bool';
 
 /* Identificator.
  */
+fragment UPPERLETTER : [A-Z];
+fragment LOWERCASE: [a-z];
 fragment LETTER : [a-zA-Z];
-ID : (LETTER | '_')(LETTER | '_' | DIGIT)*;
 
 /* Număr întreg.
  *
@@ -54,6 +55,9 @@ ID : (LETTER | '_')(LETTER | '_' | DIGIT)*;
  */
 fragment DIGIT : [0-9];
 INT : DIGIT+;
+
+TYPE_ID : UPPERLETTER(LETTER | '_' | DIGIT)*;
+ID : LOWERCASE(LETTER | '_' | DIGIT)*;
 
 /* Număr real.
  */
@@ -76,6 +80,8 @@ STRING : '"' ('\\"' | .)*? '"'
 
 SEMI : ';';
 
+COLON: ':';
+
 COMMA : ',';
 
 ASSIGN : '<-';
@@ -92,9 +98,11 @@ PLUS : '+';
 
 MINUS : '-';
 
-MULT : '*';
+MUL : '*';
 
 DIV : '/';
+
+RESULTS : '=>';
 
 EQUAL : '=';
 

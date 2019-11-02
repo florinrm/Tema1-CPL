@@ -7,6 +7,7 @@ import org.antlr.v4.runtime.tree.ParseTreeProperty;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 
 public class Compiler {
@@ -44,7 +45,7 @@ public class Compiler {
             else
                 tokenStream.setTokenSource(lexer);
                 
-            /*
+
             // Test lexer only.
             tokenStream.fill();
             List<Token> tokens = tokenStream.getTokens();
@@ -53,9 +54,9 @@ public class Compiler {
                 var name = CoolLexer.VOCABULARY.getSymbolicName(token.getType());
                 
                 System.out.println(text + " : " + name);
-                //System.out.println(token);
+                System.out.println(token);
             });
-            */
+
 
             // Parser
             if (parser == null)
@@ -121,5 +122,6 @@ public class Compiler {
         }
 
         // must do Print tree
+        // var tree = new ASTNode<>()
     }
 }
