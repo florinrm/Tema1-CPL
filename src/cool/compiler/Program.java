@@ -18,6 +18,22 @@ public class Program extends ASTNode {
         expressions.add(expr);
     }
 
+    public ArrayList<Definition> getDefinitions() {
+        return definitions;
+    }
+
+    public void setDefinitions(ArrayList<Definition> definitions) {
+        this.definitions = definitions;
+    }
+
+    public ArrayList<Expression> getExpressions() {
+        return expressions;
+    }
+
+    public void setExpressions(ArrayList<Expression> expressions) {
+        this.expressions = expressions;
+    }
+
     @Override
     public <T> T accept(ASTVisitor<T> visitor) {
         return visitor.visit(this);

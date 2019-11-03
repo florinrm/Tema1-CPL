@@ -1,49 +1,60 @@
-line 1:0 token recognition error at: 'c'
-line 1:1 token recognition error at: 'l'
-line 1:2 token recognition error at: 'a'
-line 1:3 token recognition error at: 's'
-line 1:4 token recognition error at: 's'
-line 1:6 token recognition error at: 'A'
-line 1:8 token recognition error at: '{'
-line 2:4 token recognition error at: 'f'
-line 2:5 token recognition error at: '('
-line 2:6 token recognition error at: 'x'
-line 2:8 token recognition error at: ':'
-line 2:10 token recognition error at: 'I'
-line 2:11 token recognition error at: 'n'
-line 2:12 token recognition error at: 't'
-line 2:13 token recognition error at: ')'
-line 2:15 token recognition error at: ':'
-line 2:17 token recognition error at: 'O'
-line 2:18 token recognition error at: 'b'
-line 2:19 token recognition error at: 'j'
-line 2:20 token recognition error at: 'e'
-line 2:21 token recognition error at: 'c'
-line 2:22 token recognition error at: 't'
-line 2:24 token recognition error at: '{'
-line 3:8 token recognition error at: 'w'
-line 3:9 token recognition error at: 'h'
-line 3:10 token recognition error at: 'i'
-line 3:11 token recognition error at: 'l'
-line 3:12 token recognition error at: 'e'
-line 3:14 token recognition error at: '0'
-line 3:16 token recognition error at: '<'
-line 3:18 token recognition error at: 'x'
-line 3:20 token recognition error at: 'l'
-line 3:21 token recognition error at: 'o'
-line 3:22 token recognition error at: 'o'
-line 3:23 token recognition error at: 'p'
-line 4:12 token recognition error at: 'x'
-line 4:14 token recognition error at: '<'
-line 4:15 token recognition error at: '-'
-line 4:17 token recognition error at: 'x'
-line 4:19 token recognition error at: '-'
-line 4:21 token recognition error at: '1'
-line 5:8 token recognition error at: 'p'
-line 5:9 token recognition error at: 'o'
-line 5:10 token recognition error at: 'o'
-line 5:11 token recognition error at: 'l'
-line 6:4 token recognition error at: '}'
-line 6:5 token recognition error at: ';'
-line 7:0 token recognition error at: '}'
-line 7:1 token recognition error at: ';'
+class : CLASS
+[@0,0:4='class',<9>,1:0]
+A : TYPE_ID
+[@1,6:6='A',<24>,1:6]
+{ : LBRACE
+[@2,8:8='{',<34>,1:8]
+f : ID
+[@3,14:14='f',<25>,2:4]
+( : LPAREN
+[@4,15:15='(',<32>,2:5]
+x : ID
+[@5,16:16='x',<25>,2:6]
+: : COLON
+[@6,18:18=':',<29>,2:8]
+Int : TYPE
+[@7,20:22='Int',<22>,2:10]
+) : RPAREN
+[@8,23:23=')',<33>,2:13]
+: : COLON
+[@9,25:25=':',<29>,2:15]
+Object : TYPE_ID
+[@10,27:32='Object',<24>,2:17]
+{ : LBRACE
+[@11,34:34='{',<34>,2:24]
+while : WHILE
+[@12,44:48='while',<14>,3:8]
+0 : INT
+[@13,50:50='0',<23>,3:14]
+< : LT
+[@14,52:52='<',<42>,3:16]
+x : ID
+[@15,54:54='x',<25>,3:18]
+loop : LOOP
+[@16,56:59='loop',<15>,3:20]
+x : ID
+[@17,73:73='x',<25>,4:12]
+<- : ASSIGN
+[@18,75:76='<-',<31>,4:14]
+x : ID
+[@19,78:78='x',<25>,4:17]
+- : MINUS
+[@20,80:80='-',<37>,4:19]
+1 : INT
+[@21,82:82='1',<23>,4:21]
+pool : POOL
+[@22,92:95='pool',<16>,5:8]
+} : RBRACE
+[@23,101:101='}',<35>,6:4]
+; : SEMI
+[@24,102:102=';',<28>,6:5]
+} : RBRACE
+[@25,104:104='}',<35>,7:0]
+; : SEMI
+[@26,105:105=';',<28>,7:1]
+<EOF> : EOF
+[@27,106:105='<EOF>',<-1>,7:2]
+"12-while.cl", line 2:11, Syntax error: mismatched input 'Int' expecting TYPE_ID
+"12-while.cl", line 3:21, Syntax error: no viable alternative at input 'xloop'
+"12-while.cl", line 4:20, Syntax error: no viable alternative at input 'x-'
+Compilation halted

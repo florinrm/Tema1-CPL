@@ -1,1340 +1,949 @@
-line 1:0 token recognition error at: '('
-line 1:1 token recognition error at: '*'
-line 2:4 token recognition error at: 'L'
-line 2:5 token recognition error at: 'i'
-line 2:6 token recognition error at: 's'
-line 2:7 token recognition error at: 't'
 line 2:8 token recognition error at: 'ă'
-line 2:10 token recognition error at: 'n'
-line 2:11 token recognition error at: 'e'
-line 2:12 token recognition error at: 'v'
-line 2:13 token recognition error at: 'i'
-line 2:14 token recognition error at: 'd'
 line 2:15 token recognition error at: 'ă'
-line 2:17 token recognition error at: 'e'
-line 2:18 token recognition error at: 't'
-line 2:19 token recognition error at: 'e'
-line 2:20 token recognition error at: 'r'
-line 2:21 token recognition error at: 'o'
-line 2:22 token recognition error at: 'g'
-line 2:23 token recognition error at: 'e'
-line 2:24 token recognition error at: 'n'
 line 2:25 token recognition error at: 'ă'
-line 2:26 token recognition error at: ','
-line 2:28 token recognition error at: 'c'
-line 2:29 token recognition error at: 'u'
-line 2:31 token recognition error at: 'e'
-line 2:32 token recognition error at: 'l'
-line 2:33 token recognition error at: 'e'
-line 2:34 token recognition error at: 'm'
-line 2:35 token recognition error at: 'e'
-line 2:36 token recognition error at: 'n'
-line 2:37 token recognition error at: 't'
-line 2:38 token recognition error at: 'e'
-line 2:40 token recognition error at: 'a'
-line 2:41 token recognition error at: 'v'
 line 2:42 token recognition error at: 'â'
-line 2:43 token recognition error at: 'n'
-line 2:44 token recognition error at: 'd'
-line 2:46 token recognition error at: 't'
-line 2:47 token recognition error at: 'i'
-line 2:48 token recognition error at: 'p'
-line 2:49 token recognition error at: 'u'
-line 2:50 token recognition error at: 'l'
-line 2:52 token recognition error at: 's'
-line 2:53 token recognition error at: 't'
-line 2:54 token recognition error at: 'a'
-line 2:55 token recognition error at: 't'
-line 2:56 token recognition error at: 'i'
-line 2:57 token recognition error at: 'c'
-line 2:59 token recognition error at: 'O'
-line 2:60 token recognition error at: 'b'
-line 2:61 token recognition error at: 'j'
-line 2:62 token recognition error at: 'e'
-line 2:63 token recognition error at: 'c'
-line 2:64 token recognition error at: 't'
 line 2:66 token recognition error at: 'ș'
-line 2:67 token recognition error at: 'i'
-line 2:69 token recognition error at: 't'
-line 2:70 token recognition error at: 'i'
-line 2:71 token recognition error at: 'p'
-line 2:72 token recognition error at: 'u'
-line 2:73 token recognition error at: 'r'
-line 2:74 token recognition error at: 'i'
-line 3:4 token recognition error at: 'd'
-line 3:5 token recognition error at: 'i'
-line 3:6 token recognition error at: 'n'
-line 3:7 token recognition error at: 'a'
-line 3:8 token recognition error at: 'm'
-line 3:9 token recognition error at: 'i'
-line 3:10 token recognition error at: 'c'
-line 3:11 token recognition error at: 'e'
-line 3:13 token recognition error at: 'a'
-line 3:14 token recognition error at: 'm'
-line 3:15 token recognition error at: 'e'
-line 3:16 token recognition error at: 's'
-line 3:17 token recognition error at: 't'
-line 3:18 token recognition error at: 'e'
-line 3:19 token recognition error at: 'c'
-line 3:20 token recognition error at: 'a'
-line 3:21 token recognition error at: 't'
-line 3:22 token recognition error at: 'e'
-line 3:23 token recognition error at: '.'
-line 3:25 token recognition error at: 'S'
-line 3:26 token recognition error at: 'f'
+line 3:23 token recognition error at: '. '
 line 3:27 token recognition error at: 'â'
-line 3:28 token recognition error at: 'r'
 line 3:29 token recognition error at: 'ș'
-line 3:30 token recognition error at: 'i'
-line 3:31 token recognition error at: 't'
-line 3:32 token recognition error at: 'u'
-line 3:33 token recognition error at: 'l'
-line 3:35 token recognition error at: 'l'
-line 3:36 token recognition error at: 'i'
-line 3:37 token recognition error at: 's'
-line 3:38 token recognition error at: 't'
-line 3:39 token recognition error at: 'e'
-line 3:41 token recognition error at: 'e'
-line 3:42 token recognition error at: 's'
-line 3:43 token recognition error at: 't'
-line 3:44 token recognition error at: 'e'
-line 3:46 token recognition error at: 's'
-line 3:47 token recognition error at: 'e'
-line 3:48 token recognition error at: 'm'
-line 3:49 token recognition error at: 'n'
-line 3:50 token recognition error at: 'a'
-line 3:51 token recognition error at: 'l'
-line 3:52 token recognition error at: 'a'
-line 3:53 token recognition error at: 't'
-line 3:55 token recognition error at: 'd'
-line 3:56 token recognition error at: 'e'
-line 3:58 token recognition error at: 'n'
-line 3:59 token recognition error at: 'e'
-line 3:60 token recognition error at: 'x'
-line 3:61 token recognition error at: 't'
-line 3:63 token recognition error at: '='
-line 3:65 token recognition error at: 'v'
-line 3:66 token recognition error at: 'o'
-line 3:67 token recognition error at: 'i'
-line 3:68 token recognition error at: 'd'
-line 3:69 token recognition error at: '.'
-line 5:4 token recognition error at: 'A'
-line 5:5 token recognition error at: 'd'
-line 5:6 token recognition error at: 'a'
-line 5:7 token recognition error at: 'p'
-line 5:8 token recognition error at: 't'
-line 5:9 token recognition error at: 'a'
-line 5:10 token recognition error at: 'r'
-line 5:11 token recognition error at: 'e'
-line 5:13 token recognition error at: 'd'
-line 5:14 token recognition error at: 'u'
-line 5:15 token recognition error at: 'p'
+line 3:69 token recognition error at: '.\n'
 line 5:16 token recognition error at: 'ă'
-line 5:18 token recognition error at: 'A'
-line 5:19 token recognition error at: 'l'
-line 5:20 token recognition error at: 'e'
-line 5:21 token recognition error at: 'x'
-line 5:23 token recognition error at: 'A'
-line 5:24 token recognition error at: 'i'
-line 5:25 token recognition error at: 'k'
-line 5:26 token recognition error at: 'e'
-line 5:27 token recognition error at: 'n'
-line 5:28 token recognition error at: '.'
-line 6:0 token recognition error at: '*'
-line 6:1 token recognition error at: ')'
-line 7:0 token recognition error at: 'c'
-line 7:1 token recognition error at: 'l'
-line 7:2 token recognition error at: 'a'
-line 7:3 token recognition error at: 's'
-line 7:4 token recognition error at: 's'
-line 7:6 token recognition error at: 'L'
-line 7:7 token recognition error at: 'i'
-line 7:8 token recognition error at: 's'
-line 7:9 token recognition error at: 't'
-line 7:11 token recognition error at: 'i'
-line 7:12 token recognition error at: 'n'
-line 7:13 token recognition error at: 'h'
-line 7:14 token recognition error at: 'e'
-line 7:15 token recognition error at: 'r'
-line 7:16 token recognition error at: 'i'
-line 7:17 token recognition error at: 't'
-line 7:18 token recognition error at: 's'
-line 7:20 token recognition error at: 'I'
-line 7:21 token recognition error at: 'O'
-line 7:23 token recognition error at: '{'
-line 8:4 token recognition error at: 'e'
-line 8:5 token recognition error at: 'l'
-line 8:6 token recognition error at: 'e'
-line 8:7 token recognition error at: 'm'
-line 8:9 token recognition error at: ':'
-line 8:11 token recognition error at: 'O'
-line 8:12 token recognition error at: 'b'
-line 8:13 token recognition error at: 'j'
-line 8:14 token recognition error at: 'e'
-line 8:15 token recognition error at: 'c'
-line 8:16 token recognition error at: 't'
-line 8:17 token recognition error at: ';'
-line 9:4 token recognition error at: 'n'
-line 9:5 token recognition error at: 'e'
-line 9:6 token recognition error at: 'x'
-line 9:7 token recognition error at: 't'
-line 9:9 token recognition error at: ':'
-line 9:11 token recognition error at: 'L'
-line 9:12 token recognition error at: 'i'
-line 9:13 token recognition error at: 's'
-line 9:14 token recognition error at: 't'
-line 9:15 token recognition error at: ';'
-line 11:4 token recognition error at: 'i'
-line 11:5 token recognition error at: 'n'
-line 11:6 token recognition error at: 'i'
-line 11:7 token recognition error at: 't'
-line 11:8 token recognition error at: '('
-line 11:9 token recognition error at: 'e'
-line 11:11 token recognition error at: ':'
-line 11:13 token recognition error at: 'O'
-line 11:14 token recognition error at: 'b'
-line 11:15 token recognition error at: 'j'
-line 11:16 token recognition error at: 'e'
-line 11:17 token recognition error at: 'c'
-line 11:18 token recognition error at: 't'
-line 11:19 token recognition error at: ','
-line 11:21 token recognition error at: 'n'
-line 11:23 token recognition error at: ':'
-line 11:25 token recognition error at: 'L'
-line 11:26 token recognition error at: 'i'
-line 11:27 token recognition error at: 's'
-line 11:28 token recognition error at: 't'
-line 11:29 token recognition error at: ')'
-line 11:31 token recognition error at: ':'
-line 11:33 token recognition error at: 'L'
-line 11:34 token recognition error at: 'i'
-line 11:35 token recognition error at: 's'
-line 11:36 token recognition error at: 't'
-line 11:38 token recognition error at: '{'
-line 12:8 token recognition error at: '{'
-line 13:12 token recognition error at: 'e'
-line 13:13 token recognition error at: 'l'
-line 13:14 token recognition error at: 'e'
-line 13:15 token recognition error at: 'm'
-line 13:17 token recognition error at: '<'
-line 13:18 token recognition error at: '-'
-line 13:20 token recognition error at: 'e'
-line 13:21 token recognition error at: ';'
-line 14:12 token recognition error at: 'n'
-line 14:13 token recognition error at: 'e'
-line 14:14 token recognition error at: 'x'
-line 14:15 token recognition error at: 't'
-line 14:17 token recognition error at: '<'
-line 14:18 token recognition error at: '-'
-line 14:20 token recognition error at: 'n'
-line 14:21 token recognition error at: ';'
-line 15:12 token recognition error at: 's'
-line 15:13 token recognition error at: 'e'
-line 15:14 token recognition error at: 'l'
-line 15:15 token recognition error at: 'f'
-line 15:16 token recognition error at: ';'
-line 16:8 token recognition error at: '}'
-line 17:4 token recognition error at: '}'
-line 17:5 token recognition error at: ';'
-line 19:4 token recognition error at: 'p'
-line 19:5 token recognition error at: 'r'
-line 19:6 token recognition error at: 'i'
-line 19:7 token recognition error at: 'n'
-line 19:8 token recognition error at: 't'
-line 19:9 token recognition error at: '('
-line 19:10 token recognition error at: ')'
-line 19:12 token recognition error at: ':'
-line 19:14 token recognition error at: 'I'
-line 19:15 token recognition error at: 'O'
-line 19:17 token recognition error at: '{'
-line 20:8 token recognition error at: 'l'
-line 20:9 token recognition error at: 'e'
-line 20:10 token recognition error at: 't'
-line 20:12 token recognition error at: 's'
-line 20:13 token recognition error at: 't'
-line 20:14 token recognition error at: 'r'
-line 20:16 token recognition error at: ':'
-line 20:18 token recognition error at: 'S'
-line 20:19 token recognition error at: 't'
-line 20:20 token recognition error at: 'r'
-line 20:21 token recognition error at: 'i'
-line 20:22 token recognition error at: 'n'
-line 20:23 token recognition error at: 'g'
-line 20:25 token recognition error at: '<'
-line 20:26 token recognition error at: '-'
-line 21:16 token recognition error at: '-'
-line 21:17 token recognition error at: '-'
-line 21:19 token recognition error at: 'c'
-line 21:20 token recognition error at: 'a'
-line 21:21 token recognition error at: 's'
-line 21:22 token recognition error at: 'e'
-line 21:24 token recognition error at: 'p'
-line 21:25 token recognition error at: 'e'
-line 21:26 token recognition error at: 'r'
-line 21:27 token recognition error at: 'm'
-line 21:28 token recognition error at: 'i'
-line 21:29 token recognition error at: 't'
-line 21:30 token recognition error at: 'e'
-line 21:32 token recognition error at: 'r'
-line 21:33 token recognition error at: 'a'
-line 21:34 token recognition error at: 'm'
-line 21:35 token recognition error at: 'i'
-line 21:36 token recognition error at: 'f'
-line 21:37 token recognition error at: 'i'
-line 21:38 token recognition error at: 'c'
-line 21:39 token recognition error at: 'a'
-line 21:40 token recognition error at: 'r'
-line 21:41 token recognition error at: 'e'
-line 21:42 token recognition error at: 'a'
-line 21:44 token recognition error at: 'e'
-line 21:45 token recognition error at: 'x'
-line 21:46 token recognition error at: 'e'
-line 21:47 token recognition error at: 'c'
-line 21:48 token recognition error at: 'u'
+line 5:28 token recognition error at: '.\n'
 line 21:49 token recognition error at: 'ț'
-line 21:50 token recognition error at: 'i'
-line 21:51 token recognition error at: 'e'
-line 21:52 token recognition error at: 'i'
 line 21:54 token recognition error at: 'î'
-line 21:55 token recognition error at: 'n'
-line 21:57 token recognition error at: 'f'
-line 21:58 token recognition error at: 'u'
-line 21:59 token recognition error at: 'n'
-line 21:60 token recognition error at: 'c'
 line 21:61 token recognition error at: 'ț'
-line 21:62 token recognition error at: 'i'
-line 21:63 token recognition error at: 'e'
-line 21:65 token recognition error at: 'd'
-line 21:66 token recognition error at: 'e'
-line 21:68 token recognition error at: 't'
-line 21:69 token recognition error at: 'i'
-line 21:70 token recognition error at: 'p'
-line 21:71 token recognition error at: 'u'
-line 21:72 token recognition error at: 'l'
-line 22:16 token recognition error at: '-'
-line 22:17 token recognition error at: '-'
-line 22:19 token recognition error at: 'd'
-line 22:20 token recognition error at: 'i'
-line 22:21 token recognition error at: 'n'
-line 22:22 token recognition error at: 'a'
-line 22:23 token recognition error at: 'm'
-line 22:24 token recognition error at: 'i'
-line 22:25 token recognition error at: 'c'
-line 22:26 token recognition error at: '.'
-line 22:28 token recognition error at: 'a'
-line 22:29 token recognition error at: 'b'
-line 22:30 token recognition error at: 'o'
-line 22:31 token recognition error at: 'r'
-line 22:32 token recognition error at: 't'
-line 22:33 token recognition error at: '('
-line 22:34 token recognition error at: ')'
-line 22:36 token recognition error at: 'o'
-line 22:37 token recognition error at: 'p'
-line 22:38 token recognition error at: 'r'
-line 22:39 token recognition error at: 'e'
+line 22:26 token recognition error at: '. '
 line 22:40 token recognition error at: 'ș'
-line 22:41 token recognition error at: 't'
-line 22:42 token recognition error at: 'e'
-line 22:44 token recognition error at: 'e'
-line 22:45 token recognition error at: 'x'
-line 22:46 token recognition error at: 'e'
-line 22:47 token recognition error at: 'c'
-line 22:48 token recognition error at: 'u'
 line 22:49 token recognition error at: 'ț'
-line 22:50 token recognition error at: 'i'
-line 22:51 token recognition error at: 'a'
-line 22:52 token recognition error at: '.'
+line 22:52 token recognition error at: '. '
 line 22:54 token recognition error at: 'Ș'
-line 22:55 token recognition error at: 'i'
-line 22:56 token recognition error at: 'r'
-line 22:57 token recognition error at: 'u'
-line 22:58 token recognition error at: 'l'
-line 22:60 token recognition error at: 'v'
-line 22:61 token recognition error at: 'i'
-line 22:62 token recognition error at: 'd'
-line 22:64 token recognition error at: 'c'
-line 22:65 token recognition error at: 'a'
-line 22:66 token recognition error at: 'r'
-line 22:67 token recognition error at: 'e'
 line 22:69 token recognition error at: 'î'
-line 22:70 token recognition error at: 'i'
-line 22:72 token recognition error at: 'u'
-line 22:73 token recognition error at: 'r'
-line 22:74 token recognition error at: 'm'
-line 22:75 token recognition error at: 'e'
-line 22:76 token recognition error at: 'a'
-line 22:77 token recognition error at: 'z'
 line 22:78 token recognition error at: 'ă'
-line 23:16 token recognition error at: '-'
-line 23:17 token recognition error at: '-'
-line 23:19 token recognition error at: 'e'
-line 23:20 token recognition error at: 's'
-line 23:21 token recognition error at: 't'
-line 23:22 token recognition error at: 'e'
-line 23:24 token recognition error at: 'n'
-line 23:25 token recognition error at: 'e'
-line 23:26 token recognition error at: 'c'
-line 23:27 token recognition error at: 'e'
-line 23:28 token recognition error at: 's'
-line 23:29 token recognition error at: 'a'
-line 23:30 token recognition error at: 'r'
-line 23:32 token recognition error at: 'p'
-line 23:33 token recognition error at: 'e'
-line 23:34 token recognition error at: 'n'
-line 23:35 token recognition error at: 't'
-line 23:36 token recognition error at: 'r'
-line 23:37 token recognition error at: 'u'
-line 23:39 token recognition error at: 'v'
-line 23:40 token recognition error at: 'e'
-line 23:41 token recognition error at: 'r'
-line 23:42 token recognition error at: 'i'
-line 23:43 token recognition error at: 'f'
-line 23:44 token recognition error at: 'i'
-line 23:45 token recognition error at: 'c'
-line 23:46 token recognition error at: 'a'
-line 23:47 token recognition error at: 'r'
-line 23:48 token recognition error at: 'e'
-line 23:49 token recognition error at: 'a'
-line 23:51 token recognition error at: 's'
-line 23:52 token recognition error at: 't'
-line 23:53 token recognition error at: 'a'
-line 23:54 token recognition error at: 't'
-line 23:55 token recognition error at: 'i'
-line 23:56 token recognition error at: 'c'
 line 23:57 token recognition error at: 'ă'
-line 23:59 token recognition error at: 'a'
-line 23:61 token recognition error at: 't'
-line 23:62 token recognition error at: 'i'
-line 23:63 token recognition error at: 'p'
-line 23:64 token recognition error at: 'u'
-line 23:65 token recognition error at: 'r'
-line 23:66 token recognition error at: 'i'
-line 23:67 token recognition error at: 'l'
-line 23:68 token recognition error at: 'o'
-line 23:69 token recognition error at: 'r'
-line 23:70 token recognition error at: '.'
-line 24:16 token recognition error at: 'c'
-line 24:17 token recognition error at: 'a'
-line 24:18 token recognition error at: 's'
-line 24:19 token recognition error at: 'e'
-line 24:21 token recognition error at: 'e'
-line 24:22 token recognition error at: 'l'
-line 24:23 token recognition error at: 'e'
-line 24:24 token recognition error at: 'm'
-line 24:26 token recognition error at: 'o'
-line 24:27 token recognition error at: 'f'
-line 25:20 token recognition error at: 's'
-line 25:22 token recognition error at: ':'
-line 25:24 token recognition error at: 'S'
-line 25:25 token recognition error at: 't'
-line 25:26 token recognition error at: 'r'
-line 25:27 token recognition error at: 'i'
-line 25:28 token recognition error at: 'n'
-line 25:29 token recognition error at: 'g'
-line 25:31 token recognition error at: '='
-line 25:32 token recognition error at: '>'
-line 25:34 token recognition error at: 's'
-line 25:35 token recognition error at: ';'
-line 26:20 token recognition error at: 'n'
-line 26:22 token recognition error at: ':'
-line 26:24 token recognition error at: 'I'
-line 26:25 token recognition error at: 'n'
-line 26:26 token recognition error at: 't'
-line 26:28 token recognition error at: '='
-line 26:29 token recognition error at: '>'
-line 26:31 token recognition error at: 'n'
-line 26:32 token recognition error at: 'e'
-line 26:33 token recognition error at: 'w'
-line 26:35 token recognition error at: 'A'
-line 26:36 token recognition error at: '2'
-line 26:37 token recognition error at: 'I'
-line 26:38 token recognition error at: '.'
-line 26:39 token recognition error at: 'i'
-line 26:40 token recognition error at: '2'
-line 26:41 token recognition error at: 'a'
-line 26:42 token recognition error at: '('
-line 26:43 token recognition error at: 'n'
-line 26:44 token recognition error at: ')'
-line 26:45 token recognition error at: ';'
-line 26:48 token recognition error at: '-'
-line 26:49 token recognition error at: '-'
-line 26:51 token recognition error at: 'A'
-line 26:52 token recognition error at: '2'
-line 26:53 token recognition error at: 'I'
-line 26:55 token recognition error at: 'e'
-line 26:56 token recognition error at: 's'
-line 26:57 token recognition error at: 't'
-line 26:58 token recognition error at: 'e'
-line 26:60 token recognition error at: 'd'
-line 26:61 token recognition error at: 'e'
-line 26:62 token recognition error at: 'f'
-line 26:63 token recognition error at: 'i'
-line 26:64 token recognition error at: 'n'
-line 26:65 token recognition error at: 'i'
-line 26:66 token recognition error at: 't'
+line 23:70 token recognition error at: '.\n'
+line 26:38 token recognition error at: '.i'
 line 26:67 token recognition error at: 'ă'
-line 26:69 token recognition error at: 'm'
-line 26:70 token recognition error at: 'a'
-line 26:71 token recognition error at: 'i'
-line 26:73 token recognition error at: 'j'
-line 26:74 token recognition error at: 'o'
-line 26:75 token recognition error at: 's'
-line 27:20 token recognition error at: 'o'
-line 27:22 token recognition error at: ':'
-line 27:24 token recognition error at: 'O'
-line 27:25 token recognition error at: 'b'
-line 27:26 token recognition error at: 'j'
-line 27:27 token recognition error at: 'e'
-line 27:28 token recognition error at: 'c'
-line 27:29 token recognition error at: 't'
-line 27:31 token recognition error at: '='
-line 27:32 token recognition error at: '>'
-line 27:34 token recognition error at: '{'
-line 27:36 token recognition error at: 'a'
-line 27:37 token recognition error at: 'b'
-line 27:38 token recognition error at: 'o'
-line 27:39 token recognition error at: 'r'
-line 27:40 token recognition error at: 't'
-line 27:41 token recognition error at: '('
-line 27:42 token recognition error at: ')'
-line 27:43 token recognition error at: ';'
-line 27:45 token recognition error at: '"'
-line 27:46 token recognition error at: '"'
-line 27:47 token recognition error at: ';'
-line 27:49 token recognition error at: '}'
-line 27:50 token recognition error at: ';'
-line 28:16 token recognition error at: 'e'
-line 28:17 token recognition error at: 's'
-line 28:18 token recognition error at: 'a'
-line 28:19 token recognition error at: 'c'
-line 29:8 token recognition error at: 'i'
-line 29:9 token recognition error at: 'n'
-line 30:12 token recognition error at: '{'
-line 31:16 token recognition error at: 'o'
-line 31:17 token recognition error at: 'u'
-line 31:18 token recognition error at: 't'
-line 31:19 token recognition error at: '_'
-line 31:20 token recognition error at: 's'
-line 31:21 token recognition error at: 't'
-line 31:22 token recognition error at: 'r'
-line 31:23 token recognition error at: 'i'
-line 31:24 token recognition error at: 'n'
-line 31:25 token recognition error at: 'g'
-line 31:26 token recognition error at: '('
-line 31:27 token recognition error at: 's'
-line 31:28 token recognition error at: 't'
-line 31:29 token recognition error at: 'r'
-line 31:30 token recognition error at: '.'
-line 31:31 token recognition error at: 'c'
-line 31:32 token recognition error at: 'o'
-line 31:33 token recognition error at: 'n'
-line 31:34 token recognition error at: 'c'
-line 31:35 token recognition error at: 'a'
-line 31:36 token recognition error at: 't'
-line 31:37 token recognition error at: '('
-line 31:38 token recognition error at: '"'
-line 31:40 token recognition error at: '"'
-line 31:41 token recognition error at: ')'
-line 31:42 token recognition error at: ')'
-line 31:43 token recognition error at: ';'
-line 32:16 token recognition error at: 'i'
-line 32:17 token recognition error at: 'f'
-line 32:19 token recognition error at: '('
-line 32:20 token recognition error at: 'i'
-line 32:21 token recognition error at: 's'
-line 32:22 token recognition error at: 'v'
-line 32:23 token recognition error at: 'o'
-line 32:24 token recognition error at: 'i'
-line 32:25 token recognition error at: 'd'
-line 32:27 token recognition error at: 'n'
-line 32:28 token recognition error at: 'e'
-line 32:29 token recognition error at: 'x'
-line 32:30 token recognition error at: 't'
-line 32:31 token recognition error at: ')'
-line 32:33 token recognition error at: 't'
-line 32:34 token recognition error at: 'h'
-line 32:35 token recognition error at: 'e'
-line 32:36 token recognition error at: 'n'
-line 32:38 token recognition error at: 'o'
-line 32:39 token recognition error at: 'u'
-line 32:40 token recognition error at: 't'
-line 32:41 token recognition error at: '_'
-line 32:42 token recognition error at: 's'
-line 32:43 token recognition error at: 't'
-line 32:44 token recognition error at: 'r'
-line 32:45 token recognition error at: 'i'
-line 32:46 token recognition error at: 'n'
-line 32:47 token recognition error at: 'g'
-line 32:48 token recognition error at: '('
-line 32:49 token recognition error at: '"'
-line 32:50 token recognition error at: '\'
-line 32:51 token recognition error at: 'n'
-line 32:52 token recognition error at: '"'
-line 32:53 token recognition error at: ')'
-line 32:55 token recognition error at: 'e'
-line 32:56 token recognition error at: 'l'
-line 32:57 token recognition error at: 's'
-line 32:58 token recognition error at: 'e'
-line 32:60 token recognition error at: 'n'
-line 32:61 token recognition error at: 'e'
-line 32:62 token recognition error at: 'x'
-line 32:63 token recognition error at: 't'
-line 32:64 token recognition error at: '.'
-line 32:65 token recognition error at: 'p'
-line 32:66 token recognition error at: 'r'
-line 32:67 token recognition error at: 'i'
-line 32:68 token recognition error at: 'n'
-line 32:69 token recognition error at: 't'
-line 32:70 token recognition error at: '('
-line 32:71 token recognition error at: ')'
-line 32:73 token recognition error at: 'f'
-line 32:74 token recognition error at: 'i'
-line 32:75 token recognition error at: ';'
-line 33:12 token recognition error at: '}'
-line 34:4 token recognition error at: '}'
-line 34:5 token recognition error at: ';'
-line 35:0 token recognition error at: '}'
-line 35:1 token recognition error at: ';'
-line 37:0 token recognition error at: 'c'
-line 37:1 token recognition error at: 'l'
-line 37:2 token recognition error at: 'a'
-line 37:3 token recognition error at: 's'
-line 37:4 token recognition error at: 's'
-line 37:6 token recognition error at: 'M'
-line 37:7 token recognition error at: 'a'
-line 37:8 token recognition error at: 'i'
-line 37:9 token recognition error at: 'n'
-line 37:11 token recognition error at: 'i'
-line 37:12 token recognition error at: 'n'
-line 37:13 token recognition error at: 'h'
-line 37:14 token recognition error at: 'e'
-line 37:15 token recognition error at: 'r'
-line 37:16 token recognition error at: 'i'
-line 37:17 token recognition error at: 't'
-line 37:18 token recognition error at: 's'
-line 37:20 token recognition error at: 'I'
-line 37:21 token recognition error at: 'O'
-line 37:23 token recognition error at: '{'
-line 38:4 token recognition error at: 'm'
-line 38:5 token recognition error at: 'a'
-line 38:6 token recognition error at: 'i'
-line 38:7 token recognition error at: 'n'
-line 38:8 token recognition error at: '('
-line 38:9 token recognition error at: ')'
-line 38:11 token recognition error at: ':'
-line 38:13 token recognition error at: 'O'
-line 38:14 token recognition error at: 'b'
-line 38:15 token recognition error at: 'j'
-line 38:16 token recognition error at: 'e'
-line 38:17 token recognition error at: 'c'
-line 38:18 token recognition error at: 't'
-line 38:20 token recognition error at: '{'
-line 39:8 token recognition error at: '{'
-line 40:12 token recognition error at: 'l'
-line 40:13 token recognition error at: 'e'
-line 40:14 token recognition error at: 't'
-line 40:16 token recognition error at: 'x'
-line 40:18 token recognition error at: ':'
-line 40:20 token recognition error at: 'I'
-line 40:21 token recognition error at: 'n'
-line 40:22 token recognition error at: 't'
-line 40:24 token recognition error at: '<'
-line 40:25 token recognition error at: '-'
-line 40:27 token recognition error at: '0'
-line 40:28 token recognition error at: ','
-line 41:16 token recognition error at: 'y'
-line 41:18 token recognition error at: ':'
-line 41:20 token recognition error at: 'S'
-line 41:21 token recognition error at: 't'
-line 41:22 token recognition error at: 'r'
-line 41:23 token recognition error at: 'i'
-line 41:24 token recognition error at: 'n'
-line 41:25 token recognition error at: 'g'
-line 41:27 token recognition error at: '<'
-line 41:28 token recognition error at: '-'
-line 41:30 token recognition error at: '"'
-line 41:31 token recognition error at: '!'
-line 41:32 token recognition error at: '"'
-line 41:33 token recognition error at: ','
-line 42:16 token recognition error at: 'z'
-line 42:18 token recognition error at: ':'
-line 42:20 token recognition error at: 'I'
-line 42:21 token recognition error at: 'n'
-line 42:22 token recognition error at: 't'
-line 42:24 token recognition error at: '<'
-line 42:25 token recognition error at: '-'
-line 42:27 token recognition error at: 'x'
-line 42:29 token recognition error at: '+'
-line 42:31 token recognition error at: '2'
-line 42:32 token recognition error at: ','
-line 43:16 token recognition error at: 'e'
-line 43:17 token recognition error at: 'm'
-line 43:18 token recognition error at: 'p'
-line 43:19 token recognition error at: 't'
-line 43:20 token recognition error at: 'y'
-line 43:22 token recognition error at: ':'
-line 43:24 token recognition error at: 'L'
-line 43:25 token recognition error at: 'i'
-line 43:26 token recognition error at: 's'
-line 43:27 token recognition error at: 't'
-line 43:28 token recognition error at: ','
-line 43:31 token recognition error at: '-'
-line 43:32 token recognition error at: '-'
-line 43:34 token recognition error at: 'i'
-line 43:35 token recognition error at: 'n'
-line 43:36 token recognition error at: 'i'
+there are no strings in CPLang, but shhh..
+line 31:30 token recognition error at: '.c'
+there are no strings in CPLang, but shhh..
+there are no strings in CPLang, but shhh..
+line 32:64 token recognition error at: '.p'
+there are no strings in CPLang, but shhh..
 line 43:37 token recognition error at: 'ț'
-line 43:38 token recognition error at: 'i'
-line 43:39 token recognition error at: 'a'
-line 43:40 token recognition error at: 'l'
-line 43:41 token recognition error at: 'i'
-line 43:42 token recognition error at: 'z'
-line 43:43 token recognition error at: 'a'
-line 43:44 token recognition error at: 't'
 line 43:45 token recognition error at: 'ă'
-line 43:47 token recognition error at: 'i'
-line 43:48 token recognition error at: 'm'
-line 43:49 token recognition error at: 'p'
-line 43:50 token recognition error at: 'l'
-line 43:51 token recognition error at: 'i'
-line 43:52 token recognition error at: 'c'
-line 43:53 token recognition error at: 'i'
-line 43:54 token recognition error at: 't'
-line 43:56 token recognition error at: 'l'
-line 43:57 token recognition error at: 'a'
-line 43:59 token recognition error at: 'v'
-line 43:60 token recognition error at: 'o'
-line 43:61 token recognition error at: 'i'
-line 43:62 token recognition error at: 'd'
-line 44:16 token recognition error at: 'l'
-line 44:17 token recognition error at: 'i'
-line 44:18 token recognition error at: 's'
-line 44:19 token recognition error at: 't'
-line 44:21 token recognition error at: ':'
-line 44:23 token recognition error at: 'L'
-line 44:24 token recognition error at: 'i'
-line 44:25 token recognition error at: 's'
-line 44:26 token recognition error at: 't'
-line 44:28 token recognition error at: '<'
-line 44:29 token recognition error at: '-'
-line 45:20 token recognition error at: 'n'
-line 45:21 token recognition error at: 'e'
-line 45:22 token recognition error at: 'w'
-line 45:24 token recognition error at: 'L'
-line 45:25 token recognition error at: 'i'
-line 45:26 token recognition error at: 's'
-line 45:27 token recognition error at: 't'
-line 45:28 token recognition error at: '.'
-line 45:29 token recognition error at: 'i'
-line 45:30 token recognition error at: 'n'
-line 45:31 token recognition error at: 'i'
-line 45:32 token recognition error at: 't'
-line 45:33 token recognition error at: '('
-line 45:34 token recognition error at: 'x'
-line 45:35 token recognition error at: ','
-line 46:24 token recognition error at: 'n'
-line 46:25 token recognition error at: 'e'
-line 46:26 token recognition error at: 'w'
-line 46:28 token recognition error at: 'L'
-line 46:29 token recognition error at: 'i'
-line 46:30 token recognition error at: 's'
-line 46:31 token recognition error at: 't'
-line 46:32 token recognition error at: '.'
-line 46:33 token recognition error at: 'i'
-line 46:34 token recognition error at: 'n'
-line 46:35 token recognition error at: 'i'
-line 46:36 token recognition error at: 't'
-line 46:37 token recognition error at: '('
-line 46:38 token recognition error at: 'y'
-line 46:39 token recognition error at: ','
-line 47:28 token recognition error at: 'n'
-line 47:29 token recognition error at: 'e'
-line 47:30 token recognition error at: 'w'
-line 47:32 token recognition error at: 'L'
-line 47:33 token recognition error at: 'i'
-line 47:34 token recognition error at: 's'
-line 47:35 token recognition error at: 't'
-line 47:36 token recognition error at: '.'
-line 47:37 token recognition error at: 'i'
-line 47:38 token recognition error at: 'n'
-line 47:39 token recognition error at: 'i'
-line 47:40 token recognition error at: 't'
-line 47:41 token recognition error at: '('
-line 47:42 token recognition error at: 'z'
-line 47:43 token recognition error at: ','
-line 47:45 token recognition error at: 'e'
-line 47:46 token recognition error at: 'm'
-line 47:47 token recognition error at: 'p'
-line 47:48 token recognition error at: 't'
-line 47:49 token recognition error at: 'y'
-line 47:50 token recognition error at: ')'
-line 47:51 token recognition error at: ')'
-line 47:52 token recognition error at: ')'
-line 48:12 token recognition error at: 'i'
-line 48:13 token recognition error at: 'n'
-line 49:16 token recognition error at: 'l'
-line 49:17 token recognition error at: 'i'
-line 49:18 token recognition error at: 's'
-line 49:19 token recognition error at: 't'
-line 49:20 token recognition error at: '.'
-line 49:21 token recognition error at: 'p'
-line 49:22 token recognition error at: 'r'
-line 49:23 token recognition error at: 'i'
-line 49:24 token recognition error at: 'n'
-line 49:25 token recognition error at: 't'
-line 49:26 token recognition error at: '('
-line 49:27 token recognition error at: ')'
-line 49:28 token recognition error at: ';'
-line 51:12 token recognition error at: '-'
-line 51:13 token recognition error at: '-'
-line 51:15 token recognition error at: 'o'
-line 51:16 token recognition error at: 'u'
-line 51:17 token recognition error at: 't'
-line 51:18 token recognition error at: '_'
-line 51:19 token recognition error at: 's'
-line 51:20 token recognition error at: 't'
-line 51:21 token recognition error at: 'r'
-line 51:22 token recognition error at: 'i'
-line 51:23 token recognition error at: 'n'
-line 51:24 token recognition error at: 'g'
+line 45:28 token recognition error at: '.i'
+line 46:32 token recognition error at: '.i'
+line 47:36 token recognition error at: '.i'
+line 49:20 token recognition error at: '.p'
 line 51:26 token recognition error at: 'î'
-line 51:27 token recognition error at: 'n'
-line 51:28 token recognition error at: 't'
-line 51:29 token recognition error at: 'o'
-line 51:30 token recognition error at: 'a'
-line 51:31 token recognition error at: 'r'
-line 51:32 token recognition error at: 'c'
-line 51:33 token recognition error at: 'e'
-line 51:35 token recognition error at: 'I'
-line 51:36 token recognition error at: 'O'
-line 51:37 token recognition error at: ','
 line 51:39 token recognition error at: 'ș'
-line 51:40 token recognition error at: 'i'
-line 51:42 token recognition error at: 'p'
-line 51:43 token recognition error at: 'u'
-line 51:44 token recognition error at: 't'
-line 51:45 token recognition error at: 'e'
-line 51:46 token recognition error at: 'm'
 line 51:48 token recognition error at: 'î'
-line 51:49 token recognition error at: 'n'
-line 51:50 token recognition error at: 'l'
 line 51:51 token recognition error at: 'ă'
-line 51:52 token recognition error at: 'n'
 line 51:53 token recognition error at: 'ț'
-line 51:54 token recognition error at: 'u'
-line 51:55 token recognition error at: 'i'
-line 51:57 token recognition error at: 'm'
-line 51:58 token recognition error at: 'a'
-line 51:59 token recognition error at: 'i'
-line 51:61 token recognition error at: 'm'
-line 51:62 token recognition error at: 'u'
-line 51:63 token recognition error at: 'l'
-line 51:64 token recognition error at: 't'
-line 51:65 token recognition error at: 'e'
-line 51:67 token recognition error at: 'o'
-line 51:68 token recognition error at: 'p'
-line 51:69 token recognition error at: 'e'
-line 51:70 token recognition error at: 'r'
-line 51:71 token recognition error at: 'a'
 line 51:72 token recognition error at: 'ț'
-line 51:73 token recognition error at: 'i'
-line 51:74 token recognition error at: 'i'
-line 51:75 token recognition error at: '.'
-line 52:12 token recognition error at: 'l'
-line 52:13 token recognition error at: 'e'
-line 52:14 token recognition error at: 't'
-line 52:16 token recognition error at: 'n'
-line 52:18 token recognition error at: ':'
-line 52:20 token recognition error at: 'I'
-line 52:21 token recognition error at: 'n'
-line 52:22 token recognition error at: 't'
-line 52:24 token recognition error at: '<'
-line 52:25 token recognition error at: '-'
-line 52:27 token recognition error at: 'o'
-line 52:28 token recognition error at: 'u'
-line 52:29 token recognition error at: 't'
-line 52:30 token recognition error at: '_'
-line 52:31 token recognition error at: 's'
-line 52:32 token recognition error at: 't'
-line 52:33 token recognition error at: 'r'
-line 52:34 token recognition error at: 'i'
-line 52:35 token recognition error at: 'n'
-line 52:36 token recognition error at: 'g'
-line 52:37 token recognition error at: '('
-line 52:38 token recognition error at: '"'
-line 52:39 token recognition error at: 'C'
-line 52:40 token recognition error at: 'a'
-line 52:41 token recognition error at: 'l'
-line 52:42 token recognition error at: 'c'
-line 52:43 token recognition error at: 'u'
-line 52:44 token recognition error at: 'l'
-line 52:45 token recognition error at: 'ă'
-line 52:46 token recognition error at: 'm'
-line 52:48 token recognition error at: 'f'
-line 52:49 token recognition error at: 'a'
-line 52:50 token recognition error at: 'c'
-line 52:51 token recognition error at: 't'
-line 52:52 token recognition error at: 'o'
-line 52:53 token recognition error at: 'r'
-line 52:54 token recognition error at: 'i'
-line 52:55 token recognition error at: 'a'
-line 52:56 token recognition error at: 'l'
-line 52:58 token recognition error at: 'p'
-line 52:59 token recognition error at: 'e'
-line 52:60 token recognition error at: 'n'
-line 52:61 token recognition error at: 't'
-line 52:62 token recognition error at: 'r'
-line 52:63 token recognition error at: 'u'
-line 52:64 token recognition error at: ':'
-line 52:66 token recognition error at: '"'
-line 52:67 token recognition error at: ')'
-line 52:68 token recognition error at: '.'
-line 52:69 token recognition error at: 'i'
-line 52:70 token recognition error at: 'n'
-line 52:71 token recognition error at: '_'
-line 52:72 token recognition error at: 'i'
-line 52:73 token recognition error at: 'n'
-line 52:74 token recognition error at: 't'
-line 52:75 token recognition error at: '('
-line 52:76 token recognition error at: ')'
-line 53:12 token recognition error at: 'i'
-line 53:13 token recognition error at: 'n'
-line 54:16 token recognition error at: '{'
-line 55:20 token recognition error at: 'o'
-line 55:21 token recognition error at: 'u'
-line 55:22 token recognition error at: 't'
-line 55:23 token recognition error at: '_'
-line 55:24 token recognition error at: 's'
-line 55:25 token recognition error at: 't'
-line 55:26 token recognition error at: 'r'
-line 55:27 token recognition error at: 'i'
-line 55:28 token recognition error at: 'n'
-line 55:29 token recognition error at: 'g'
-line 55:30 token recognition error at: '('
-line 55:31 token recognition error at: '"'
-line 55:32 token recognition error at: 'F'
-line 55:33 token recognition error at: 'a'
-line 55:34 token recognition error at: 'c'
-line 55:35 token recognition error at: 't'
-line 55:36 token recognition error at: 'o'
-line 55:37 token recognition error at: 'r'
-line 55:38 token recognition error at: 'i'
-line 55:39 token recognition error at: 'a'
-line 55:40 token recognition error at: 'l'
-line 55:42 token recognition error at: 'r'
-line 55:43 token recognition error at: 'e'
-line 55:44 token recognition error at: 'c'
-line 55:45 token recognition error at: 'u'
-line 55:46 token recognition error at: 'r'
-line 55:47 token recognition error at: 's'
-line 55:48 token recognition error at: 'i'
-line 55:49 token recognition error at: 'v'
-line 55:50 token recognition error at: ':'
-line 55:52 token recognition error at: '"'
-line 55:53 token recognition error at: ')'
-line 55:54 token recognition error at: '.'
-line 55:55 token recognition error at: 'o'
-line 55:56 token recognition error at: 'u'
-line 55:57 token recognition error at: 't'
-line 55:58 token recognition error at: '_'
-line 55:59 token recognition error at: 'i'
-line 55:60 token recognition error at: 'n'
-line 55:61 token recognition error at: 't'
-line 55:62 token recognition error at: '('
-line 55:63 token recognition error at: 'f'
-line 55:64 token recognition error at: 'a'
-line 55:65 token recognition error at: 'c'
-line 55:66 token recognition error at: 't'
-line 55:67 token recognition error at: '_'
-line 55:68 token recognition error at: 'r'
-line 55:69 token recognition error at: 'e'
-line 55:70 token recognition error at: 'c'
-line 55:71 token recognition error at: '('
-line 55:72 token recognition error at: 'n'
-line 55:73 token recognition error at: ')'
-line 55:74 token recognition error at: ')'
-line 56:24 token recognition error at: '.'
-line 56:25 token recognition error at: 'o'
-line 56:26 token recognition error at: 'u'
-line 56:27 token recognition error at: 't'
-line 56:28 token recognition error at: '_'
-line 56:29 token recognition error at: 's'
-line 56:30 token recognition error at: 't'
-line 56:31 token recognition error at: 'r'
-line 56:32 token recognition error at: 'i'
-line 56:33 token recognition error at: 'n'
-line 56:34 token recognition error at: 'g'
-line 56:35 token recognition error at: '('
-line 56:36 token recognition error at: '"'
-line 56:37 token recognition error at: '\'
-line 56:38 token recognition error at: 'n'
-line 56:39 token recognition error at: '"'
-line 56:40 token recognition error at: ')'
-line 56:41 token recognition error at: ';'
-line 57:20 token recognition error at: 'o'
-line 57:21 token recognition error at: 'u'
-line 57:22 token recognition error at: 't'
-line 57:23 token recognition error at: '_'
-line 57:24 token recognition error at: 's'
-line 57:25 token recognition error at: 't'
-line 57:26 token recognition error at: 'r'
-line 57:27 token recognition error at: 'i'
-line 57:28 token recognition error at: 'n'
-line 57:29 token recognition error at: 'g'
-line 57:30 token recognition error at: '('
-line 57:31 token recognition error at: '"'
-line 57:32 token recognition error at: 'F'
-line 57:33 token recognition error at: 'a'
-line 57:34 token recognition error at: 'c'
-line 57:35 token recognition error at: 't'
-line 57:36 token recognition error at: 'o'
-line 57:37 token recognition error at: 'r'
-line 57:38 token recognition error at: 'i'
-line 57:39 token recognition error at: 'a'
-line 57:40 token recognition error at: 'l'
-line 57:42 token recognition error at: 'i'
-line 57:43 token recognition error at: 't'
-line 57:44 token recognition error at: 'e'
-line 57:45 token recognition error at: 'r'
-line 57:46 token recognition error at: 'a'
-line 57:47 token recognition error at: 't'
-line 57:48 token recognition error at: 'i'
-line 57:49 token recognition error at: 'v'
-line 57:50 token recognition error at: ':'
-line 57:52 token recognition error at: '"'
-line 57:53 token recognition error at: ')'
-line 57:54 token recognition error at: '.'
-line 57:55 token recognition error at: 'o'
-line 57:56 token recognition error at: 'u'
-line 57:57 token recognition error at: 't'
-line 57:58 token recognition error at: '_'
-line 57:59 token recognition error at: 'i'
-line 57:60 token recognition error at: 'n'
-line 57:61 token recognition error at: 't'
-line 57:62 token recognition error at: '('
-line 57:63 token recognition error at: 'f'
-line 57:64 token recognition error at: 'a'
-line 57:65 token recognition error at: 'c'
-line 57:66 token recognition error at: 't'
-line 57:67 token recognition error at: '_'
-line 57:68 token recognition error at: 'i'
-line 57:69 token recognition error at: 't'
-line 57:70 token recognition error at: 'e'
-line 57:71 token recognition error at: 'r'
-line 57:72 token recognition error at: '('
-line 57:73 token recognition error at: 'n'
-line 57:74 token recognition error at: ')'
-line 57:75 token recognition error at: ')'
-line 58:24 token recognition error at: '.'
-line 58:25 token recognition error at: 'o'
-line 58:26 token recognition error at: 'u'
-line 58:27 token recognition error at: 't'
-line 58:28 token recognition error at: '_'
-line 58:29 token recognition error at: 's'
-line 58:30 token recognition error at: 't'
-line 58:31 token recognition error at: 'r'
-line 58:32 token recognition error at: 'i'
-line 58:33 token recognition error at: 'n'
-line 58:34 token recognition error at: 'g'
-line 58:35 token recognition error at: '('
-line 58:36 token recognition error at: '"'
-line 58:37 token recognition error at: '\'
-line 58:38 token recognition error at: 'n'
-line 58:39 token recognition error at: '"'
-line 58:40 token recognition error at: ')'
-line 58:41 token recognition error at: ';'
-line 59:16 token recognition error at: '}'
-line 59:17 token recognition error at: ';'
-line 60:8 token recognition error at: '}'
-line 61:4 token recognition error at: '}'
-line 61:5 token recognition error at: ';'
-line 63:4 token recognition error at: '-'
-line 63:5 token recognition error at: '-'
-line 63:7 token recognition error at: 'f'
-line 63:8 token recognition error at: 'a'
-line 63:9 token recognition error at: 'c'
-line 63:10 token recognition error at: 't'
-line 63:11 token recognition error at: 'o'
-line 63:12 token recognition error at: 'r'
-line 63:13 token recognition error at: 'i'
-line 63:14 token recognition error at: 'a'
-line 63:15 token recognition error at: 'l'
-line 63:17 token recognition error at: 'i'
-line 63:18 token recognition error at: 'm'
-line 63:19 token recognition error at: 'p'
-line 63:20 token recognition error at: 'l'
-line 63:21 token recognition error at: 'e'
-line 63:22 token recognition error at: 'm'
-line 63:23 token recognition error at: 'e'
-line 63:24 token recognition error at: 'n'
-line 63:25 token recognition error at: 't'
-line 63:26 token recognition error at: 'a'
-line 63:27 token recognition error at: 't'
-line 63:29 token recognition error at: 'r'
-line 63:30 token recognition error at: 'e'
-line 63:31 token recognition error at: 'c'
-line 63:32 token recognition error at: 'u'
-line 63:33 token recognition error at: 'r'
-line 63:34 token recognition error at: 's'
-line 63:35 token recognition error at: 'i'
-line 63:36 token recognition error at: 'v'
-line 64:4 token recognition error at: 'f'
-line 64:5 token recognition error at: 'a'
-line 64:6 token recognition error at: 'c'
-line 64:7 token recognition error at: 't'
-line 64:8 token recognition error at: '_'
-line 64:9 token recognition error at: 'r'
-line 64:10 token recognition error at: 'e'
-line 64:11 token recognition error at: 'c'
-line 64:12 token recognition error at: '('
-line 64:13 token recognition error at: 'n'
-line 64:15 token recognition error at: ':'
-line 64:17 token recognition error at: 'I'
-line 64:18 token recognition error at: 'n'
-line 64:19 token recognition error at: 't'
-line 64:20 token recognition error at: ')'
-line 64:22 token recognition error at: ':'
-line 64:24 token recognition error at: 'I'
-line 64:25 token recognition error at: 'n'
-line 64:26 token recognition error at: 't'
-line 64:28 token recognition error at: '{'
-line 65:8 token recognition error at: 'i'
-line 65:9 token recognition error at: 'f'
-line 65:11 token recognition error at: 'n'
-line 65:13 token recognition error at: '='
-line 65:15 token recognition error at: '0'
-line 65:17 token recognition error at: 't'
-line 65:18 token recognition error at: 'h'
-line 65:19 token recognition error at: 'e'
-line 65:20 token recognition error at: 'n'
-line 65:22 token recognition error at: '1'
-line 65:24 token recognition error at: 'e'
-line 65:25 token recognition error at: 'l'
-line 65:26 token recognition error at: 's'
-line 65:27 token recognition error at: 'e'
-line 65:29 token recognition error at: 'n'
-line 65:31 token recognition error at: '*'
-line 65:33 token recognition error at: 'f'
-line 65:34 token recognition error at: 'a'
-line 65:35 token recognition error at: 'c'
-line 65:36 token recognition error at: 't'
-line 65:37 token recognition error at: '_'
-line 65:38 token recognition error at: 'r'
-line 65:39 token recognition error at: 'e'
-line 65:40 token recognition error at: 'c'
-line 65:41 token recognition error at: '('
-line 65:42 token recognition error at: 'n'
-line 65:44 token recognition error at: '-'
-line 65:46 token recognition error at: '1'
-line 65:47 token recognition error at: ')'
-line 65:49 token recognition error at: 'f'
-line 65:50 token recognition error at: 'i'
-line 66:4 token recognition error at: '}'
-line 66:5 token recognition error at: ';'
-line 68:4 token recognition error at: '-'
-line 68:5 token recognition error at: '-'
-line 68:7 token recognition error at: 'f'
-line 68:8 token recognition error at: 'a'
-line 68:9 token recognition error at: 'c'
-line 68:10 token recognition error at: 't'
-line 68:11 token recognition error at: 'o'
-line 68:12 token recognition error at: 'r'
-line 68:13 token recognition error at: 'i'
-line 68:14 token recognition error at: 'a'
-line 68:15 token recognition error at: 'l'
-line 68:17 token recognition error at: 'i'
-line 68:18 token recognition error at: 'm'
-line 68:19 token recognition error at: 'p'
-line 68:20 token recognition error at: 'l'
-line 68:21 token recognition error at: 'e'
-line 68:22 token recognition error at: 'm'
-line 68:23 token recognition error at: 'e'
-line 68:24 token recognition error at: 'n'
-line 68:25 token recognition error at: 't'
-line 68:26 token recognition error at: 'a'
-line 68:27 token recognition error at: 't'
-line 68:29 token recognition error at: 'i'
-line 68:30 token recognition error at: 't'
-line 68:31 token recognition error at: 'e'
-line 68:32 token recognition error at: 'r'
-line 68:33 token recognition error at: 'a'
-line 68:34 token recognition error at: 't'
-line 68:35 token recognition error at: 'i'
-line 68:36 token recognition error at: 'v'
-line 69:4 token recognition error at: 'f'
-line 69:5 token recognition error at: 'a'
-line 69:6 token recognition error at: 'c'
-line 69:7 token recognition error at: 't'
-line 69:8 token recognition error at: '_'
-line 69:9 token recognition error at: 'i'
-line 69:10 token recognition error at: 't'
-line 69:11 token recognition error at: 'e'
-line 69:12 token recognition error at: 'r'
-line 69:13 token recognition error at: '('
-line 69:14 token recognition error at: 'n'
-line 69:16 token recognition error at: ':'
-line 69:18 token recognition error at: 'I'
-line 69:19 token recognition error at: 'n'
-line 69:20 token recognition error at: 't'
-line 69:21 token recognition error at: ')'
-line 69:23 token recognition error at: ':'
-line 69:25 token recognition error at: 'I'
-line 69:26 token recognition error at: 'n'
-line 69:27 token recognition error at: 't'
-line 69:29 token recognition error at: '{'
-line 70:8 token recognition error at: 'l'
-line 70:9 token recognition error at: 'e'
-line 70:10 token recognition error at: 't'
-line 70:12 token recognition error at: 'r'
-line 70:13 token recognition error at: 'e'
-line 70:14 token recognition error at: 's'
-line 70:16 token recognition error at: ':'
-line 70:18 token recognition error at: 'I'
-line 70:19 token recognition error at: 'n'
-line 70:20 token recognition error at: 't'
-line 70:22 token recognition error at: '<'
-line 70:23 token recognition error at: '-'
-line 70:25 token recognition error at: '1'
-line 71:8 token recognition error at: '-'
-line 71:9 token recognition error at: '-'
-line 71:11 token recognition error at: 'B'
-line 71:12 token recognition error at: 'l'
-line 71:13 token recognition error at: 'o'
-line 71:14 token recognition error at: 'c'
-line 71:15 token recognition error at: 'u'
-line 71:16 token recognition error at: 'r'
-line 71:17 token recognition error at: 'i'
-line 71:18 token recognition error at: 'l'
-line 71:19 token recognition error at: 'e'
-line 71:21 token recognition error at: '{'
-line 71:22 token recognition error at: '}'
-line 71:24 token recognition error at: 's'
-line 71:25 token recognition error at: 'u'
-line 71:26 token recognition error at: 'n'
-line 71:27 token recognition error at: 't'
-line 71:29 token recognition error at: 'v'
+line 51:75 token recognition error at: '.\n'
+there are no strings in CPLang, but shhh..
+line 52:68 token recognition error at: '.i'
+there are no strings in CPLang, but shhh..
+line 55:54 token recognition error at: '.o'
+line 56:24 token recognition error at: '.o'
+there are no strings in CPLang, but shhh..
+there are no strings in CPLang, but shhh..
+line 57:54 token recognition error at: '.o'
+line 58:24 token recognition error at: '.o'
+there are no strings in CPLang, but shhh..
 line 71:30 token recognition error at: 'ă'
-line 71:31 token recognition error at: 'z'
-line 71:32 token recognition error at: 'u'
-line 71:33 token recognition error at: 't'
-line 71:34 token recognition error at: 'e'
-line 71:36 token recognition error at: 'c'
-line 71:37 token recognition error at: 'a'
-line 71:39 token recognition error at: 'e'
-line 71:40 token recognition error at: 'x'
-line 71:41 token recognition error at: 'p'
-line 71:42 token recognition error at: 'r'
-line 71:43 token recognition error at: 'e'
-line 71:44 token recognition error at: 's'
-line 71:45 token recognition error at: 'i'
-line 71:46 token recognition error at: 'i'
-line 71:47 token recognition error at: '.'
-line 71:49 token recognition error at: 'V'
-line 71:50 token recognition error at: 'a'
-line 71:51 token recognition error at: 'l'
-line 71:52 token recognition error at: 'o'
-line 71:53 token recognition error at: 'a'
-line 71:54 token recognition error at: 'r'
-line 71:55 token recognition error at: 'e'
-line 71:56 token recognition error at: 'a'
-line 71:58 token recognition error at: 'u'
-line 71:59 token recognition error at: 'l'
-line 71:60 token recognition error at: 't'
-line 71:61 token recognition error at: 'i'
-line 71:62 token recognition error at: 'm'
-line 71:63 token recognition error at: 'e'
-line 71:64 token recognition error at: 'i'
-line 71:66 token recognition error at: 'e'
-line 71:67 token recognition error at: 'x'
-line 71:68 token recognition error at: 'p'
-line 71:69 token recognition error at: 'r'
-line 71:70 token recognition error at: 'e'
-line 71:71 token recognition error at: 's'
-line 71:72 token recognition error at: 'i'
-line 71:73 token recognition error at: 'i'
-line 72:8 token recognition error at: '-'
-line 72:9 token recognition error at: '-'
-line 72:11 token recognition error at: 'd'
-line 72:12 token recognition error at: 'i'
-line 72:13 token recognition error at: 'n'
-line 72:15 token recognition error at: 'b'
-line 72:16 token recognition error at: 'l'
-line 72:17 token recognition error at: 'o'
-line 72:18 token recognition error at: 'c'
-line 72:20 token recognition error at: 'e'
-line 72:21 token recognition error at: 's'
-line 72:22 token recognition error at: 't'
-line 72:23 token recognition error at: 'e'
-line 72:25 token recognition error at: 'v'
-line 72:26 token recognition error at: 'a'
-line 72:27 token recognition error at: 'l'
-line 72:28 token recognition error at: 'o'
-line 72:29 token recognition error at: 'a'
-line 72:30 token recognition error at: 'r'
-line 72:31 token recognition error at: 'e'
-line 72:32 token recognition error at: 'a'
-line 72:34 token recognition error at: 'b'
-line 72:35 token recognition error at: 'l'
-line 72:36 token recognition error at: 'o'
-line 72:37 token recognition error at: 'c'
-line 72:38 token recognition error at: 'u'
-line 72:39 token recognition error at: 'l'
-line 72:40 token recognition error at: 'u'
-line 72:41 token recognition error at: 'i'
-line 72:42 token recognition error at: '.'
-line 73:8 token recognition error at: 'i'
-line 73:9 token recognition error at: 'n'
-line 74:12 token recognition error at: '{'
-line 75:16 token recognition error at: 'w'
-line 75:17 token recognition error at: 'h'
-line 75:18 token recognition error at: 'i'
-line 75:19 token recognition error at: 'l'
-line 75:20 token recognition error at: 'e'
-line 75:22 token recognition error at: '('
-line 75:23 token recognition error at: 'n'
-line 75:24 token recognition error at: 'o'
-line 75:25 token recognition error at: 't'
-line 75:27 token recognition error at: '('
-line 75:28 token recognition error at: 'n'
-line 75:30 token recognition error at: '='
-line 75:32 token recognition error at: '0'
-line 75:33 token recognition error at: ')'
-line 75:34 token recognition error at: ')'
-line 75:36 token recognition error at: 'l'
-line 75:37 token recognition error at: 'o'
-line 75:38 token recognition error at: 'o'
-line 75:39 token recognition error at: 'p'
-line 76:20 token recognition error at: '{'
-line 77:24 token recognition error at: 'r'
-line 77:25 token recognition error at: 'e'
-line 77:26 token recognition error at: 's'
-line 77:28 token recognition error at: '<'
-line 77:29 token recognition error at: '-'
-line 77:31 token recognition error at: 'r'
-line 77:32 token recognition error at: 'e'
-line 77:33 token recognition error at: 's'
-line 77:35 token recognition error at: '*'
-line 77:37 token recognition error at: 'n'
-line 77:38 token recognition error at: ';'
-line 78:24 token recognition error at: 'n'
-line 78:26 token recognition error at: '<'
-line 78:27 token recognition error at: '-'
-line 78:29 token recognition error at: 'n'
-line 78:31 token recognition error at: '-'
-line 78:33 token recognition error at: '1'
-line 78:34 token recognition error at: ';'
-line 79:20 token recognition error at: '}'
-line 80:16 token recognition error at: 'p'
-line 80:17 token recognition error at: 'o'
-line 80:18 token recognition error at: 'o'
-line 80:19 token recognition error at: 'l'
-line 80:20 token recognition error at: ';'
-line 81:16 token recognition error at: 'r'
-line 81:17 token recognition error at: 'e'
-line 81:18 token recognition error at: 's'
-line 81:19 token recognition error at: ';'
-line 82:12 token recognition error at: '}'
-line 83:4 token recognition error at: '}'
-line 83:5 token recognition error at: ';'
-line 84:0 token recognition error at: '}'
-line 84:1 token recognition error at: ';'
+line 71:47 token recognition error at: '. '
+line 72:42 token recognition error at: '. '
+( : LPAREN
+[@0,0:0='(',<32>,1:0]
+* : MUL
+[@1,1:1='*',<38>,1:1]
+List : TYPE_ID
+[@2,7:10='List',<24>,2:4]
+nevid : ID
+[@3,13:17='nevid',<25>,2:10]
+eterogen : ID
+[@4,20:27='eterogen',<25>,2:17]
+, : COMMA
+[@5,29:29=',',<30>,2:26]
+cu : ID
+[@6,31:32='cu',<25>,2:28]
+elemente : ID
+[@7,34:41='elemente',<25>,2:31]
+av : ID
+[@8,43:44='av',<25>,2:40]
+nd : ID
+[@9,46:47='nd',<25>,2:43]
+tipul : ID
+[@10,49:53='tipul',<25>,2:46]
+static : ID
+[@11,55:60='static',<25>,2:52]
+Object : TYPE_ID
+[@12,62:67='Object',<24>,2:59]
+i : ID
+[@13,70:70='i',<25>,2:67]
+tipuri : ID
+[@14,72:77='tipuri',<25>,2:69]
+dinamice : ID
+[@15,83:90='dinamice',<25>,3:4]
+amestecate : ID
+[@16,92:101='amestecate',<25>,3:13]
+Sf : TYPE_ID
+[@17,104:105='Sf',<24>,3:25]
+r : ID
+[@18,107:107='r',<25>,3:28]
+itul : ID
+[@19,109:112='itul',<25>,3:30]
+liste : ID
+[@20,114:118='liste',<25>,3:35]
+este : ID
+[@21,120:123='este',<25>,3:41]
+semnalat : ID
+[@22,125:132='semnalat',<25>,3:46]
+de : ID
+[@23,134:135='de',<25>,3:55]
+next : ID
+[@24,137:140='next',<25>,3:58]
+= : EQUAL
+[@25,142:142='=',<41>,3:63]
+void : ID
+[@26,144:147='void',<25>,3:65]
+Adaptare : TYPE_ID
+[@27,155:162='Adaptare',<24>,5:4]
+dup : ID
+[@28,164:166='dup',<25>,5:13]
+Alex : TYPE_ID
+[@29,169:172='Alex',<24>,5:18]
+Aiken : TYPE_ID
+[@30,174:178='Aiken',<24>,5:23]
+* : MUL
+[@31,181:181='*',<38>,6:0]
+) : RPAREN
+[@32,182:182=')',<33>,6:1]
+class : CLASS
+[@33,184:188='class',<9>,7:0]
+List : TYPE_ID
+[@34,190:193='List',<24>,7:6]
+inherits : INHERITS
+[@35,195:202='inherits',<10>,7:11]
+IO : TYPE_ID
+[@36,204:205='IO',<24>,7:20]
+{ : LBRACE
+[@37,207:207='{',<34>,7:23]
+elem : ID
+[@38,213:216='elem',<25>,8:4]
+: : COLON
+[@39,218:218=':',<29>,8:9]
+Object : TYPE_ID
+[@40,220:225='Object',<24>,8:11]
+; : SEMI
+[@41,226:226=';',<28>,8:17]
+next : ID
+[@42,232:235='next',<25>,9:4]
+: : COLON
+[@43,237:237=':',<29>,9:9]
+List : TYPE_ID
+[@44,239:242='List',<24>,9:11]
+; : SEMI
+[@45,243:243=';',<28>,9:15]
+init : ID
+[@46,250:253='init',<25>,11:4]
+( : LPAREN
+[@47,254:254='(',<32>,11:8]
+e : ID
+[@48,255:255='e',<25>,11:9]
+: : COLON
+[@49,257:257=':',<29>,11:11]
+Object : TYPE_ID
+[@50,259:264='Object',<24>,11:13]
+, : COMMA
+[@51,265:265=',',<30>,11:19]
+n : ID
+[@52,267:267='n',<25>,11:21]
+: : COLON
+[@53,269:269=':',<29>,11:23]
+List : TYPE_ID
+[@54,271:274='List',<24>,11:25]
+) : RPAREN
+[@55,275:275=')',<33>,11:29]
+: : COLON
+[@56,277:277=':',<29>,11:31]
+List : TYPE_ID
+[@57,279:282='List',<24>,11:33]
+{ : LBRACE
+[@58,284:284='{',<34>,11:38]
+{ : LBRACE
+[@59,294:294='{',<34>,12:8]
+elem : ID
+[@60,308:311='elem',<25>,13:12]
+<- : ASSIGN
+[@61,313:314='<-',<31>,13:17]
+e : ID
+[@62,316:316='e',<25>,13:20]
+; : SEMI
+[@63,317:317=';',<28>,13:21]
+next : ID
+[@64,331:334='next',<25>,14:12]
+<- : ASSIGN
+[@65,336:337='<-',<31>,14:17]
+n : ID
+[@66,339:339='n',<25>,14:20]
+; : SEMI
+[@67,340:340=';',<28>,14:21]
+self : ID
+[@68,354:357='self',<25>,15:12]
+; : SEMI
+[@69,358:358=';',<28>,15:16]
+} : RBRACE
+[@70,368:368='}',<35>,16:8]
+} : RBRACE
+[@71,374:374='}',<35>,17:4]
+; : SEMI
+[@72,375:375=';',<28>,17:5]
+print : ID
+[@73,382:386='print',<25>,19:4]
+( : LPAREN
+[@74,387:387='(',<32>,19:9]
+) : RPAREN
+[@75,388:388=')',<33>,19:10]
+: : COLON
+[@76,390:390=':',<29>,19:12]
+IO : TYPE_ID
+[@77,392:393='IO',<24>,19:14]
+{ : LBRACE
+[@78,395:395='{',<34>,19:17]
+let : LET
+[@79,405:407='let',<11>,20:8]
+str : ID
+[@80,409:411='str',<25>,20:12]
+: : COLON
+[@81,413:413=':',<29>,20:16]
+String : TYPE_ID
+[@82,415:420='String',<24>,20:18]
+<- : ASSIGN
+[@83,422:423='<-',<31>,20:25]
+- : MINUS
+[@84,441:441='-',<37>,21:16]
+- : MINUS
+[@85,442:442='-',<37>,21:17]
+case : CASE
+[@86,444:447='case',<17>,21:19]
+permite : ID
+[@87,449:455='permite',<25>,21:24]
+ramificarea : ID
+[@88,457:467='ramificarea',<25>,21:32]
+execu : ID
+[@89,469:473='execu',<25>,21:44]
+iei : ID
+[@90,475:477='iei',<25>,21:50]
+n : ID
+[@91,480:480='n',<25>,21:55]
+func : ID
+[@92,482:485='func',<25>,21:57]
+ie : ID
+[@93,487:488='ie',<25>,21:62]
+de : ID
+[@94,490:491='de',<25>,21:65]
+tipul : ID
+[@95,493:497='tipul',<25>,21:68]
+- : MINUS
+[@96,515:515='-',<37>,22:16]
+- : MINUS
+[@97,516:516='-',<37>,22:17]
+dinamic : ID
+[@98,518:524='dinamic',<25>,22:19]
+abort : ID
+[@99,527:531='abort',<25>,22:28]
+( : LPAREN
+[@100,532:532='(',<32>,22:33]
+) : RPAREN
+[@101,533:533=')',<33>,22:34]
+opre : ID
+[@102,535:538='opre',<25>,22:36]
+te : ID
+[@103,540:541='te',<25>,22:41]
+execu : ID
+[@104,543:547='execu',<25>,22:44]
+ia : ID
+[@105,549:550='ia',<25>,22:50]
+irul : ID
+[@106,554:557='irul',<25>,22:55]
+vid : ID
+[@107,559:561='vid',<25>,22:60]
+care : ID
+[@108,563:566='care',<25>,22:64]
+i : ID
+[@109,569:569='i',<25>,22:70]
+urmeaz : ID
+[@110,571:576='urmeaz',<25>,22:72]
+- : MINUS
+[@111,595:595='-',<37>,23:16]
+- : MINUS
+[@112,596:596='-',<37>,23:17]
+este : ID
+[@113,598:601='este',<25>,23:19]
+necesar : ID
+[@114,603:609='necesar',<25>,23:24]
+pentru : ID
+[@115,611:616='pentru',<25>,23:32]
+verificarea : ID
+[@116,618:628='verificarea',<25>,23:39]
+static : ID
+[@117,630:635='static',<25>,23:51]
+a : ID
+[@118,638:638='a',<25>,23:59]
+tipurilor : ID
+[@119,640:648='tipurilor',<25>,23:61]
+case : CASE
+[@120,667:670='case',<17>,24:16]
+elem : ID
+[@121,672:675='elem',<25>,24:21]
+of : OF
+[@122,677:678='of',<18>,24:26]
+s : ID
+[@123,700:700='s',<25>,25:20]
+: : COLON
+[@124,702:702=':',<29>,25:22]
+String : TYPE_ID
+[@125,704:709='String',<24>,25:24]
+=> : RESULTS
+[@126,711:712='=>',<40>,25:31]
+s : ID
+[@127,714:714='s',<25>,25:34]
+; : SEMI
+[@128,715:715=';',<28>,25:35]
+n : ID
+[@129,737:737='n',<25>,26:20]
+: : COLON
+[@130,739:739=':',<29>,26:22]
+Int : TYPE
+[@131,741:743='Int',<22>,26:24]
+=> : RESULTS
+[@132,745:746='=>',<40>,26:28]
+new : NEW
+[@133,748:750='new',<8>,26:31]
+A2I : TYPE_ID
+[@134,752:754='A2I',<24>,26:35]
+2 : INT
+[@135,757:757='2',<23>,26:40]
+a : ID
+[@136,758:758='a',<25>,26:41]
+( : LPAREN
+[@137,759:759='(',<32>,26:42]
+n : ID
+[@138,760:760='n',<25>,26:43]
+) : RPAREN
+[@139,761:761=')',<33>,26:44]
+; : SEMI
+[@140,762:762=';',<28>,26:45]
+- : MINUS
+[@141,765:765='-',<37>,26:48]
+- : MINUS
+[@142,766:766='-',<37>,26:49]
+A2I : TYPE_ID
+[@143,768:770='A2I',<24>,26:51]
+este : ID
+[@144,772:775='este',<25>,26:55]
+definit : ID
+[@145,777:783='definit',<25>,26:60]
+mai : ID
+[@146,786:788='mai',<25>,26:69]
+jos : ID
+[@147,790:792='jos',<25>,26:73]
+o : ID
+[@148,814:814='o',<25>,27:20]
+: : COLON
+[@149,816:816=':',<29>,27:22]
+Object : TYPE_ID
+[@150,818:823='Object',<24>,27:24]
+=> : RESULTS
+[@151,825:826='=>',<40>,27:31]
+{ : LBRACE
+[@152,828:828='{',<34>,27:34]
+abort : ID
+[@153,830:834='abort',<25>,27:36]
+( : LPAREN
+[@154,835:835='(',<32>,27:41]
+) : RPAREN
+[@155,836:836=')',<33>,27:42]
+; : SEMI
+[@156,837:837=';',<28>,27:43]
+"" : STRING
+[@157,839:840='""',<27>,27:45]
+; : SEMI
+[@158,841:841=';',<28>,27:47]
+} : RBRACE
+[@159,843:843='}',<35>,27:49]
+; : SEMI
+[@160,844:844=';',<28>,27:50]
+esac : ESAC
+[@161,862:865='esac',<19>,28:16]
+in : IN
+[@162,875:876='in',<12>,29:8]
+{ : LBRACE
+[@163,890:890='{',<34>,30:12]
+out_string : ID
+[@164,908:917='out_string',<25>,31:16]
+( : LPAREN
+[@165,918:918='(',<32>,31:26]
+str : ID
+[@166,919:921='str',<25>,31:27]
+oncat : ID
+[@167,924:928='oncat',<25>,31:32]
+( : LPAREN
+[@168,929:929='(',<32>,31:37]
+" " : STRING
+[@169,930:932='" "',<27>,31:38]
+) : RPAREN
+[@170,933:933=')',<33>,31:41]
+) : RPAREN
+[@171,934:934=')',<33>,31:42]
+; : SEMI
+[@172,935:935=';',<28>,31:43]
+if : IF
+[@173,953:954='if',<2>,32:16]
+( : LPAREN
+[@174,956:956='(',<32>,32:19]
+isvoid : ISVOID
+[@175,957:962='isvoid',<20>,32:20]
+next : ID
+[@176,964:967='next',<25>,32:27]
+) : RPAREN
+[@177,968:968=')',<33>,32:31]
+then : THEN
+[@178,970:973='then',<3>,32:33]
+out_string : ID
+[@179,975:984='out_string',<25>,32:38]
+( : LPAREN
+[@180,985:985='(',<32>,32:48]
+"\n" : STRING
+[@181,986:989='"\n"',<27>,32:49]
+) : RPAREN
+[@182,990:990=')',<33>,32:53]
+else : ELSE
+[@183,992:995='else',<4>,32:55]
+next : ID
+[@184,997:1000='next',<25>,32:60]
+rint : ID
+[@185,1003:1006='rint',<25>,32:66]
+( : LPAREN
+[@186,1007:1007='(',<32>,32:70]
+) : RPAREN
+[@187,1008:1008=')',<33>,32:71]
+fi : FI
+[@188,1010:1011='fi',<5>,32:73]
+; : SEMI
+[@189,1012:1012=';',<28>,32:75]
+} : RBRACE
+[@190,1026:1026='}',<35>,33:12]
+} : RBRACE
+[@191,1032:1032='}',<35>,34:4]
+; : SEMI
+[@192,1033:1033=';',<28>,34:5]
+} : RBRACE
+[@193,1035:1035='}',<35>,35:0]
+; : SEMI
+[@194,1036:1036=';',<28>,35:1]
+class : CLASS
+[@195,1039:1043='class',<9>,37:0]
+Main : TYPE_ID
+[@196,1045:1048='Main',<24>,37:6]
+inherits : INHERITS
+[@197,1050:1057='inherits',<10>,37:11]
+IO : TYPE_ID
+[@198,1059:1060='IO',<24>,37:20]
+{ : LBRACE
+[@199,1062:1062='{',<34>,37:23]
+main : ID
+[@200,1068:1071='main',<25>,38:4]
+( : LPAREN
+[@201,1072:1072='(',<32>,38:8]
+) : RPAREN
+[@202,1073:1073=')',<33>,38:9]
+: : COLON
+[@203,1075:1075=':',<29>,38:11]
+Object : TYPE_ID
+[@204,1077:1082='Object',<24>,38:13]
+{ : LBRACE
+[@205,1084:1084='{',<34>,38:20]
+{ : LBRACE
+[@206,1094:1094='{',<34>,39:8]
+let : LET
+[@207,1108:1110='let',<11>,40:12]
+x : ID
+[@208,1112:1112='x',<25>,40:16]
+: : COLON
+[@209,1114:1114=':',<29>,40:18]
+Int : TYPE
+[@210,1116:1118='Int',<22>,40:20]
+<- : ASSIGN
+[@211,1120:1121='<-',<31>,40:24]
+0 : INT
+[@212,1123:1123='0',<23>,40:27]
+, : COMMA
+[@213,1124:1124=',',<30>,40:28]
+y : ID
+[@214,1142:1142='y',<25>,41:16]
+: : COLON
+[@215,1144:1144=':',<29>,41:18]
+String : TYPE_ID
+[@216,1146:1151='String',<24>,41:20]
+<- : ASSIGN
+[@217,1153:1154='<-',<31>,41:27]
+"!" : STRING
+[@218,1156:1158='"!"',<27>,41:30]
+, : COMMA
+[@219,1159:1159=',',<30>,41:33]
+z : ID
+[@220,1177:1177='z',<25>,42:16]
+: : COLON
+[@221,1179:1179=':',<29>,42:18]
+Int : TYPE
+[@222,1181:1183='Int',<22>,42:20]
+<- : ASSIGN
+[@223,1185:1186='<-',<31>,42:24]
+x : ID
+[@224,1188:1188='x',<25>,42:27]
++ : PLUS
+[@225,1190:1190='+',<36>,42:29]
+2 : INT
+[@226,1192:1192='2',<23>,42:31]
+, : COMMA
+[@227,1193:1193=',',<30>,42:32]
+empty : ID
+[@228,1211:1215='empty',<25>,43:16]
+: : COLON
+[@229,1217:1217=':',<29>,43:22]
+List : TYPE_ID
+[@230,1219:1222='List',<24>,43:24]
+, : COMMA
+[@231,1223:1223=',',<30>,43:28]
+- : MINUS
+[@232,1226:1226='-',<37>,43:31]
+- : MINUS
+[@233,1227:1227='-',<37>,43:32]
+ini : ID
+[@234,1229:1231='ini',<25>,43:34]
+ializat : ID
+[@235,1233:1239='ializat',<25>,43:38]
+implicit : ID
+[@236,1242:1249='implicit',<25>,43:47]
+la : ID
+[@237,1251:1252='la',<25>,43:56]
+void : ID
+[@238,1254:1257='void',<25>,43:59]
+list : ID
+[@239,1275:1278='list',<25>,44:16]
+: : COLON
+[@240,1280:1280=':',<29>,44:21]
+List : TYPE_ID
+[@241,1282:1285='List',<24>,44:23]
+<- : ASSIGN
+[@242,1287:1288='<-',<31>,44:28]
+new : NEW
+[@243,1310:1312='new',<8>,45:20]
+List : TYPE_ID
+[@244,1314:1317='List',<24>,45:24]
+nit : ID
+[@245,1320:1322='nit',<25>,45:30]
+( : LPAREN
+[@246,1323:1323='(',<32>,45:33]
+x : ID
+[@247,1324:1324='x',<25>,45:34]
+, : COMMA
+[@248,1325:1325=',',<30>,45:35]
+new : NEW
+[@249,1351:1353='new',<8>,46:24]
+List : TYPE_ID
+[@250,1355:1358='List',<24>,46:28]
+nit : ID
+[@251,1361:1363='nit',<25>,46:34]
+( : LPAREN
+[@252,1364:1364='(',<32>,46:37]
+y : ID
+[@253,1365:1365='y',<25>,46:38]
+, : COMMA
+[@254,1366:1366=',',<30>,46:39]
+new : NEW
+[@255,1396:1398='new',<8>,47:28]
+List : TYPE_ID
+[@256,1400:1403='List',<24>,47:32]
+nit : ID
+[@257,1406:1408='nit',<25>,47:38]
+( : LPAREN
+[@258,1409:1409='(',<32>,47:41]
+z : ID
+[@259,1410:1410='z',<25>,47:42]
+, : COMMA
+[@260,1411:1411=',',<30>,47:43]
+empty : ID
+[@261,1413:1417='empty',<25>,47:45]
+) : RPAREN
+[@262,1418:1418=')',<33>,47:50]
+) : RPAREN
+[@263,1419:1419=')',<33>,47:51]
+) : RPAREN
+[@264,1420:1420=')',<33>,47:52]
+in : IN
+[@265,1434:1435='in',<12>,48:12]
+list : ID
+[@266,1453:1456='list',<25>,49:16]
+rint : ID
+[@267,1459:1462='rint',<25>,49:22]
+( : LPAREN
+[@268,1463:1463='(',<32>,49:26]
+) : RPAREN
+[@269,1464:1464=')',<33>,49:27]
+; : SEMI
+[@270,1465:1465=';',<28>,49:28]
+- : MINUS
+[@271,1480:1480='-',<37>,51:12]
+- : MINUS
+[@272,1481:1481='-',<37>,51:13]
+out_string : ID
+[@273,1483:1492='out_string',<25>,51:15]
+ntoarce : ID
+[@274,1495:1501='ntoarce',<25>,51:27]
+IO : TYPE_ID
+[@275,1503:1504='IO',<24>,51:35]
+, : COMMA
+[@276,1505:1505=',',<30>,51:37]
+i : ID
+[@277,1508:1508='i',<25>,51:40]
+putem : ID
+[@278,1510:1514='putem',<25>,51:42]
+nl : ID
+[@279,1517:1518='nl',<25>,51:49]
+n : ID
+[@280,1520:1520='n',<25>,51:52]
+ui : ID
+[@281,1522:1523='ui',<25>,51:54]
+mai : ID
+[@282,1525:1527='mai',<25>,51:57]
+multe : ID
+[@283,1529:1533='multe',<25>,51:61]
+opera : ID
+[@284,1535:1539='opera',<25>,51:67]
+ii : ID
+[@285,1541:1542='ii',<25>,51:73]
+let : LET
+[@286,1557:1559='let',<11>,52:12]
+n : ID
+[@287,1561:1561='n',<25>,52:16]
+: : COLON
+[@288,1563:1563=':',<29>,52:18]
+Int : TYPE
+[@289,1565:1567='Int',<22>,52:20]
+<- : ASSIGN
+[@290,1569:1570='<-',<31>,52:24]
+out_string : ID
+[@291,1572:1581='out_string',<25>,52:27]
+( : LPAREN
+[@292,1582:1582='(',<32>,52:37]
+"Calculăm factorial pentru: " : STRING
+[@293,1583:1611='"Calculăm factorial pentru: "',<27>,52:38]
+) : RPAREN
+[@294,1612:1612=')',<33>,52:67]
+n_int : ID
+[@295,1615:1619='n_int',<25>,52:70]
+( : LPAREN
+[@296,1620:1620='(',<32>,52:75]
+) : RPAREN
+[@297,1621:1621=')',<33>,52:76]
+in : IN
+[@298,1635:1636='in',<12>,53:12]
+{ : LBRACE
+[@299,1654:1654='{',<34>,54:16]
+out_string : ID
+[@300,1676:1685='out_string',<25>,55:20]
+( : LPAREN
+[@301,1686:1686='(',<32>,55:30]
+"Factorial recursiv: " : STRING
+[@302,1687:1708='"Factorial recursiv: "',<27>,55:31]
+) : RPAREN
+[@303,1709:1709=')',<33>,55:53]
+ut_int : ID
+[@304,1712:1717='ut_int',<25>,55:56]
+( : LPAREN
+[@305,1718:1718='(',<32>,55:62]
+fact_rec : ID
+[@306,1719:1726='fact_rec',<25>,55:63]
+( : LPAREN
+[@307,1727:1727='(',<32>,55:71]
+n : ID
+[@308,1728:1728='n',<25>,55:72]
+) : RPAREN
+[@309,1729:1729=')',<33>,55:73]
+) : RPAREN
+[@310,1730:1730=')',<33>,55:74]
+ut_string : ID
+[@311,1758:1766='ut_string',<25>,56:26]
+( : LPAREN
+[@312,1767:1767='(',<32>,56:35]
+"\n" : STRING
+[@313,1768:1771='"\n"',<27>,56:36]
+) : RPAREN
+[@314,1772:1772=')',<33>,56:40]
+; : SEMI
+[@315,1773:1773=';',<28>,56:41]
+out_string : ID
+[@316,1795:1804='out_string',<25>,57:20]
+( : LPAREN
+[@317,1805:1805='(',<32>,57:30]
+"Factorial iterativ: " : STRING
+[@318,1806:1827='"Factorial iterativ: "',<27>,57:31]
+) : RPAREN
+[@319,1828:1828=')',<33>,57:53]
+ut_int : ID
+[@320,1831:1836='ut_int',<25>,57:56]
+( : LPAREN
+[@321,1837:1837='(',<32>,57:62]
+fact_iter : ID
+[@322,1838:1846='fact_iter',<25>,57:63]
+( : LPAREN
+[@323,1847:1847='(',<32>,57:72]
+n : ID
+[@324,1848:1848='n',<25>,57:73]
+) : RPAREN
+[@325,1849:1849=')',<33>,57:74]
+) : RPAREN
+[@326,1850:1850=')',<33>,57:75]
+ut_string : ID
+[@327,1878:1886='ut_string',<25>,58:26]
+( : LPAREN
+[@328,1887:1887='(',<32>,58:35]
+"\n" : STRING
+[@329,1888:1891='"\n"',<27>,58:36]
+) : RPAREN
+[@330,1892:1892=')',<33>,58:40]
+; : SEMI
+[@331,1893:1893=';',<28>,58:41]
+} : RBRACE
+[@332,1911:1911='}',<35>,59:16]
+; : SEMI
+[@333,1912:1912=';',<28>,59:17]
+} : RBRACE
+[@334,1922:1922='}',<35>,60:8]
+} : RBRACE
+[@335,1928:1928='}',<35>,61:4]
+; : SEMI
+[@336,1929:1929=';',<28>,61:5]
+- : MINUS
+[@337,1936:1936='-',<37>,63:4]
+- : MINUS
+[@338,1937:1937='-',<37>,63:5]
+factorial : ID
+[@339,1939:1947='factorial',<25>,63:7]
+implementat : ID
+[@340,1949:1959='implementat',<25>,63:17]
+recursiv : ID
+[@341,1961:1968='recursiv',<25>,63:29]
+fact_rec : ID
+[@342,1974:1981='fact_rec',<25>,64:4]
+( : LPAREN
+[@343,1982:1982='(',<32>,64:12]
+n : ID
+[@344,1983:1983='n',<25>,64:13]
+: : COLON
+[@345,1985:1985=':',<29>,64:15]
+Int : TYPE
+[@346,1987:1989='Int',<22>,64:17]
+) : RPAREN
+[@347,1990:1990=')',<33>,64:20]
+: : COLON
+[@348,1992:1992=':',<29>,64:22]
+Int : TYPE
+[@349,1994:1996='Int',<22>,64:24]
+{ : LBRACE
+[@350,1998:1998='{',<34>,64:28]
+if : IF
+[@351,2008:2009='if',<2>,65:8]
+n : ID
+[@352,2011:2011='n',<25>,65:11]
+= : EQUAL
+[@353,2013:2013='=',<41>,65:13]
+0 : INT
+[@354,2015:2015='0',<23>,65:15]
+then : THEN
+[@355,2017:2020='then',<3>,65:17]
+1 : INT
+[@356,2022:2022='1',<23>,65:22]
+else : ELSE
+[@357,2024:2027='else',<4>,65:24]
+n : ID
+[@358,2029:2029='n',<25>,65:29]
+* : MUL
+[@359,2031:2031='*',<38>,65:31]
+fact_rec : ID
+[@360,2033:2040='fact_rec',<25>,65:33]
+( : LPAREN
+[@361,2041:2041='(',<32>,65:41]
+n : ID
+[@362,2042:2042='n',<25>,65:42]
+- : MINUS
+[@363,2044:2044='-',<37>,65:44]
+1 : INT
+[@364,2046:2046='1',<23>,65:46]
+) : RPAREN
+[@365,2047:2047=')',<33>,65:47]
+fi : FI
+[@366,2049:2050='fi',<5>,65:49]
+} : RBRACE
+[@367,2056:2056='}',<35>,66:4]
+; : SEMI
+[@368,2057:2057=';',<28>,66:5]
+- : MINUS
+[@369,2064:2064='-',<37>,68:4]
+- : MINUS
+[@370,2065:2065='-',<37>,68:5]
+factorial : ID
+[@371,2067:2075='factorial',<25>,68:7]
+implementat : ID
+[@372,2077:2087='implementat',<25>,68:17]
+iterativ : ID
+[@373,2089:2096='iterativ',<25>,68:29]
+fact_iter : ID
+[@374,2102:2110='fact_iter',<25>,69:4]
+( : LPAREN
+[@375,2111:2111='(',<32>,69:13]
+n : ID
+[@376,2112:2112='n',<25>,69:14]
+: : COLON
+[@377,2114:2114=':',<29>,69:16]
+Int : TYPE
+[@378,2116:2118='Int',<22>,69:18]
+) : RPAREN
+[@379,2119:2119=')',<33>,69:21]
+: : COLON
+[@380,2121:2121=':',<29>,69:23]
+Int : TYPE
+[@381,2123:2125='Int',<22>,69:25]
+{ : LBRACE
+[@382,2127:2127='{',<34>,69:29]
+let : LET
+[@383,2137:2139='let',<11>,70:8]
+res : ID
+[@384,2141:2143='res',<25>,70:12]
+: : COLON
+[@385,2145:2145=':',<29>,70:16]
+Int : TYPE
+[@386,2147:2149='Int',<22>,70:18]
+<- : ASSIGN
+[@387,2151:2152='<-',<31>,70:22]
+1 : INT
+[@388,2154:2154='1',<23>,70:25]
+- : MINUS
+[@389,2164:2164='-',<37>,71:8]
+- : MINUS
+[@390,2165:2165='-',<37>,71:9]
+Blocurile : TYPE_ID
+[@391,2167:2175='Blocurile',<24>,71:11]
+{ : LBRACE
+[@392,2177:2177='{',<34>,71:21]
+} : RBRACE
+[@393,2178:2178='}',<35>,71:22]
+sunt : ID
+[@394,2180:2183='sunt',<25>,71:24]
+v : ID
+[@395,2185:2185='v',<25>,71:29]
+zute : ID
+[@396,2187:2190='zute',<25>,71:31]
+ca : ID
+[@397,2192:2193='ca',<25>,71:36]
+expresii : ID
+[@398,2195:2202='expresii',<25>,71:39]
+Valoarea : TYPE_ID
+[@399,2205:2212='Valoarea',<24>,71:49]
+ultimei : ID
+[@400,2214:2220='ultimei',<25>,71:58]
+expresii : ID
+[@401,2222:2229='expresii',<25>,71:66]
+- : MINUS
+[@402,2239:2239='-',<37>,72:8]
+- : MINUS
+[@403,2240:2240='-',<37>,72:9]
+din : ID
+[@404,2242:2244='din',<25>,72:11]
+bloc : ID
+[@405,2246:2249='bloc',<25>,72:15]
+este : ID
+[@406,2251:2254='este',<25>,72:20]
+valoarea : ID
+[@407,2256:2263='valoarea',<25>,72:25]
+blocului : ID
+[@408,2265:2272='blocului',<25>,72:34]
+in : IN
+[@409,2284:2285='in',<12>,73:8]
+{ : LBRACE
+[@410,2299:2299='{',<34>,74:12]
+while : WHILE
+[@411,2317:2321='while',<14>,75:16]
+( : LPAREN
+[@412,2323:2323='(',<32>,75:22]
+not : NOT
+[@413,2324:2326='not',<7>,75:23]
+( : LPAREN
+[@414,2328:2328='(',<32>,75:27]
+n : ID
+[@415,2329:2329='n',<25>,75:28]
+= : EQUAL
+[@416,2331:2331='=',<41>,75:30]
+0 : INT
+[@417,2333:2333='0',<23>,75:32]
+) : RPAREN
+[@418,2334:2334=')',<33>,75:33]
+) : RPAREN
+[@419,2335:2335=')',<33>,75:34]
+loop : LOOP
+[@420,2337:2340='loop',<15>,75:36]
+{ : LBRACE
+[@421,2362:2362='{',<34>,76:20]
+res : ID
+[@422,2388:2390='res',<25>,77:24]
+<- : ASSIGN
+[@423,2392:2393='<-',<31>,77:28]
+res : ID
+[@424,2395:2397='res',<25>,77:31]
+* : MUL
+[@425,2399:2399='*',<38>,77:35]
+n : ID
+[@426,2401:2401='n',<25>,77:37]
+; : SEMI
+[@427,2402:2402=';',<28>,77:38]
+n : ID
+[@428,2428:2428='n',<25>,78:24]
+<- : ASSIGN
+[@429,2430:2431='<-',<31>,78:26]
+n : ID
+[@430,2433:2433='n',<25>,78:29]
+- : MINUS
+[@431,2435:2435='-',<37>,78:31]
+1 : INT
+[@432,2437:2437='1',<23>,78:33]
+; : SEMI
+[@433,2438:2438=';',<28>,78:34]
+} : RBRACE
+[@434,2460:2460='}',<35>,79:20]
+pool : POOL
+[@435,2478:2481='pool',<16>,80:16]
+; : SEMI
+[@436,2482:2482=';',<28>,80:20]
+res : ID
+[@437,2500:2502='res',<25>,81:16]
+; : SEMI
+[@438,2503:2503=';',<28>,81:19]
+} : RBRACE
+[@439,2517:2517='}',<35>,82:12]
+} : RBRACE
+[@440,2523:2523='}',<35>,83:4]
+; : SEMI
+[@441,2524:2524=';',<28>,83:5]
+} : RBRACE
+[@442,2526:2526='}',<35>,84:0]
+; : SEMI
+[@443,2527:2527=';',<28>,84:1]
+<EOF> : EOF
+[@444,2528:2527='<EOF>',<-1>,84:2]
+"17-big.cl", line 1:1, Syntax error: mismatched input '(' expecting 'class'
+Compilation halted

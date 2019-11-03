@@ -1,58 +1,66 @@
-line 1:0 token recognition error at: 'c'
-line 1:1 token recognition error at: 'l'
-line 1:2 token recognition error at: 'a'
-line 1:3 token recognition error at: 's'
-line 1:4 token recognition error at: 's'
-line 1:6 token recognition error at: 'A'
-line 1:8 token recognition error at: '{'
-line 2:4 token recognition error at: 'n'
-line 2:6 token recognition error at: ':'
-line 2:8 token recognition error at: 'I'
-line 2:9 token recognition error at: 'n'
-line 2:10 token recognition error at: 't'
-line 2:12 token recognition error at: '<'
-line 2:13 token recognition error at: '-'
-line 2:15 token recognition error at: '0'
-line 2:16 token recognition error at: ';'
-line 3:4 token recognition error at: 's'
-line 3:6 token recognition error at: ':'
-line 3:8 token recognition error at: 'S'
-line 3:9 token recognition error at: 't'
-line 3:10 token recognition error at: 'r'
-line 3:11 token recognition error at: 'i'
-line 3:12 token recognition error at: 'n'
-line 3:13 token recognition error at: 'g'
-line 3:15 token recognition error at: '<'
-line 3:16 token recognition error at: '-'
-line 3:18 token recognition error at: '"'
-line 3:19 token recognition error at: 'a'
-line 3:20 token recognition error at: 'b'
-line 3:21 token recognition error at: 'c'
-line 3:22 token recognition error at: '"'
-line 3:23 token recognition error at: ';'
-line 4:4 token recognition error at: 'b'
-line 4:6 token recognition error at: ':'
-line 4:8 token recognition error at: 'B'
-line 4:9 token recognition error at: 'o'
-line 4:10 token recognition error at: 'o'
-line 4:11 token recognition error at: 'l'
-line 4:13 token recognition error at: '<'
-line 4:14 token recognition error at: '-'
-line 4:16 token recognition error at: 'f'
-line 4:17 token recognition error at: 'a'
-line 4:18 token recognition error at: 'l'
-line 4:19 token recognition error at: 's'
-line 4:20 token recognition error at: 'e'
-line 4:21 token recognition error at: ';'
-line 5:4 token recognition error at: 'c'
-line 5:6 token recognition error at: ':'
-line 5:8 token recognition error at: 'B'
-line 5:9 token recognition error at: 'o'
-line 5:10 token recognition error at: 'o'
-line 5:11 token recognition error at: 'l'
-line 5:13 token recognition error at: '<'
-line 5:14 token recognition error at: '-'
-line 5:16 token recognition error at: 'b'
-line 5:17 token recognition error at: ';'
-line 6:0 token recognition error at: '}'
-line 6:1 token recognition error at: ';'
+there are no strings in CPLang, but shhh..
+class : CLASS
+[@0,0:4='class',<9>,1:0]
+A : TYPE_ID
+[@1,6:6='A',<24>,1:6]
+{ : LBRACE
+[@2,8:8='{',<34>,1:8]
+n : ID
+[@3,14:14='n',<25>,2:4]
+: : COLON
+[@4,16:16=':',<29>,2:6]
+Int : TYPE
+[@5,18:20='Int',<22>,2:8]
+<- : ASSIGN
+[@6,22:23='<-',<31>,2:12]
+0 : INT
+[@7,25:25='0',<23>,2:15]
+; : SEMI
+[@8,26:26=';',<28>,2:16]
+s : ID
+[@9,32:32='s',<25>,3:4]
+: : COLON
+[@10,34:34=':',<29>,3:6]
+String : TYPE_ID
+[@11,36:41='String',<24>,3:8]
+<- : ASSIGN
+[@12,43:44='<-',<31>,3:15]
+"abc" : STRING
+[@13,46:50='"abc"',<27>,3:18]
+; : SEMI
+[@14,51:51=';',<28>,3:23]
+b : ID
+[@15,57:57='b',<25>,4:4]
+: : COLON
+[@16,59:59=':',<29>,4:6]
+Bool : TYPE
+[@17,61:64='Bool',<22>,4:8]
+<- : ASSIGN
+[@18,66:67='<-',<31>,4:13]
+false : BOOL
+[@19,69:73='false',<21>,4:16]
+; : SEMI
+[@20,74:74=';',<28>,4:21]
+c : ID
+[@21,80:80='c',<25>,5:4]
+: : COLON
+[@22,82:82=':',<29>,5:6]
+Bool : TYPE
+[@23,84:87='Bool',<22>,5:8]
+<- : ASSIGN
+[@24,89:90='<-',<31>,5:13]
+b : ID
+[@25,92:92='b',<25>,5:16]
+; : SEMI
+[@26,93:93=';',<28>,5:17]
+} : RBRACE
+[@27,95:95='}',<35>,6:0]
+; : SEMI
+[@28,96:96=';',<28>,6:1]
+<EOF> : EOF
+[@29,97:96='<EOF>',<-1>,6:2]
+"05-literal-id.cl", line 2:9, Syntax error: mismatched input 'Int' expecting TYPE_ID
+"05-literal-id.cl", line 4:9, Syntax error: mismatched input 'Bool' expecting TYPE_ID
+"05-literal-id.cl", line 5:9, Syntax error: mismatched input 'Bool' expecting TYPE_ID
+"05-literal-id.cl", line 5:18, Syntax error: no viable alternative at input 'b;'
+Compilation halted
