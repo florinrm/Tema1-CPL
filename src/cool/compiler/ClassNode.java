@@ -5,8 +5,8 @@ import org.antlr.v4.runtime.Token;
 import java.util.ArrayList;
 
 public class ClassNode extends Expression {
-    private ClassNode parent;
     private String name;
+    private String parent;
     private ArrayList<Definition> definitions;
 
     public ClassNode(String name, Token token) {
@@ -15,7 +15,7 @@ public class ClassNode extends Expression {
         definitions = new ArrayList<>();
     }
 
-    public ClassNode(String name, ClassNode parent, Token token) {
+    public ClassNode(String name, String parent, Token token) {
         this(name, token);
         this.parent = parent;
     }
@@ -24,11 +24,11 @@ public class ClassNode extends Expression {
         definitions.add(def);
     }
 
-    public ClassNode getParent() {
+    public String getParent() {
         return parent;
     }
 
-    public void setParent(ClassNode parent) {
+    public void setParent(String parent) {
         this.parent = parent;
     }
 

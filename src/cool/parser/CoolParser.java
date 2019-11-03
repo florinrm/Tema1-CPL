@@ -26,12 +26,6 @@ public class CoolParser extends Parser {
 	public static final int
             RULE_program = 0, RULE_class_def = 1, RULE_definition = 2, RULE_declare_type = 3,
             RULE_expr = 4;
-	public static final String[] ruleNames = makeRuleNames();
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	@Deprecated
-	public static final String[] tokenNames;
 	public static final String _serializedATN =
             "\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\60\u00aa\4\2\t\2" +
                     "\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\3\2\3\2\3\2\6\2\20\n\2\r\2\16\2\21\3" +
@@ -89,6 +83,7 @@ public class CoolParser extends Parser {
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
             new PredictionContextCache();
+    public static final String[] ruleNames = makeRuleNames();
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
@@ -97,6 +92,18 @@ public class CoolParser extends Parser {
         RuntimeMetaData.checkVersion("4.7.2", RuntimeMetaData.VERSION);
     }
 
+    static {
+        _decisionToDFA = new DFA[_ATN.getNumberOfDecisions()];
+        for (int i = 0; i < _ATN.getNumberOfDecisions(); i++) {
+            _decisionToDFA[i] = new DFA(_ATN.getDecisionState(i), i);
+        }
+    }
+
+    /**
+     * @deprecated Use {@link #VOCABULARY} instead.
+     */
+    @Deprecated
+    public static final String[] tokenNames;
 	static {
 		tokenNames = new String[_SYMBOLIC_NAMES.length];
 		for (int i = 0; i < tokenNames.length; i++) {
@@ -110,25 +117,6 @@ public class CoolParser extends Parser {
 			}
 		}
 	}
-
-	static {
-		_decisionToDFA = new DFA[_ATN.getNumberOfDecisions()];
-		for (int i = 0; i < _ATN.getNumberOfDecisions(); i++) {
-			_decisionToDFA[i] = new DFA(_ATN.getDecisionState(i), i);
-		}
-	}
-
-    @Override
-    @Deprecated
-    public String[] getTokenNames() {
-        return tokenNames;
-    }
-
-    @Override
-
-    public Vocabulary getVocabulary() {
-        return VOCABULARY;
-    }
 
 	public CoolParser(TokenStream input) {
 		super(input);
@@ -163,24 +151,34 @@ public class CoolParser extends Parser {
 	}
 
 	@Override
+    @Deprecated
+    public String[] getTokenNames() {
+        return tokenNames;
+	}
+
+	@Override
+
+    public Vocabulary getVocabulary() {
+        return VOCABULARY;
+	}
+
+	@Override
     public String getGrammarFileName() {
-        return "CoolParser.g4";
-    }
+        return "CoolParser.g4"; }
 
 	@Override
     public String[] getRuleNames() {
         return ruleNames;
     }
 
-	@Override
+    @Override
     public String getSerializedATN() {
         return _serializedATN;
     }
 
-	@Override
+    @Override
     public ATN getATN() {
-        return _ATN;
-    }
+        return _ATN; }
 
 	public final ProgramContext program() throws RecognitionException {
 		ProgramContext _localctx = new ProgramContext(_ctx, getState());
@@ -188,7 +186,7 @@ public class CoolParser extends Parser {
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
-			{
+            {
                 setState(13);
                 _errHandler.sync(this);
                 _la = _input.LA(1);
@@ -208,7 +206,7 @@ public class CoolParser extends Parser {
                 } while (_la == CLASS);
                 setState(17);
                 match(EOF);
-			}
+            }
         } catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
@@ -225,7 +223,7 @@ public class CoolParser extends Parser {
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
-			{
+            {
                 setState(19);
                 match(CLASS);
                 setState(20);
@@ -263,7 +261,7 @@ public class CoolParser extends Parser {
                 }
                 setState(34);
                 match(RBRACE);
-			}
+            }
         } catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
@@ -285,7 +283,7 @@ public class CoolParser extends Parser {
                 case 1:
                     _localctx = new FunctionDefinitionContext(_localctx);
                     enterOuterAlt(_localctx, 1);
-				{
+                {
                     setState(36);
                     ((FunctionDefinitionContext) _localctx).nameFunc = match(ID);
                     setState(37);
@@ -334,7 +332,7 @@ public class CoolParser extends Parser {
                 case 2:
                     _localctx = new VariableDefinitionContext(_localctx);
                     enterOuterAlt(_localctx, 2);
-				{
+                {
                     setState(55);
                     declare_type();
                     setState(58);
@@ -347,11 +345,11 @@ public class CoolParser extends Parser {
                             setState(57);
                             ((VariableDefinitionContext) _localctx).initVal = expr(0);
                         }
-                    }
+				}
 
 				}
 				break;
-			}
+            }
         } catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
@@ -362,28 +360,32 @@ public class CoolParser extends Parser {
 		return _localctx;
 	}
 
-	public final Declare_typeContext declare_type() throws RecognitionException {
-		Declare_typeContext _localctx = new Declare_typeContext(_ctx, getState());
-		enterRule(_localctx, 6, RULE_declare_type);
-		try {
-			enterOuterAlt(_localctx, 1);
-			{
+    public final Declare_typeContext declare_type() throws RecognitionException {
+        Declare_typeContext _localctx = new Declare_typeContext(_ctx, getState());
+        enterRule(_localctx, 6, RULE_declare_type);
+        try {
+            enterOuterAlt(_localctx, 1);
+            {
                 setState(62);
                 ((Declare_typeContext) _localctx).name = match(ID);
                 setState(63);
                 match(COLON);
                 setState(64);
                 ((Declare_typeContext) _localctx).type = match(TYPE_ID);
-			}
+            }
         } catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
+            _localctx.exception = re;
+            _errHandler.reportError(this, re);
+            _errHandler.recover(this, re);
         } finally {
-			exitRule();
-		}
-		return _localctx;
-	}
+            exitRule();
+        }
+        return _localctx;
+    }
+
+    public final ExprContext expr() throws RecognitionException {
+        return expr(0);
+    }
 
 	private ExprContext expr(int _p) throws RecognitionException {
 		ParserRuleContext _parentctx = _ctx;
@@ -396,7 +398,7 @@ public class CoolParser extends Parser {
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
-			{
+            {
                 setState(151);
                 _errHandler.sync(this);
                 switch (getInterpreter().adaptivePredict(_input, 12, _ctx)) {
@@ -755,8 +757,8 @@ public class CoolParser extends Parser {
                     setState(166);
                     _errHandler.sync(this);
                     _alt = getInterpreter().adaptivePredict(_input, 14, _ctx);
-                }
 			}
+            }
         } catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
@@ -792,15 +794,14 @@ public class CoolParser extends Parser {
 		public List<Class_defContext> classesProgram = new ArrayList<Class_defContext>();
 		public ProgramContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
-		}
+        }
 
         public TerminalNode EOF() {
             return getToken(CoolParser.EOF, 0);
         }
 
         public List<TerminalNode> SEMI() {
-            return getTokens(CoolParser.SEMI);
-        }
+            return getTokens(CoolParser.SEMI); }
 
 		public TerminalNode SEMI(int i) {
 			return getToken(CoolParser.SEMI, i);
@@ -811,13 +812,12 @@ public class CoolParser extends Parser {
 		}
 
 		public Class_defContext class_def(int i) {
-            return getRuleContext(Class_defContext.class, i);
-		}
+            return getRuleContext(Class_defContext.class,i);
+        }
 
         @Override
         public int getRuleIndex() {
-            return RULE_program;
-        }
+            return RULE_program; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
             if (listener instanceof CoolParserListener) ((CoolParserListener) listener).enterProgram(this);
@@ -828,8 +828,7 @@ public class CoolParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-            if (visitor instanceof CoolParserVisitor)
-                return ((CoolParserVisitor<? extends T>) visitor).visitProgram(this);
+            if (visitor instanceof CoolParserVisitor) return ((CoolParserVisitor<? extends T>) visitor).visitProgram(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -841,7 +840,7 @@ public class CoolParser extends Parser {
 		public List<DefinitionContext> definitions = new ArrayList<DefinitionContext>();
 		public Class_defContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
-		}
+        }
 
         public TerminalNode CLASS() {
             return getToken(CoolParser.CLASS, 0);
@@ -856,20 +855,18 @@ public class CoolParser extends Parser {
         }
 
         public List<TerminalNode> TYPE_ID() {
-            return getTokens(CoolParser.TYPE_ID);
-        }
+            return getTokens(CoolParser.TYPE_ID); }
 
 		public TerminalNode TYPE_ID(int i) {
 			return getToken(CoolParser.TYPE_ID, i);
-		}
+        }
 
         public TerminalNode INHERITS() {
             return getToken(CoolParser.INHERITS, 0);
         }
 
         public List<TerminalNode> SEMI() {
-            return getTokens(CoolParser.SEMI);
-        }
+            return getTokens(CoolParser.SEMI); }
 
 		public TerminalNode SEMI(int i) {
 			return getToken(CoolParser.SEMI, i);
@@ -880,13 +877,12 @@ public class CoolParser extends Parser {
 		}
 
 		public DefinitionContext definition(int i) {
-            return getRuleContext(DefinitionContext.class, i);
-		}
+            return getRuleContext(DefinitionContext.class,i);
+        }
 
         @Override
         public int getRuleIndex() {
-            return RULE_class_def;
-        }
+            return RULE_class_def; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
             if (listener instanceof CoolParserListener) ((CoolParserListener) listener).enterClass_def(this);
@@ -897,24 +893,22 @@ public class CoolParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-            if (visitor instanceof CoolParserVisitor)
-                return ((CoolParserVisitor<? extends T>) visitor).visitClass_def(this);
+            if (visitor instanceof CoolParserVisitor) return ((CoolParserVisitor<? extends T>) visitor).visitClass_def(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
 	public static class DefinitionContext extends ParserRuleContext {
-		public DefinitionContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
+        public DefinitionContext(ParserRuleContext parent, int invokingState) {
+            super(parent, invokingState);
+        }
 
         public DefinitionContext() {
         }
 
         @Override
         public int getRuleIndex() {
-            return RULE_definition;
-        }
+            return RULE_definition; }
 
 		public void copyFrom(DefinitionContext ctx) {
 			super.copyFrom(ctx);
@@ -957,11 +951,10 @@ public class CoolParser extends Parser {
         }
 
         public TerminalNode TYPE_ID() {
-            return getToken(CoolParser.TYPE_ID, 0);
-        }
+            return getToken(CoolParser.TYPE_ID, 0); }
 
 		public ExprContext expr() {
-            return getRuleContext(ExprContext.class, 0);
+            return getRuleContext(ExprContext.class,0);
 		}
 
 		public List<Declare_typeContext> declare_type() {
@@ -969,12 +962,11 @@ public class CoolParser extends Parser {
 		}
 
 		public Declare_typeContext declare_type(int i) {
-            return getRuleContext(Declare_typeContext.class, i);
-		}
+            return getRuleContext(Declare_typeContext.class,i);
+        }
 
         public List<TerminalNode> COMMA() {
-            return getTokens(CoolParser.COMMA);
-        }
+            return getTokens(CoolParser.COMMA); }
 
 		public TerminalNode COMMA(int i) {
 			return getToken(CoolParser.COMMA, i);
@@ -1000,19 +992,17 @@ public class CoolParser extends Parser {
 		public ExprContext initVal;
 
         public VariableDefinitionContext(DefinitionContext ctx) {
-            copyFrom(ctx);
-        }
+            copyFrom(ctx); }
 
 		public Declare_typeContext declare_type() {
-            return getRuleContext(Declare_typeContext.class, 0);
-		}
-
-        public TerminalNode ASSIGN() {
-            return getToken(CoolParser.ASSIGN, 0);
+            return getRuleContext(Declare_typeContext.class,0);
         }
 
+        public TerminalNode ASSIGN() {
+            return getToken(CoolParser.ASSIGN, 0); }
+
 		public ExprContext expr() {
-            return getRuleContext(ExprContext.class, 0);
+            return getRuleContext(ExprContext.class,0);
 		}
 
 		@Override
@@ -1036,7 +1026,7 @@ public class CoolParser extends Parser {
 		public Token type;
 		public Declare_typeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
-		}
+        }
 
         public TerminalNode COLON() {
             return getToken(CoolParser.COLON, 0);
@@ -1052,8 +1042,7 @@ public class CoolParser extends Parser {
 
         @Override
         public int getRuleIndex() {
-            return RULE_declare_type;
-        }
+            return RULE_declare_type; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
             if (listener instanceof CoolParserListener) ((CoolParserListener) listener).enterDeclare_type(this);
@@ -1071,17 +1060,16 @@ public class CoolParser extends Parser {
 	}
 
 	public static class ExprContext extends ParserRuleContext {
-		public ExprContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
+        public ExprContext(ParserRuleContext parent, int invokingState) {
+            super(parent, invokingState);
+        }
 
         public ExprContext() {
         }
 
         @Override
         public int getRuleIndex() {
-            return RULE_expr;
-        }
+            return RULE_expr; }
 
 		public void copyFrom(ExprContext ctx) {
 			super.copyFrom(ctx);
@@ -1096,11 +1084,10 @@ public class CoolParser extends Parser {
         }
 
         public TerminalNode NOT() {
-            return getToken(CoolParser.NOT, 0);
-        }
+            return getToken(CoolParser.NOT, 0); }
 
 		public ExprContext expr() {
-            return getRuleContext(ExprContext.class, 0);
+            return getRuleContext(ExprContext.class,0);
 		}
 
 		@Override
@@ -1113,8 +1100,7 @@ public class CoolParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-            if (visitor instanceof CoolParserVisitor)
-                return ((CoolParserVisitor<? extends T>) visitor).visitNegation(this);
+            if (visitor instanceof CoolParserVisitor) return ((CoolParserVisitor<? extends T>) visitor).visitNegation(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1125,16 +1111,15 @@ public class CoolParser extends Parser {
 		public ExprContext rightBranch;
 
         public CompareContext(ExprContext ctx) {
-            copyFrom(ctx);
-        }
+            copyFrom(ctx); }
 
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
 		}
 
 		public ExprContext expr(int i) {
-            return getRuleContext(ExprContext.class, i);
-		}
+            return getRuleContext(ExprContext.class,i);
+        }
 
         public TerminalNode LE() {
             return getToken(CoolParser.LE, 0);
@@ -1145,8 +1130,7 @@ public class CoolParser extends Parser {
         }
 
         public TerminalNode EQUAL() {
-            return getToken(CoolParser.EQUAL, 0);
-        }
+            return getToken(CoolParser.EQUAL, 0); }
 
 		@Override
 		public void enterRule(ParseTreeListener listener) {
@@ -1158,8 +1142,7 @@ public class CoolParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-            if (visitor instanceof CoolParserVisitor)
-                return ((CoolParserVisitor<? extends T>) visitor).visitCompare(this);
+            if (visitor instanceof CoolParserVisitor) return ((CoolParserVisitor<? extends T>) visitor).visitCompare(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1177,11 +1160,10 @@ public class CoolParser extends Parser {
         }
 
         public TerminalNode ID() {
-            return getToken(CoolParser.ID, 0);
-        }
+            return getToken(CoolParser.ID, 0); }
 
 		public ExprContext expr() {
-            return getRuleContext(ExprContext.class, 0);
+            return getRuleContext(ExprContext.class,0);
 		}
 
 		@Override
@@ -1208,11 +1190,10 @@ public class CoolParser extends Parser {
         }
 
         public TerminalNode ISVOID() {
-            return getToken(CoolParser.ISVOID, 0);
-        }
+            return getToken(CoolParser.ISVOID, 0); }
 
 		public ExprContext expr() {
-            return getRuleContext(ExprContext.class, 0);
+            return getRuleContext(ExprContext.class,0);
 		}
 
 		@Override
@@ -1236,8 +1217,7 @@ public class CoolParser extends Parser {
         }
 
         public TerminalNode STRING() {
-            return getToken(CoolParser.STRING, 0);
-        }
+            return getToken(CoolParser.STRING, 0); }
 
 		@Override
 		public void enterRule(ParseTreeListener listener) {
@@ -1249,8 +1229,7 @@ public class CoolParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-            if (visitor instanceof CoolParserVisitor)
-                return ((CoolParserVisitor<? extends T>) visitor).visitString(this);
+            if (visitor instanceof CoolParserVisitor) return ((CoolParserVisitor<? extends T>) visitor).visitString(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1261,24 +1240,22 @@ public class CoolParser extends Parser {
 		public ExprContext rightBranch;
 
         public MinusPlusContext(ExprContext ctx) {
-            copyFrom(ctx);
-        }
+            copyFrom(ctx); }
 
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
 		}
 
 		public ExprContext expr(int i) {
-            return getRuleContext(ExprContext.class, i);
-		}
+            return getRuleContext(ExprContext.class,i);
+        }
 
         public TerminalNode PLUS() {
             return getToken(CoolParser.PLUS, 0);
         }
 
         public TerminalNode MINUS() {
-            return getToken(CoolParser.MINUS, 0);
-        }
+            return getToken(CoolParser.MINUS, 0); }
 
 		@Override
 		public void enterRule(ParseTreeListener listener) {
@@ -1290,8 +1267,7 @@ public class CoolParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-            if (visitor instanceof CoolParserVisitor)
-                return ((CoolParserVisitor<? extends T>) visitor).visitMinusPlus(this);
+            if (visitor instanceof CoolParserVisitor) return ((CoolParserVisitor<? extends T>) visitor).visitMinusPlus(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1308,11 +1284,10 @@ public class CoolParser extends Parser {
         }
 
         public TerminalNode RPAREN() {
-            return getToken(CoolParser.RPAREN, 0);
-        }
+            return getToken(CoolParser.RPAREN, 0); }
 
 		public ExprContext expr() {
-            return getRuleContext(ExprContext.class, 0);
+            return getRuleContext(ExprContext.class,0);
 		}
 
 		@Override
@@ -1348,15 +1323,14 @@ public class CoolParser extends Parser {
         }
 
         public TerminalNode POOL() {
-            return getToken(CoolParser.POOL, 0);
-        }
+            return getToken(CoolParser.POOL, 0); }
 
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
 		}
 
 		public ExprContext expr(int i) {
-            return getRuleContext(ExprContext.class, i);
+            return getRuleContext(ExprContext.class,i);
 		}
 
 		@Override
@@ -1369,8 +1343,7 @@ public class CoolParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-            if (visitor instanceof CoolParserVisitor)
-                return ((CoolParserVisitor<? extends T>) visitor).visitWhile(this);
+            if (visitor instanceof CoolParserVisitor) return ((CoolParserVisitor<? extends T>) visitor).visitWhile(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1392,8 +1365,7 @@ public class CoolParser extends Parser {
         }
 
         public List<TerminalNode> SEMI() {
-            return getTokens(CoolParser.SEMI);
-        }
+            return getTokens(CoolParser.SEMI); }
 
 		public TerminalNode SEMI(int i) {
 			return getToken(CoolParser.SEMI, i);
@@ -1404,7 +1376,7 @@ public class CoolParser extends Parser {
 		}
 
 		public ExprContext expr(int i) {
-            return getRuleContext(ExprContext.class, i);
+            return getRuleContext(ExprContext.class,i);
 		}
 
 		@Override
@@ -1428,8 +1400,7 @@ public class CoolParser extends Parser {
         }
 
         public TerminalNode FLOAT() {
-            return getToken(CoolParser.FLOAT, 0);
-        }
+            return getToken(CoolParser.FLOAT, 0); }
 
 		@Override
 		public void enterRule(ParseTreeListener listener) {
@@ -1441,8 +1412,7 @@ public class CoolParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-            if (visitor instanceof CoolParserVisitor)
-                return ((CoolParserVisitor<? extends T>) visitor).visitFloat(this);
+            if (visitor instanceof CoolParserVisitor) return ((CoolParserVisitor<? extends T>) visitor).visitFloat(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1453,8 +1423,7 @@ public class CoolParser extends Parser {
         }
 
         public TerminalNode INT() {
-            return getToken(CoolParser.INT, 0);
-        }
+            return getToken(CoolParser.INT, 0); }
 
 		@Override
 		public void enterRule(ParseTreeListener listener) {
@@ -1477,24 +1446,22 @@ public class CoolParser extends Parser {
 		public ExprContext rightBranch;
 
         public MulDivContext(ExprContext ctx) {
-            copyFrom(ctx);
-        }
+            copyFrom(ctx); }
 
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
 		}
 
 		public ExprContext expr(int i) {
-            return getRuleContext(ExprContext.class, i);
-		}
+            return getRuleContext(ExprContext.class,i);
+        }
 
         public TerminalNode MUL() {
             return getToken(CoolParser.MUL, 0);
         }
 
         public TerminalNode DIV() {
-            return getToken(CoolParser.DIV, 0);
-        }
+            return getToken(CoolParser.DIV, 0); }
 
 		@Override
 		public void enterRule(ParseTreeListener listener) {
@@ -1506,8 +1473,7 @@ public class CoolParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-            if (visitor instanceof CoolParserVisitor)
-                return ((CoolParserVisitor<? extends T>) visitor).visitMulDiv(this);
+            if (visitor instanceof CoolParserVisitor) return ((CoolParserVisitor<? extends T>) visitor).visitMulDiv(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1518,8 +1484,7 @@ public class CoolParser extends Parser {
         }
 
         public TerminalNode BOOL() {
-            return getToken(CoolParser.BOOL, 0);
-        }
+            return getToken(CoolParser.BOOL, 0); }
 
 		@Override
 		public void enterRule(ParseTreeListener listener) {
@@ -1531,15 +1496,10 @@ public class CoolParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-            if (visitor instanceof CoolParserVisitor)
-                return ((CoolParserVisitor<? extends T>) visitor).visitBoolean(this);
+            if (visitor instanceof CoolParserVisitor) return ((CoolParserVisitor<? extends T>) visitor).visitBoolean(this);
 			else return visitor.visitChildren(this);
 		}
 	}
-
-    public final ExprContext expr() throws RecognitionException {
-        return expr(0);
-    }
 
 	public static class FunctionCallContext extends ExprContext {
 		public Token name;
@@ -1559,20 +1519,18 @@ public class CoolParser extends Parser {
         }
 
         public TerminalNode ID() {
-            return getToken(CoolParser.ID, 0);
-        }
+            return getToken(CoolParser.ID, 0); }
 
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
 		}
 
 		public ExprContext expr(int i) {
-            return getRuleContext(ExprContext.class, i);
-		}
+            return getRuleContext(ExprContext.class,i);
+        }
 
         public TerminalNode COMMA() {
-            return getToken(CoolParser.COMMA, 0);
-        }
+            return getToken(CoolParser.COMMA, 0); }
 
 		@Override
 		public void enterRule(ParseTreeListener listener) {
@@ -1598,11 +1556,10 @@ public class CoolParser extends Parser {
         }
 
         public TerminalNode NEGATION() {
-            return getToken(CoolParser.NEGATION, 0);
-        }
+            return getToken(CoolParser.NEGATION, 0); }
 
 		public ExprContext expr() {
-            return getRuleContext(ExprContext.class, 0);
+            return getRuleContext(ExprContext.class,0);
 		}
 
 		@Override
@@ -1635,15 +1592,14 @@ public class CoolParser extends Parser {
         }
 
         public TerminalNode IN() {
-            return getToken(CoolParser.IN, 0);
-        }
+            return getToken(CoolParser.IN, 0); }
 
 		public List<Declare_typeContext> declare_type() {
 			return getRuleContexts(Declare_typeContext.class);
 		}
 
 		public Declare_typeContext declare_type(int i) {
-            return getRuleContext(Declare_typeContext.class, i);
+            return getRuleContext(Declare_typeContext.class,i);
 		}
 
 		public List<ExprContext> expr() {
@@ -1651,20 +1607,18 @@ public class CoolParser extends Parser {
 		}
 
 		public ExprContext expr(int i) {
-            return getRuleContext(ExprContext.class, i);
-		}
+            return getRuleContext(ExprContext.class,i);
+        }
 
         public List<TerminalNode> ASSIGN() {
-            return getTokens(CoolParser.ASSIGN);
-        }
+            return getTokens(CoolParser.ASSIGN); }
 
 		public TerminalNode ASSIGN(int i) {
 			return getToken(CoolParser.ASSIGN, i);
-		}
+        }
 
         public List<TerminalNode> COMMA() {
-            return getTokens(CoolParser.COMMA);
-        }
+            return getTokens(CoolParser.COMMA); }
 
 		public TerminalNode COMMA(int i) {
 			return getToken(CoolParser.COMMA, i);
@@ -1703,15 +1657,14 @@ public class CoolParser extends Parser {
         }
 
         public TerminalNode ELSE() {
-            return getToken(CoolParser.ELSE, 0);
-        }
+            return getToken(CoolParser.ELSE, 0); }
 
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
 		}
 
 		public ExprContext expr(int i) {
-            return getRuleContext(ExprContext.class, i);
+            return getRuleContext(ExprContext.class,i);
 		}
 
 		@Override
@@ -1748,28 +1701,25 @@ public class CoolParser extends Parser {
         }
 
         public TerminalNode ESAC() {
-            return getToken(CoolParser.ESAC, 0);
-        }
+            return getToken(CoolParser.ESAC, 0); }
 
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
 		}
 
 		public ExprContext expr(int i) {
-            return getRuleContext(ExprContext.class, i);
-		}
+            return getRuleContext(ExprContext.class,i);
+        }
 
         public List<TerminalNode> RESULTS() {
-            return getTokens(CoolParser.RESULTS);
-        }
+            return getTokens(CoolParser.RESULTS); }
 
 		public TerminalNode RESULTS(int i) {
 			return getToken(CoolParser.RESULTS, i);
-		}
+        }
 
         public List<TerminalNode> SEMI() {
-            return getTokens(CoolParser.SEMI);
-        }
+            return getTokens(CoolParser.SEMI); }
 
 		public TerminalNode SEMI(int i) {
 			return getToken(CoolParser.SEMI, i);
@@ -1780,7 +1730,7 @@ public class CoolParser extends Parser {
 		}
 
 		public Declare_typeContext declare_type(int i) {
-            return getRuleContext(Declare_typeContext.class, i);
+            return getRuleContext(Declare_typeContext.class,i);
 		}
 
 		@Override
@@ -1808,8 +1758,7 @@ public class CoolParser extends Parser {
         }
 
         public TerminalNode TYPE_ID() {
-            return getToken(CoolParser.TYPE_ID, 0);
-        }
+            return getToken(CoolParser.TYPE_ID, 0); }
 
 		@Override
 		public void enterRule(ParseTreeListener listener) {

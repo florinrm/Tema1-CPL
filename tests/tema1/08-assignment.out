@@ -1,95 +1,20 @@
-class : CLASS
-[@0,0:4='class',<9>,1:0]
-A : TYPE_ID
-[@1,6:6='A',<24>,1:6]
-{ : LBRACE
-[@2,8:8='{',<34>,1:8]
-x : ID
-[@3,14:14='x',<25>,2:4]
-: : COLON
-[@4,16:16=':',<29>,2:6]
-Int : TYPE
-[@5,18:20='Int',<22>,2:8]
-; : SEMI
-[@6,21:21=';',<28>,2:11]
-f : ID
-[@7,32:32='f',<25>,4:4]
-( : LPAREN
-[@8,33:33='(',<32>,4:5]
-y : ID
-[@9,34:34='y',<25>,4:6]
-: : COLON
-[@10,36:36=':',<29>,4:8]
-Int : TYPE
-[@11,38:40='Int',<22>,4:10]
-) : RPAREN
-[@12,41:41=')',<33>,4:13]
-: : COLON
-[@13,43:43=':',<29>,4:15]
-Int : TYPE
-[@14,45:47='Int',<22>,4:17]
-{ : LBRACE
-[@15,49:49='{',<34>,4:21]
-x : ID
-[@16,59:59='x',<25>,5:8]
-<- : ASSIGN
-[@17,61:62='<-',<31>,5:10]
-y : ID
-[@18,64:64='y',<25>,5:13]
-} : RBRACE
-[@19,70:70='}',<35>,6:4]
-; : SEMI
-[@20,71:71=';',<28>,6:5]
-f : ID
-[@21,82:82='f',<25>,8:4]
-( : LPAREN
-[@22,83:83='(',<32>,8:5]
-y : ID
-[@23,84:84='y',<25>,8:6]
-: : COLON
-[@24,86:86=':',<29>,8:8]
-Int : TYPE
-[@25,88:90='Int',<22>,8:10]
-, : COMMA
-[@26,91:91=',',<30>,8:13]
-z : ID
-[@27,93:93='z',<25>,8:15]
-: : COLON
-[@28,95:95=':',<29>,8:17]
-Int : TYPE
-[@29,97:99='Int',<22>,8:19]
-) : RPAREN
-[@30,100:100=')',<33>,8:22]
-: : COLON
-[@31,102:102=':',<29>,8:24]
-Int : TYPE
-[@32,104:106='Int',<22>,8:26]
-{ : LBRACE
-[@33,108:108='{',<34>,8:30]
-x : ID
-[@34,118:118='x',<25>,9:8]
-<- : ASSIGN
-[@35,120:121='<-',<31>,9:10]
-y : ID
-[@36,123:123='y',<25>,9:13]
-<- : ASSIGN
-[@37,125:126='<-',<31>,9:15]
-z : ID
-[@38,128:128='z',<25>,9:18]
-} : RBRACE
-[@39,134:134='}',<35>,10:4]
-; : SEMI
-[@40,135:135=';',<28>,10:5]
-} : RBRACE
-[@41,137:137='}',<35>,11:0]
-; : SEMI
-[@42,138:138=';',<28>,11:1]
-<EOF> : EOF
-[@43,139:138='<EOF>',<-1>,11:2]
 "08-assignment.cl", line 2:9, Syntax error: mismatched input 'Int' expecting TYPE_ID
 "08-assignment.cl", line 4:11, Syntax error: mismatched input 'Int' expecting TYPE_ID
 "08-assignment.cl", line 4:18, Syntax error: mismatched input 'Int' expecting TYPE_ID
 "08-assignment.cl", line 8:11, Syntax error: mismatched input 'Int' expecting TYPE_ID
 "08-assignment.cl", line 8:20, Syntax error: mismatched input 'Int' expecting TYPE_ID
 "08-assignment.cl", line 8:27, Syntax error: mismatched input 'Int' expecting TYPE_ID
-Compilation halted
+Exception in thread "main" java.lang.NullPointerException
+	at org.antlr.v4.runtime.tree.AbstractParseTreeVisitor.visit(AbstractParseTreeVisitor.java:18)
+	at cool.compiler.Compiler$2.visitVariableDefinition(Compiler.java:151)
+	at cool.compiler.Compiler$2.visitVariableDefinition(Compiler.java:115)
+	at cool.parser.CoolParser$VariableDefinitionContext.accept(CoolParser.java:350)
+	at cool.compiler.Compiler$2.visitClass_def(Compiler.java:137)
+	at cool.compiler.Compiler$2.visitClass_def(Compiler.java:115)
+	at cool.parser.CoolParser$Class_defContext.accept(CoolParser.java:216)
+	at cool.compiler.Compiler$2.visitProgram(Compiler.java:121)
+	at cool.compiler.Compiler$2.visitProgram(Compiler.java:115)
+	at cool.parser.CoolParser$ProgramContext.accept(CoolParser.java:135)
+	at org.antlr.v4.runtime.tree.AbstractParseTreeVisitor.visit(AbstractParseTreeVisitor.java:18)
+	at cool.compiler.Compiler.main(Compiler.java:363)
+	at cool.tester.Tester1.main(Tester1.java:31)
