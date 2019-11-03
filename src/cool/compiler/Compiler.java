@@ -126,6 +126,11 @@ public class Compiler {
                 }
 
                 @Override
+                public ASTNode visitId(CoolParser.IdContext ctx) {
+                    return new Id(ctx.ID().getSymbol());
+                }
+
+                @Override
                 public ASTNode visitClass_def(CoolParser.Class_defContext ctx) {
                     //return super.visitClass_def(ctx);
                     ClassNode node = new ClassNode(ctx.class_type.getText(),
@@ -172,22 +177,23 @@ public class Compiler {
 
                 @Override
                 public ASTNode visitCompare(CoolParser.CompareContext ctx) {
-                    return super.visitCompare(ctx);
+                    return new CompareNode((Expression) visit(ctx.leftBranch), ctx.op,
+                            (Expression) visit(ctx.rightBranch), ctx.start);
                 }
 
                 @Override
                 public ASTNode visitVariableAssignment(CoolParser.VariableAssignmentContext ctx) {
-                    return super.visitVariableAssignment(ctx);
+                    return new AssignmentNode(ctx.name.getText(), (Expression) visit(ctx.value), ctx.start);
                 }
 
                 @Override
                 public ASTNode visitVoid(CoolParser.VoidContext ctx) {
-                    return super.visitVoid(ctx);
+                    return new VoidNode(ctx.start, (Expression) visit(ctx.expression));
                 }
 
                 @Override
                 public ASTNode visitString(CoolParser.StringContext ctx) {
-                    return super.visitString(ctx);
+                    return new StringNode(ctx.STRING().getSymbol());
                 }
 
                 @Override
@@ -208,17 +214,12 @@ public class Compiler {
 
                 @Override
                 public ASTNode visitWhile(CoolParser.WhileContext ctx) {
-                    return super.visitWhile(ctx);
+                    return new WhileNode((Expression) visit(ctx.condition), (Expression) visit(ctx.body), ctx.start);
                 }
 
                 @Override
                 public ASTNode visitBody(CoolParser.BodyContext ctx) {
                     return super.visitBody(ctx);
-                }
-
-                @Override
-                public ASTNode visitFloat(CoolParser.FloatContext ctx) {
-                    return super.visitFloat(ctx);
                 }
 
                 @Override
@@ -249,7 +250,7 @@ public class Compiler {
 
                 @Override
                 public ASTNode visitUnaryNegation(CoolParser.UnaryNegationContext ctx) {
-                    return super.visitUnaryNegation(ctx);
+                    return new UnaryMinusNode((Expression) visit(ctx.expression), ctx.start);
                 }
 
                 @Override
@@ -273,7 +274,7 @@ public class Compiler {
 
                 @Override
                 public ASTNode visitInstantiation(CoolParser.InstantiationContext ctx) {
-                    return super.visitInstantiation(ctx);
+                    return new NewNode(ctx.start, ctx.TYPE_ID().getText());
                 }
             };
 
@@ -300,6 +301,12 @@ public class Compiler {
 
                 @Override
                 public Void visit(If iff) {
+                    printIndent("if");
+                    indent++;
+                    iff.getCond().accept(this);
+                    iff.getThenBranch().accept(this);
+                    iff.getElseBranch().accept(this);
+                    indent--;
                     return null;
                 }
 
@@ -352,6 +359,11 @@ public class Compiler {
 
                 @Override
                 public Void visit(CompareNode comp) {
+                    printIndent(comp.getOp().getText());
+                    indent++;
+                    comp.getLeft().accept(this);
+                    comp.getRight().accept(this);
+                    indent--;
                     return null;
                 }
 
@@ -378,7 +390,7 @@ public class Compiler {
 
                 @Override
                 public Void visit(UnaryMinusNode minus) {
-                    printIndent("~");
+                    printIndent("not");
                     indent++;
                     minus.getNested().accept(this);
                     indent--;
@@ -395,7 +407,9 @@ public class Compiler {
 
                     indent++;
                     printIndent(var.getNameToken().getText());
-                    printIndent(var.getTypeToken().getText());
+                    if (var.getTypeToken() != null) {
+                        printIndent(var.getTypeToken().getText());
+                    }
                     if (var.getInitExpr() != null) {
                         var.getInitExpr().accept(this);
                     }
@@ -406,6 +420,11 @@ public class Compiler {
 
                 @Override
                 public Void visit(AssignmentNode assignmentNode) {
+                    printIndent("<-");
+                    indent++;
+                    printIndent(assignmentNode.getVarName());
+                    assignmentNode.getValue().accept(this);
+                    indent--;
                     return null;
                 }
 
@@ -420,6 +439,40 @@ public class Compiler {
                     for (var def : classNode.getDefinitions()) {
                         def.accept(this);
                     }
+                    indent--;
+                    return null;
+                }
+
+                @Override
+                public Void visit(StringNode stringNode) {
+                    printIndent(stringNode.token.getText().replace("\"", ""));
+                    return null;
+                }
+
+                @Override
+                public Void visit(WhileNode whileNode) {
+                    printIndent("while");
+                    indent++;
+                    whileNode.getCondition().accept(this);
+                    whileNode.getBody().accept(this);
+                    indent--;
+                    return null;
+                }
+
+                @Override
+                public Void visit(VoidNode voidNode) {
+                    printIndent("isvoid");
+                    indent++;
+                    voidNode.getExpression().accept(this);
+                    indent--;
+                    return null;
+                }
+
+                @Override
+                public Void visit(NewNode newNode) {
+                    printIndent("new");
+                    indent++;
+                    printIndent(newNode.getType());
                     indent--;
                     return null;
                 }

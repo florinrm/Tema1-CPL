@@ -30,4 +30,14 @@ public interface ASTVisitor<T> {
     T visit(AssignmentNode assignmentNode);
 
     T visit(ClassNode classNode);
+
+    T visit(StringNode stringNode);
+
+    T visit(WhileNode whileNode);
+
+    T visit(VoidNode voidNode);
+
+    T visit(NewNode newNode);
+
+    T visit(LetNode letNode);
 }

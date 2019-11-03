@@ -42,4 +42,13 @@ public class MultDivNode extends Expression {
     public <T> T accept(ASTVisitor<T> visitor) {
         return visitor.visit(this);
     }
+
+    @Override
+    public String toString() {
+        return "MultDivNode{" +
+                "left=" + left.token.getText() +
+                ", right=" + right.token.getText() +
+                ", op=" + op.getText() +
+                '}';
+    }
 }

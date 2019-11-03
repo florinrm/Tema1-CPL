@@ -158,16 +158,6 @@ public class CoolParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> implem
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
     @Override
-    public T visitFloat(CoolParser.FloatContext ctx) {
-        return visitChildren(ctx);
-    }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-    @Override
     public T visitInt(CoolParser.IntContext ctx) {
         return visitChildren(ctx);
     }
@@ -219,6 +209,16 @@ public class CoolParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> implem
 	 */
     @Override
     public T visitLet(CoolParser.LetContext ctx) {
+        return visitChildren(ctx);
+    }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+    @Override
+    public T visitId(CoolParser.IdContext ctx) {
         return visitChildren(ctx);
     }
 	/**

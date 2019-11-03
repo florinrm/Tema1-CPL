@@ -241,22 +241,6 @@ public class CoolParserBaseListener implements CoolParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
     @Override
-    public void enterFloat(CoolParser.FloatContext ctx) {
-    }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-    @Override
-    public void exitFloat(CoolParser.FloatContext ctx) {
-    }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-    @Override
     public void enterInt(CoolParser.IntContext ctx) {
     }
 	/**
@@ -346,6 +330,22 @@ public class CoolParserBaseListener implements CoolParserListener {
 	 */
     @Override
     public void exitLet(CoolParser.LetContext ctx) {
+    }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+    @Override
+    public void enterId(CoolParser.IdContext ctx) {
+    }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+    @Override
+    public void exitId(CoolParser.IdContext ctx) {
     }
 	/**
 	 * {@inheritDoc}
