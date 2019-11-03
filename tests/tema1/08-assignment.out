@@ -1,20 +1,26 @@
-"08-assignment.cl", line 2:9, Syntax error: mismatched input 'Int' expecting TYPE_ID
-"08-assignment.cl", line 4:11, Syntax error: mismatched input 'Int' expecting TYPE_ID
-"08-assignment.cl", line 4:18, Syntax error: mismatched input 'Int' expecting TYPE_ID
-"08-assignment.cl", line 8:11, Syntax error: mismatched input 'Int' expecting TYPE_ID
-"08-assignment.cl", line 8:20, Syntax error: mismatched input 'Int' expecting TYPE_ID
-"08-assignment.cl", line 8:27, Syntax error: mismatched input 'Int' expecting TYPE_ID
+"08-assignment.cl", line 6:5, Syntax error: no viable alternative at input 'y}'
+"08-assignment.cl", line 10:5, Syntax error: no viable alternative at input 'z}'
+program
+	class
+		A
+		attribute
+			x
+			Int
+		method
+			f
+			formal
+				y
+				Int
+			Int
 Exception in thread "main" java.lang.NullPointerException
-	at org.antlr.v4.runtime.tree.AbstractParseTreeVisitor.visit(AbstractParseTreeVisitor.java:18)
-	at cool.compiler.Compiler$2.visitVariableDefinition(Compiler.java:151)
-	at cool.compiler.Compiler$2.visitVariableDefinition(Compiler.java:115)
-	at cool.parser.CoolParser$VariableDefinitionContext.accept(CoolParser.java:350)
-	at cool.compiler.Compiler$2.visitClass_def(Compiler.java:137)
-	at cool.compiler.Compiler$2.visitClass_def(Compiler.java:115)
-	at cool.parser.CoolParser$Class_defContext.accept(CoolParser.java:216)
-	at cool.compiler.Compiler$2.visitProgram(Compiler.java:121)
-	at cool.compiler.Compiler$2.visitProgram(Compiler.java:115)
-	at cool.parser.CoolParser$ProgramContext.accept(CoolParser.java:135)
-	at org.antlr.v4.runtime.tree.AbstractParseTreeVisitor.visit(AbstractParseTreeVisitor.java:18)
-	at cool.compiler.Compiler.main(Compiler.java:363)
+	at cool.compiler.Compiler$3.visit(Compiler.java:351)
+	at cool.compiler.Compiler$3.visit(Compiler.java:269)
+	at cool.compiler.FuncDefNode.accept(FuncDefNode.java:59)
+	at cool.compiler.Compiler$3.visit(Compiler.java:395)
+	at cool.compiler.Compiler$3.visit(Compiler.java:269)
+	at cool.compiler.ClassNode.accept(ClassNode.java:53)
+	at cool.compiler.Compiler$3.visit(Compiler.java:304)
+	at cool.compiler.Compiler$3.visit(Compiler.java:269)
+	at cool.compiler.Program.accept(Program.java:26)
+	at cool.compiler.Compiler.main(Compiler.java:403)
 	at cool.tester.Tester1.main(Tester1.java:31)

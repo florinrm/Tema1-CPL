@@ -142,11 +142,20 @@ public class Compiler {
 
                 @Override
                 public ASTNode visitFunctionDefinition(CoolParser.FunctionDefinitionContext ctx) {
-                    return super.visitFunctionDefinition(ctx);
+                    FuncDefNode node = new FuncDefNode(ctx.nameFunc, ctx.returnType, (Expression) visit(ctx.body), ctx.start);
+                    var params = ctx.params;
+                    for (var param : params) {
+                        var def = new VarDef(param.name, param.type, ctx.start);
+                        def.setType("formal");
+                        node.addParam(def);
+                    }
+                    return node;
                 }
 
                 @Override
                 public ASTNode visitVariableDefinition(CoolParser.VariableDefinitionContext ctx) {
+                    if (ctx.initVal == null)
+                        return new VarDef(ctx.declare_type().name, ctx.declare_type().type, ctx.start);
                     return new VarDef(ctx.declare_type().name, ctx.declare_type().type,
                             (Expression) visit(ctx.initVal), ctx.start);
                 }
@@ -158,7 +167,7 @@ public class Compiler {
 
                 @Override
                 public ASTNode visitNegation(CoolParser.NegationContext ctx) {
-                    return super.visitNegation(ctx);
+                    return new UnaryMinusNode((Expression) visit(ctx.expression), ctx.start);
                 }
 
                 @Override
@@ -183,7 +192,13 @@ public class Compiler {
 
                 @Override
                 public ASTNode visitMinusPlus(CoolParser.MinusPlusContext ctx) {
-                    return super.visitMinusPlus(ctx);
+                    if (ctx.PLUS() != null) {
+                        return new MultDivNode((Expression) visit(ctx.leftBranch), ctx.PLUS().getSymbol(),
+                                (Expression) visit(ctx.rightBranch), ctx.start);
+                    } else {
+                        return new MultDivNode((Expression) visit(ctx.leftBranch), ctx.MINUS().getSymbol(),
+                                (Expression) visit(ctx.rightBranch), ctx.start);
+                    }
                 }
 
                 @Override
@@ -208,17 +223,23 @@ public class Compiler {
 
                 @Override
                 public ASTNode visitInt(CoolParser.IntContext ctx) {
-                    return super.visitInt(ctx);
+                    return new Id(ctx.INT().getSymbol());
                 }
 
                 @Override
                 public ASTNode visitMulDiv(CoolParser.MulDivContext ctx) {
-                    return super.visitMulDiv(ctx);
+                    if (ctx.DIV() != null) {
+                        return new MultDivNode((Expression) visit(ctx.leftBranch), ctx.DIV().getSymbol(),
+                                (Expression) visit(ctx.rightBranch), ctx.start);
+                    } else {
+                        return new MultDivNode((Expression) visit(ctx.leftBranch), ctx.MUL().getSymbol(),
+                                (Expression) visit(ctx.rightBranch), ctx.start);
+                    }
                 }
 
                 @Override
                 public ASTNode visitBoolean(CoolParser.BooleanContext ctx) {
-                    return super.visitBoolean(ctx);
+                    return new BoolNode(ctx.BOOL().getSymbol());
                 }
 
                 @Override
@@ -268,6 +289,7 @@ public class Compiler {
 
                 @Override
                 public Void visit(Id id) {
+                    printIndent(id.token.getText());
                     return null;
                 }
 
@@ -283,6 +305,11 @@ public class Compiler {
 
                 @Override
                 public Void visit(AddSub sum) {
+                    printIndent(sum.getOp().getText());
+                    indent++;
+                    sum.getLeft().accept(this);
+                    sum.getRight().accept(this);
+                    indent--;
                     return null;
                 }
 
@@ -300,17 +327,26 @@ public class Compiler {
 
                 @Override
                 public Void visit(MultDivNode prod) {
+                    printIndent(prod.getOp().getText());
+                    indent++;
+                    prod.getLeft().accept(this);
+                    prod.getRight().accept(this);
+                    indent--;
                     return null;
                 }
 
                 @Override
                 public Void visit(BoolNode bool) {
-                    printIndent("bool " + bool.getValue());
+                    printIndent(bool.token.getText());
                     return null;
                 }
 
                 @Override
                 public Void visit(FunctionCall call) {
+                    printIndent("method");
+                    indent++;
+
+                    indent--;
                     return null;
                 }
 
@@ -326,16 +362,45 @@ public class Compiler {
 
                 @Override
                 public Void visit(FuncDefNode func) {
+                    printIndent("method");
+                    indent++;
+                    printIndent(func.getNameToken().getText());
+                    for (var def : func.getParams()) {
+                        def.accept(this);
+                    }
+
+                    printIndent(func.getRetTypeToken().getText());
+                    func.getBody().accept(this);
+
+                    indent--;
                     return null;
                 }
 
                 @Override
                 public Void visit(UnaryMinusNode minus) {
+                    printIndent("~");
+                    indent++;
+                    minus.getNested().accept(this);
+                    indent--;
                     return null;
                 }
 
                 @Override
                 public Void visit(VarDef var) {
+                    if (var.getType() != null && var.getType().equals("formal")) {
+                        printIndent(var.getType());
+                    } else {
+                        printIndent("attribute");
+                    }
+
+                    indent++;
+                    printIndent(var.getNameToken().getText());
+                    printIndent(var.getTypeToken().getText());
+                    if (var.getInitExpr() != null) {
+                        var.getInitExpr().accept(this);
+                    }
+                    indent--;
+
                     return null;
                 }
 

@@ -18,18 +18,24 @@ import java.util.List;
 public class CoolParser extends Parser {
 	public static final int
             ERROR = 1, IF = 2, THEN = 3, ELSE = 4, FI = 5, NEGATION = 6, NOT = 7, NEW = 8, CLASS = 9,
-            INHERITS = 10, LET = 11, IN = 12, SELFTYPE = 13, WHILE = 14, LOOP = 15, POOL = 16, CASE = 17,
-            OF = 18, ESAC = 19, ISVOID = 20, BOOL = 21, TYPE = 22, INT = 23, TYPE_ID = 24, ID = 25,
-            FLOAT = 26, STRING = 27, SEMI = 28, COLON = 29, COMMA = 30, ASSIGN = 31, LPAREN = 32,
-            RPAREN = 33, LBRACE = 34, RBRACE = 35, PLUS = 36, MINUS = 37, MUL = 38, DIV = 39, RESULTS = 40,
-            EQUAL = 41, LT = 42, LE = 43, LINE_COMMENT = 44, BLOCK_COMMENT = 45, WS = 46;
+            INHERITS = 10, LET = 11, IN = 12, WHILE = 13, LOOP = 14, POOL = 15, CASE = 16, OF = 17,
+            ESAC = 18, ISVOID = 19, BOOL = 20, STRING = 21, INT = 22, TYPE_ID = 23, ID = 24, FLOAT = 25,
+            SEMI = 26, COLON = 27, COMMA = 28, ASSIGN = 29, LPAREN = 30, RPAREN = 31, LBRACE = 32,
+            RBRACE = 33, PLUS = 34, MINUS = 35, MUL = 36, DIV = 37, RESULTS = 38, EQUAL = 39, LT = 40,
+            LE = 41, LINE_COMMENT = 42, BLOCK_COMMENT = 43, WS = 44;
 	public static final int
             RULE_program = 0, RULE_class_def = 1, RULE_definition = 2, RULE_declare_type = 3,
             RULE_expr = 4;
+    public static final String[] ruleNames = makeRuleNames();
+    /**
+     * @deprecated Use {@link #VOCABULARY} instead.
+     */
+    @Deprecated
+    public static final String[] tokenNames;
 	public static final String _serializedATN =
-            "\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\60\u00aa\4\2\t\2" +
-                    "\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\3\2\3\2\3\2\6\2\20\n\2\r\2\16\2\21\3" +
-                    "\2\3\2\3\3\3\3\3\3\3\3\5\3\32\n\3\3\3\3\3\3\3\3\3\7\3 \n\3\f\3\16\3#\13" +
+            "\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3.\u00aa\4\2\t\2\4" +
+                    "\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\3\2\3\2\3\2\6\2\20\n\2\r\2\16\2\21\3\2" +
+                    "\3\2\3\3\3\3\3\3\3\3\5\3\32\n\3\3\3\3\3\3\3\3\3\7\3 \n\3\f\3\16\3#\13" +
                     "\3\3\3\3\3\3\4\3\4\3\4\3\4\3\4\7\4,\n\4\f\4\16\4/\13\4\5\4\61\n\4\3\4" +
                     "\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\5\4=\n\4\5\4?\n\4\3\5\3\5\3\5\3\5" +
                     "\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\5\6N\n\6\3\6\3\6\3\6\3\6\3\6\3\6" +
@@ -38,72 +44,65 @@ public class CoolParser extends Parser {
                     "\6w\13\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\6\6\u0084\n\6\r\6" +
                     "\16\6\u0085\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3" +
                     "\6\3\6\3\6\3\6\5\6\u009a\n\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\7\6\u00a5" +
-                    "\n\6\f\6\16\6\u00a8\13\6\3\6\2\3\n\7\2\4\6\b\n\2\5\3\2()\3\2&\'\3\2+-" +
+                    "\n\6\f\6\16\6\u00a8\13\6\3\6\2\3\n\7\2\4\6\b\n\2\5\3\2&\'\3\2$%\3\2)+" +
                     "\2\u00c2\2\17\3\2\2\2\4\25\3\2\2\2\6>\3\2\2\2\b@\3\2\2\2\n\u0099\3\2\2" +
-                    "\2\f\r\5\4\3\2\r\16\7\36\2\2\16\20\3\2\2\2\17\f\3\2\2\2\20\21\3\2\2\2" +
+                    "\2\f\r\5\4\3\2\r\16\7\34\2\2\16\20\3\2\2\2\17\f\3\2\2\2\20\21\3\2\2\2" +
                     "\21\17\3\2\2\2\21\22\3\2\2\2\22\23\3\2\2\2\23\24\7\2\2\3\24\3\3\2\2\2" +
-                    "\25\26\7\13\2\2\26\31\7\32\2\2\27\30\7\f\2\2\30\32\7\32\2\2\31\27\3\2" +
-                    "\2\2\31\32\3\2\2\2\32\33\3\2\2\2\33!\7$\2\2\34\35\5\6\4\2\35\36\7\36\2" +
-                    "\2\36 \3\2\2\2\37\34\3\2\2\2 #\3\2\2\2!\37\3\2\2\2!\"\3\2\2\2\"$\3\2\2" +
-                    "\2#!\3\2\2\2$%\7%\2\2%\5\3\2\2\2&\'\7\33\2\2\'\60\7\"\2\2(-\5\b\5\2)*" +
-                    "\7 \2\2*,\5\b\5\2+)\3\2\2\2,/\3\2\2\2-+\3\2\2\2-.\3\2\2\2.\61\3\2\2\2" +
-                    "/-\3\2\2\2\60(\3\2\2\2\60\61\3\2\2\2\61\62\3\2\2\2\62\63\7#\2\2\63\64" +
-                    "\7\37\2\2\64\65\7\32\2\2\65\66\7$\2\2\66\67\5\n\6\2\678\7%\2\28?\3\2\2" +
-                    "\29<\5\b\5\2:;\7!\2\2;=\5\n\6\2<:\3\2\2\2<=\3\2\2\2=?\3\2\2\2>&\3\2\2" +
-                    "\2>9\3\2\2\2?\7\3\2\2\2@A\7\33\2\2AB\7\37\2\2BC\7\32\2\2C\t\3\2\2\2DE" +
-                    "\b\6\1\2EF\7\33\2\2FG\7!\2\2G\u009a\5\n\6\25HI\7\33\2\2IJ\7\"\2\2JM\5" +
-                    "\n\6\2KL\7 \2\2LN\5\n\6\2MK\3\2\2\2MN\3\2\2\2NO\3\2\2\2OP\7#\2\2P\u009a" +
-                    "\3\2\2\2QR\7\4\2\2RS\5\n\6\2ST\7\5\2\2TU\5\n\6\2UV\7\6\2\2VW\5\n\6\23" +
-                    "W\u009a\3\2\2\2XY\7\20\2\2YZ\5\n\6\2Z[\7\21\2\2[\\\5\n\6\2\\]\7\22\2\2" +
-                    "]\u009a\3\2\2\2^b\7$\2\2_`\5\n\6\2`a\7\36\2\2ac\3\2\2\2b_\3\2\2\2cd\3" +
-                    "\2\2\2db\3\2\2\2de\3\2\2\2ef\3\2\2\2fg\7%\2\2g\u009a\3\2\2\2hi\7\r\2\2" +
-                    "il\5\b\5\2jk\7!\2\2km\5\n\6\2lj\3\2\2\2lm\3\2\2\2mu\3\2\2\2no\7 \2\2o" +
-                    "p\5\b\5\2pq\7!\2\2qr\5\n\6\2rt\3\2\2\2sn\3\2\2\2tw\3\2\2\2us\3\2\2\2u" +
-                    "v\3\2\2\2vx\3\2\2\2wu\3\2\2\2xy\7\16\2\2yz\5\n\6\20z\u009a\3\2\2\2{|\7" +
-                    "\23\2\2|}\5\n\6\2}\u0083\7\24\2\2~\177\5\b\5\2\177\u0080\7*\2\2\u0080" +
-                    "\u0081\5\n\6\2\u0081\u0082\7\36\2\2\u0082\u0084\3\2\2\2\u0083~\3\2\2\2" +
-                    "\u0084\u0085\3\2\2\2\u0085\u0083\3\2\2\2\u0085\u0086\3\2\2\2\u0086\u0087" +
-                    "\3\2\2\2\u0087\u0088\7\25\2\2\u0088\u009a\3\2\2\2\u0089\u008a\7\n\2\2" +
-                    "\u008a\u009a\7\32\2\2\u008b\u008c\7\26\2\2\u008c\u009a\5\n\6\r\u008d\u008e" +
-                    "\7\b\2\2\u008e\u009a\5\n\6\n\u008f\u0090\7\t\2\2\u0090\u009a\5\n\6\b\u0091" +
-                    "\u0092\7\"\2\2\u0092\u0093\5\n\6\2\u0093\u0094\7#\2\2\u0094\u009a\3\2" +
-                    "\2\2\u0095\u009a\7\27\2\2\u0096\u009a\7\35\2\2\u0097\u009a\7\34\2\2\u0098" +
-                    "\u009a\7\31\2\2\u0099D\3\2\2\2\u0099H\3\2\2\2\u0099Q\3\2\2\2\u0099X\3" +
-                    "\2\2\2\u0099^\3\2\2\2\u0099h\3\2\2\2\u0099{\3\2\2\2\u0099\u0089\3\2\2" +
-                    "\2\u0099\u008b\3\2\2\2\u0099\u008d\3\2\2\2\u0099\u008f\3\2\2\2\u0099\u0091" +
-                    "\3\2\2\2\u0099\u0095\3\2\2\2\u0099\u0096\3\2\2\2\u0099\u0097\3\2\2\2\u0099" +
-                    "\u0098\3\2\2\2\u009a\u00a6\3\2\2\2\u009b\u009c\f\f\2\2\u009c\u009d\t\2" +
-                    "\2\2\u009d\u00a5\5\n\6\r\u009e\u009f\f\13\2\2\u009f\u00a0\t\3\2\2\u00a0" +
-                    "\u00a5\5\n\6\f\u00a1\u00a2\f\t\2\2\u00a2\u00a3\t\4\2\2\u00a3\u00a5\5\n" +
-                    "\6\n\u00a4\u009b\3\2\2\2\u00a4\u009e\3\2\2\2\u00a4\u00a1\3\2\2\2\u00a5" +
-                    "\u00a8\3\2\2\2\u00a6\u00a4\3\2\2\2\u00a6\u00a7\3\2\2\2\u00a7\13\3\2\2" +
-                    "\2\u00a8\u00a6\3\2\2\2\21\21\31!-\60<>Mdlu\u0085\u0099\u00a4\u00a6";
+                    "\25\26\7\13\2\2\26\31\7\31\2\2\27\30\7\f\2\2\30\32\7\31\2\2\31\27\3\2" +
+                    "\2\2\31\32\3\2\2\2\32\33\3\2\2\2\33!\7\"\2\2\34\35\5\6\4\2\35\36\7\34" +
+                    "\2\2\36 \3\2\2\2\37\34\3\2\2\2 #\3\2\2\2!\37\3\2\2\2!\"\3\2\2\2\"$\3\2" +
+                    "\2\2#!\3\2\2\2$%\7#\2\2%\5\3\2\2\2&\'\7\32\2\2\'\60\7 \2\2(-\5\b\5\2)" +
+                    "*\7\36\2\2*,\5\b\5\2+)\3\2\2\2,/\3\2\2\2-+\3\2\2\2-.\3\2\2\2.\61\3\2\2" +
+                    "\2/-\3\2\2\2\60(\3\2\2\2\60\61\3\2\2\2\61\62\3\2\2\2\62\63\7!\2\2\63\64" +
+                    "\7\35\2\2\64\65\7\31\2\2\65\66\7\"\2\2\66\67\5\n\6\2\678\7#\2\28?\3\2" +
+                    "\2\29<\5\b\5\2:;\7\37\2\2;=\5\n\6\2<:\3\2\2\2<=\3\2\2\2=?\3\2\2\2>&\3" +
+                    "\2\2\2>9\3\2\2\2?\7\3\2\2\2@A\7\32\2\2AB\7\35\2\2BC\7\31\2\2C\t\3\2\2" +
+                    "\2DE\b\6\1\2EF\7\32\2\2FG\7\37\2\2G\u009a\5\n\6\25HI\7\32\2\2IJ\7 \2\2" +
+                    "JM\5\n\6\2KL\7\36\2\2LN\5\n\6\2MK\3\2\2\2MN\3\2\2\2NO\3\2\2\2OP\7!\2\2" +
+                    "P\u009a\3\2\2\2QR\7\4\2\2RS\5\n\6\2ST\7\5\2\2TU\5\n\6\2UV\7\6\2\2VW\5" +
+                    "\n\6\23W\u009a\3\2\2\2XY\7\17\2\2YZ\5\n\6\2Z[\7\20\2\2[\\\5\n\6\2\\]\7" +
+                    "\21\2\2]\u009a\3\2\2\2^b\7\"\2\2_`\5\n\6\2`a\7\34\2\2ac\3\2\2\2b_\3\2" +
+                    "\2\2cd\3\2\2\2db\3\2\2\2de\3\2\2\2ef\3\2\2\2fg\7#\2\2g\u009a\3\2\2\2h" +
+                    "i\7\r\2\2il\5\b\5\2jk\7\37\2\2km\5\n\6\2lj\3\2\2\2lm\3\2\2\2mu\3\2\2\2" +
+                    "no\7\36\2\2op\5\b\5\2pq\7\37\2\2qr\5\n\6\2rt\3\2\2\2sn\3\2\2\2tw\3\2\2" +
+                    "\2us\3\2\2\2uv\3\2\2\2vx\3\2\2\2wu\3\2\2\2xy\7\16\2\2yz\5\n\6\20z\u009a" +
+                    "\3\2\2\2{|\7\22\2\2|}\5\n\6\2}\u0083\7\23\2\2~\177\5\b\5\2\177\u0080\7" +
+                    "(\2\2\u0080\u0081\5\n\6\2\u0081\u0082\7\34\2\2\u0082\u0084\3\2\2\2\u0083" +
+                    "~\3\2\2\2\u0084\u0085\3\2\2\2\u0085\u0083\3\2\2\2\u0085\u0086\3\2\2\2" +
+                    "\u0086\u0087\3\2\2\2\u0087\u0088\7\24\2\2\u0088\u009a\3\2\2\2\u0089\u008a" +
+                    "\7\n\2\2\u008a\u009a\7\31\2\2\u008b\u008c\7\25\2\2\u008c\u009a\5\n\6\r" +
+                    "\u008d\u008e\7\b\2\2\u008e\u009a\5\n\6\n\u008f\u0090\7\t\2\2\u0090\u009a" +
+                    "\5\n\6\b\u0091\u0092\7 \2\2\u0092\u0093\5\n\6\2\u0093\u0094\7!\2\2\u0094" +
+                    "\u009a\3\2\2\2\u0095\u009a\7\26\2\2\u0096\u009a\7\27\2\2\u0097\u009a\7" +
+                    "\33\2\2\u0098\u009a\7\30\2\2\u0099D\3\2\2\2\u0099H\3\2\2\2\u0099Q\3\2" +
+                    "\2\2\u0099X\3\2\2\2\u0099^\3\2\2\2\u0099h\3\2\2\2\u0099{\3\2\2\2\u0099" +
+                    "\u0089\3\2\2\2\u0099\u008b\3\2\2\2\u0099\u008d\3\2\2\2\u0099\u008f\3\2" +
+                    "\2\2\u0099\u0091\3\2\2\2\u0099\u0095\3\2\2\2\u0099\u0096\3\2\2\2\u0099" +
+                    "\u0097\3\2\2\2\u0099\u0098\3\2\2\2\u009a\u00a6\3\2\2\2\u009b\u009c\f\f" +
+                    "\2\2\u009c\u009d\t\2\2\2\u009d\u00a5\5\n\6\r\u009e\u009f\f\13\2\2\u009f" +
+                    "\u00a0\t\3\2\2\u00a0\u00a5\5\n\6\f\u00a1\u00a2\f\t\2\2\u00a2\u00a3\t\4" +
+                    "\2\2\u00a3\u00a5\5\n\6\n\u00a4\u009b\3\2\2\2\u00a4\u009e\3\2\2\2\u00a4" +
+                    "\u00a1\3\2\2\2\u00a5\u00a8\3\2\2\2\u00a6\u00a4\3\2\2\2\u00a6\u00a7\3\2" +
+                    "\2\2\u00a7\13\3\2\2\2\u00a8\u00a6\3\2\2\2\21\21\31!-\60<>Mdlu\u0085\u0099" +
+                    "\u00a4\u00a6";
 	public static final ATN _ATN =
             new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
             new PredictionContextCache();
-    public static final String[] ruleNames = makeRuleNames();
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
-	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
-	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
     static {
-        RuntimeMetaData.checkVersion("4.7.2", RuntimeMetaData.VERSION);
-    }
+        RuntimeMetaData.checkVersion("4.7.2", RuntimeMetaData.VERSION); }
+	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
+	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
     static {
         _decisionToDFA = new DFA[_ATN.getNumberOfDecisions()];
         for (int i = 0; i < _ATN.getNumberOfDecisions(); i++) {
             _decisionToDFA[i] = new DFA(_ATN.getDecisionState(i), i);
         }
-    }
-
-    /**
-     * @deprecated Use {@link #VOCABULARY} instead.
-     */
-    @Deprecated
-    public static final String[] tokenNames;
+	}
 	static {
 		tokenNames = new String[_SYMBOLIC_NAMES.length];
 		for (int i = 0; i < tokenNames.length; i++) {
@@ -132,21 +131,21 @@ public class CoolParser extends Parser {
 	private static String[] makeLiteralNames() {
         return new String[]{
                 null, null, "'if'", "'then'", "'else'", "'fi'", "'~'", "'not'", "'new'",
-                "'class'", "'inherits'", "'let'", "'in'", "'SELF_TYPE'", "'while'", "'loop'",
-                "'pool'", "'case'", "'of'", "'esac'", "'isvoid'", null, null, null, null,
-                null, null, null, "';'", "':'", "','", "'<-'", "'('", "')'", "'{'", "'}'",
-                "'+'", "'-'", "'*'", "'/'", "'=>'", "'='", "'<'", "'<='"
+                "'class'", "'inherits'", "'let'", "'in'", "'while'", "'loop'", "'pool'",
+                "'case'", "'of'", "'esac'", "'isvoid'", null, null, null, null, null,
+                null, "';'", "':'", "','", "'<-'", "'('", "')'", "'{'", "'}'", "'+'",
+                "'-'", "'*'", "'/'", "'=>'", "'='", "'<'", "'<='"
 		};
 	}
 
 	private static String[] makeSymbolicNames() {
         return new String[]{
                 null, "ERROR", "IF", "THEN", "ELSE", "FI", "NEGATION", "NOT", "NEW",
-                "CLASS", "INHERITS", "LET", "IN", "SELFTYPE", "WHILE", "LOOP", "POOL",
-                "CASE", "OF", "ESAC", "ISVOID", "BOOL", "TYPE", "INT", "TYPE_ID", "ID",
-                "FLOAT", "STRING", "SEMI", "COLON", "COMMA", "ASSIGN", "LPAREN", "RPAREN",
-                "LBRACE", "RBRACE", "PLUS", "MINUS", "MUL", "DIV", "RESULTS", "EQUAL",
-                "LT", "LE", "LINE_COMMENT", "BLOCK_COMMENT", "WS"
+                "CLASS", "INHERITS", "LET", "IN", "WHILE", "LOOP", "POOL", "CASE", "OF",
+                "ESAC", "ISVOID", "BOOL", "STRING", "INT", "TYPE_ID", "ID", "FLOAT",
+                "SEMI", "COLON", "COMMA", "ASSIGN", "LPAREN", "RPAREN", "LBRACE", "RBRACE",
+                "PLUS", "MINUS", "MUL", "DIV", "RESULTS", "EQUAL", "LT", "LE", "LINE_COMMENT",
+                "BLOCK_COMMENT", "WS"
 		};
 	}
 
@@ -305,7 +304,8 @@ public class CoolParser extends Parser {
                                         setState(39);
                                         match(COMMA);
                                         setState(40);
-                                        declare_type();
+                                        ((FunctionDefinitionContext) _localctx).declare_type = declare_type();
+                                        ((FunctionDefinitionContext) _localctx).params.add(((FunctionDefinitionContext) _localctx).declare_type);
                                     }
                                 }
                                 setState(45);
@@ -358,7 +358,7 @@ public class CoolParser extends Parser {
 			exitRule();
 		}
 		return _localctx;
-	}
+    }
 
     public final Declare_typeContext declare_type() throws RecognitionException {
         Declare_typeContext _localctx = new Declare_typeContext(_ctx, getState());
@@ -385,7 +385,7 @@ public class CoolParser extends Parser {
 
     public final ExprContext expr() throws RecognitionException {
         return expr(0);
-    }
+	}
 
 	private ExprContext expr(int _p) throws RecognitionException {
 		ParserRuleContext _parentctx = _ctx;
@@ -501,7 +501,7 @@ public class CoolParser extends Parser {
                             setState(98);
                             _errHandler.sync(this);
                             _la = _input.LA(1);
-                        } while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << IF) | (1L << NEGATION) | (1L << NOT) | (1L << NEW) | (1L << LET) | (1L << WHILE) | (1L << CASE) | (1L << ISVOID) | (1L << BOOL) | (1L << INT) | (1L << ID) | (1L << FLOAT) | (1L << STRING) | (1L << LPAREN) | (1L << LBRACE))) != 0));
+                        } while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << IF) | (1L << NEGATION) | (1L << NOT) | (1L << NEW) | (1L << LET) | (1L << WHILE) | (1L << CASE) | (1L << ISVOID) | (1L << BOOL) | (1L << STRING) | (1L << INT) | (1L << ID) | (1L << FLOAT) | (1L << LPAREN) | (1L << LBRACE))) != 0));
                         setState(100);
                         match(RBRACE);
                     }
@@ -756,8 +756,8 @@ public class CoolParser extends Parser {
                     }
                     setState(166);
                     _errHandler.sync(this);
-                    _alt = getInterpreter().adaptivePredict(_input, 14, _ctx);
-			}
+                    _alt = getInterpreter().adaptivePredict(_input, 14,_ctx);
+                }
             }
         } catch (RecognitionException re) {
 			_localctx.exception = re;
@@ -812,7 +812,7 @@ public class CoolParser extends Parser {
 		}
 
 		public Class_defContext class_def(int i) {
-            return getRuleContext(Class_defContext.class,i);
+            return getRuleContext(Class_defContext.class, i);
         }
 
         @Override
@@ -877,7 +877,7 @@ public class CoolParser extends Parser {
 		}
 
 		public DefinitionContext definition(int i) {
-            return getRuleContext(DefinitionContext.class,i);
+            return getRuleContext(DefinitionContext.class, i);
         }
 
         @Override
@@ -962,7 +962,7 @@ public class CoolParser extends Parser {
 		}
 
 		public Declare_typeContext declare_type(int i) {
-            return getRuleContext(Declare_typeContext.class,i);
+            return getRuleContext(Declare_typeContext.class, i);
         }
 
         public List<TerminalNode> COMMA() {
@@ -995,7 +995,7 @@ public class CoolParser extends Parser {
             copyFrom(ctx); }
 
 		public Declare_typeContext declare_type() {
-            return getRuleContext(Declare_typeContext.class,0);
+            return getRuleContext(Declare_typeContext.class, 0);
         }
 
         public TerminalNode ASSIGN() {
@@ -1118,7 +1118,7 @@ public class CoolParser extends Parser {
 		}
 
 		public ExprContext expr(int i) {
-            return getRuleContext(ExprContext.class,i);
+            return getRuleContext(ExprContext.class, i);
         }
 
         public TerminalNode LE() {
@@ -1247,7 +1247,7 @@ public class CoolParser extends Parser {
 		}
 
 		public ExprContext expr(int i) {
-            return getRuleContext(ExprContext.class,i);
+            return getRuleContext(ExprContext.class, i);
         }
 
         public TerminalNode PLUS() {
@@ -1453,7 +1453,7 @@ public class CoolParser extends Parser {
 		}
 
 		public ExprContext expr(int i) {
-            return getRuleContext(ExprContext.class,i);
+            return getRuleContext(ExprContext.class, i);
         }
 
         public TerminalNode MUL() {
@@ -1526,7 +1526,7 @@ public class CoolParser extends Parser {
 		}
 
 		public ExprContext expr(int i) {
-            return getRuleContext(ExprContext.class,i);
+            return getRuleContext(ExprContext.class, i);
         }
 
         public TerminalNode COMMA() {
@@ -1607,7 +1607,7 @@ public class CoolParser extends Parser {
 		}
 
 		public ExprContext expr(int i) {
-            return getRuleContext(ExprContext.class,i);
+            return getRuleContext(ExprContext.class, i);
         }
 
         public List<TerminalNode> ASSIGN() {
@@ -1708,7 +1708,7 @@ public class CoolParser extends Parser {
 		}
 
 		public ExprContext expr(int i) {
-            return getRuleContext(ExprContext.class,i);
+            return getRuleContext(ExprContext.class, i);
         }
 
         public List<TerminalNode> RESULTS() {

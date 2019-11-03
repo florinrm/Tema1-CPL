@@ -6,12 +6,17 @@ public class VarDef extends Definition {
     private Token nameToken;
     private Token typeToken;
     private Expression initExpr;
+    private String type;
 
     public VarDef(Token name, Token type, Expression init, Token start) {
+        this(name, type, start);
+        initExpr = init;
+    }
+
+    public VarDef(Token name, Token type, Token start) {
         super(start);
         nameToken = name;
         typeToken = type;
-        initExpr = init;
     }
 
     public Token getNameToken() {
@@ -36,6 +41,14 @@ public class VarDef extends Definition {
 
     public void setInitExpr(Expression initExpr) {
         this.initExpr = initExpr;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     @Override

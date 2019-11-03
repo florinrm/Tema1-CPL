@@ -10,7 +10,7 @@ class_def: CLASS class_type=TYPE_ID (INHERITS inheritedClass=TYPE_ID)? LBRACE (d
 
 definition
     :
-        nameFunc=ID LPAREN (params+=declare_type (COMMA declare_type)*)? RPAREN COLON returnType=TYPE_ID LBRACE body=expr RBRACE # functionDefinition
+        nameFunc=ID LPAREN (params+=declare_type (COMMA params+=declare_type)*)? RPAREN COLON returnType=TYPE_ID LBRACE body=expr RBRACE # functionDefinition
     |   declare_type (ASSIGN initVal=expr)? # variableDefinition
     ;
 

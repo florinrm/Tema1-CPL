@@ -26,7 +26,7 @@ INHERITS: 'inherits';
 LET : 'let';
 IN : 'in';
 
-SELFTYPE: 'SELF_TYPE';
+fragment SELFTYPE: 'SELF_TYPE';
 
 WHILE: 'while';
 LOOP: 'loop';
@@ -40,7 +40,9 @@ ISVOID: 'isvoid';
 
 BOOL : 'true' | 'false';
 
-TYPE : 'Int' | 'Float' | 'Bool';
+STRING : '"' ('\\"' | .)*? '"';
+
+fragment TYPE : 'Int' | 'Float' | 'Bool' | 'String';
 
 /* Identificator.
  */
@@ -56,7 +58,7 @@ fragment LETTER : [a-zA-Z];
 fragment DIGIT : [0-9];
 INT : DIGIT+;
 
-TYPE_ID : UPPERLETTER(LETTER | '_' | DIGIT)*;
+TYPE_ID : TYPE | SELFTYPE | UPPERLETTER(LETTER | '_' | DIGIT)*;
 ID : LOWERCASE(LETTER | '_' | DIGIT)*;
 
 /* Număr real.
@@ -75,8 +77,6 @@ FLOAT : (DIGITS ('.' DIGITS?)? | '.' DIGITS) EXPONENT?;
  * Acoladele de la final pot conține secvențe arbitrare de cod Java,
  * care vor fi executate la întâlnirea acestui token.
  */
-STRING : '"' ('\\"' | .)*? '"'
-    { System.out.println("there are no strings in CPLang, but shhh.."); };
 
 SEMI : ';';
 

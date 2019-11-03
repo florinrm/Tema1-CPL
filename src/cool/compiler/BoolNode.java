@@ -10,6 +10,10 @@ public class BoolNode extends Expression {
         value = val;
     }
 
+    public BoolNode(Token start) {
+        super(start);
+    }
+
     public boolean getValue() {
         return value;
     }
