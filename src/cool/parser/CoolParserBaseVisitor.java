@@ -192,6 +192,15 @@ public class CoolParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> implem
 	 * {@link #visitChildren} on {@code ctx}.</p>
      */
     @Override
+    public T visitUpCastCall(CoolParser.UpCastCallContext ctx) {
+        return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+     */
+    @Override
     public T visitFunctionCall(CoolParser.FunctionCallContext ctx) {
         return visitChildren(ctx); }
 	/**
@@ -229,12 +238,14 @@ public class CoolParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> implem
      */
     @Override
     public T visitIf(CoolParser.IfContext ctx) {
-        return visitChildren(ctx); }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
+        return visitChildren(ctx);
+    }
+
+    /**
+     * {@inheritDoc}
+     *
+     * <p>The default implementation returns the result of calling
+     * {@link #visitChildren} on {@code ctx}.</p>
      */
     @Override
     public T visitCase(CoolParser.CaseContext ctx) {

@@ -232,6 +232,22 @@ public interface CoolParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitBoolean(CoolParser.BooleanContext ctx);
+
+    /**
+     * Enter a parse tree produced by the {@code upCastCall}
+     * labeled alternative in {@link CoolParser#expr}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterUpCastCall(CoolParser.UpCastCallContext ctx);
+
+    /**
+     * Exit a parse tree produced by the {@code upCastCall}
+     * labeled alternative in {@link CoolParser#expr}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitUpCastCall(CoolParser.UpCastCallContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code functionCall}
 	 * labeled alternative in {@link CoolParser#expr}.
@@ -264,9 +280,9 @@ public interface CoolParserListener extends ParseTreeListener {
 	void enterLet(CoolParser.LetContext ctx);
 	/**
 	 * Exit a parse tree produced by the {@code let}
-	 * labeled alternative in {@link CoolParser#expr}.
-	 * @param ctx the parse tree
-	 */
+     * labeled alternative in {@link CoolParser#expr}.
+     * @param ctx the parse tree
+     */
     void exitLet(CoolParser.LetContext ctx);
 
     /**
@@ -280,8 +296,8 @@ public interface CoolParserListener extends ParseTreeListener {
     /**
      * Exit a parse tree produced by the {@code id}
      * labeled alternative in {@link CoolParser#expr}.
-     * @param ctx the parse tree
-     */
+	 * @param ctx the parse tree
+	 */
 	void exitId(CoolParser.IdContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code if}

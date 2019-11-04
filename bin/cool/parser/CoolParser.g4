@@ -21,12 +21,13 @@ let_variables: declare_type (ASSIGN expr)?;
 branch: declare_type RESULTS body=expr SEMI;
 
 expr:
-    name=ID LPAREN (arguments+=expr (COMMA arguments+=expr)*) RPAREN                                            # functionCall
+    expression=expr (ANNOTATION upcast=TYPE_ID)? DOT name=expr LPAREN (params+=expr (COMMA params+=expr)*)? RPAREN # upCastCall
+    | name=expr LPAREN (arguments+=expr (COMMA arguments+=expr)*) RPAREN                                        # functionCall
     | IF condition=expr THEN then_branch=expr ELSE else_branch=expr FI                                          # if
     | WHILE condition=expr LOOP body=expr POOL                                                                  # while
-    | LBRACE (expressios+=expr SEMI)+ RBRACE                                                                    # body
+    | LBRACE (expressions+=expr SEMI)+ RBRACE                                                                   # body
     | LET variables+=let_variables (COMMA variables+=let_variables)* IN body=expr                               # let
-    | CASE expression=expr OF (branches+=branch)+ ESAC                             # case
+    | CASE expression=expr OF (branches+=branch)+ ESAC                                                          # case
     | NEW TYPE_ID                                                                                               # instantiation
     | leftBranch=expr op=(MUL | DIV) rightBranch=expr                                                           # mulDiv
     | leftBranch=expr op=(PLUS | MINUS) rightBranch=expr                                                        # minusPlus

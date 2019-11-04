@@ -141,6 +141,15 @@ public interface CoolParserVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitBoolean(CoolParser.BooleanContext ctx);
+
+    /**
+     * Visit a parse tree produced by the {@code upCastCall}
+     * labeled alternative in {@link CoolParser#expr}.
+     *
+     * @param ctx the parse tree
+     * @return the visitor result
+     */
+    T visitUpCastCall(CoolParser.UpCastCallContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code functionCall}
 	 * labeled alternative in {@link CoolParser#expr}.
@@ -161,7 +170,7 @@ public interface CoolParserVisitor<T> extends ParseTreeVisitor<T> {
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitLet(CoolParser.LetContext ctx);
+    T visitLet(CoolParser.LetContext ctx);
 
     /**
      * Visit a parse tree produced by the {@code id}
@@ -175,11 +184,10 @@ public interface CoolParserVisitor<T> extends ParseTreeVisitor<T> {
     /**
      * Visit a parse tree produced by the {@code if}
      * labeled alternative in {@link CoolParser#expr}.
-     *
      * @param ctx the parse tree
      * @return the visitor result
      */
-    T visitIf(CoolParser.IfContext ctx);
+	T visitIf(CoolParser.IfContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code case}
 	 * labeled alternative in {@link CoolParser#expr}.

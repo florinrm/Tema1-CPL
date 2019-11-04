@@ -183,7 +183,7 @@ public class Compiler {
 
                 @Override
                 public ASTNode visitNegation(CoolParser.NegationContext ctx) {
-                    return new UnaryMinusNode((Expression) visit(ctx.expression), ctx.start);
+                    return new NegationNode((Expression) visit(ctx.expression), ctx.start);
                 }
 
                 @Override
@@ -220,7 +220,7 @@ public class Compiler {
 
                 @Override
                 public ASTNode visitParantheses(CoolParser.ParanthesesContext ctx) {
-                    return super.visitParantheses(ctx);
+                    return new ParanthesesNode(ctx.start, (Expression) visit(ctx.expression));
                 }
 
                 @Override
@@ -230,7 +230,12 @@ public class Compiler {
 
                 @Override
                 public ASTNode visitBody(CoolParser.BodyContext ctx) {
-                    return super.visitBody(ctx);
+                    BlockNode node = new BlockNode(ctx.start);
+                    var expressions = ctx.expressions;
+                    for (var expr : expressions) {
+                        node.addExpression((Expression) expr.accept(this));
+                    }
+                    return node;
                 }
 
                 @Override
@@ -256,7 +261,29 @@ public class Compiler {
 
                 @Override
                 public ASTNode visitFunctionCall(CoolParser.FunctionCallContext ctx) {
-                    return super.visitFunctionCall(ctx);
+                    FunctionCall node = new FunctionCall((Expression) visit(ctx.name), ctx.start);
+                    for (var param : ctx.arguments) {
+                        node.addParam((Expression) param.accept(this));
+                    }
+                    return node;
+                }
+
+                @Override
+                public ASTNode visitUpCastCall(CoolParser.UpCastCallContext ctx) {
+                    FunctionCall node = null;
+                    if (ctx.expr != null) {
+                        node = new FunctionCall((Expression) visit(ctx.name),
+                                (Expression) visit(ctx.expr), ctx.upcast.getText(), ctx.start);
+                    } else {
+                        node = new FunctionCall((Expression) visit(ctx.name),
+                                null, ctx.upcast.getText(), ctx.start);
+                    }
+
+                    for (var param : ctx.params) {
+                        node.addParam((Expression) param.accept(this));
+                    }
+
+                    return node;
                 }
 
                 @Override
@@ -377,9 +404,12 @@ public class Compiler {
 
                 @Override
                 public Void visit(FunctionCall call) {
-                    printIndent("method");
+                    printIndent("implicit dispatch");
                     indent++;
-
+                    call.getName().accept(this);
+                    for (var param : call.getParams()) {
+                        param.accept(this);
+                    }
                     indent--;
                     return null;
                 }
@@ -417,9 +447,18 @@ public class Compiler {
 
                 @Override
                 public Void visit(UnaryMinusNode minus) {
-                    printIndent("not");
+                    printIndent("~");
                     indent++;
                     minus.getNested().accept(this);
+                    indent--;
+                    return null;
+                }
+
+                @Override
+                public Void visit(NegationNode negationNode) {
+                    printIndent("not");
+                    indent++;
+                    negationNode.getNested().accept(this);
                     indent--;
                     return null;
                 }
@@ -472,7 +511,16 @@ public class Compiler {
 
                 @Override
                 public Void visit(StringNode stringNode) {
-                    printIndent(stringNode.token.getText().replace("\"", ""));
+                    String toPrint = stringNode.token.getText()
+                            .replace("\"", "")
+                            .replace("\\n", "\n")
+                            .replace("\\t", "\t");
+                    if (toPrint.contains("\\\\")) {
+                        toPrint = toPrint.replace("\\\\", "\\");
+                    } else if (toPrint.contains("\\")) {
+                        toPrint = toPrint.replace("\\", "");
+                    }
+                    printIndent(toPrint);
                     return null;
                 }
 
@@ -547,6 +595,23 @@ public class Compiler {
                     printIndent(branch.getType());
                     branch.getExpression().accept(this);
                     indent--;
+                    return null;
+                }
+
+                @Override
+                public Void visit(BlockNode blockNode) {
+                    printIndent("block");
+                    indent++;
+                    for (var expression : blockNode.getExpressions()) {
+                        expression.accept(this);
+                    }
+                    indent--;
+                    return null;
+                }
+
+                @Override
+                public Void visit(ParanthesesNode paranthesesNode) {
+                    paranthesesNode.getExpression().accept(this);
                     return null;
                 }
             };

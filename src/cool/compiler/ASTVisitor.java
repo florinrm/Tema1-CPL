@@ -46,4 +46,10 @@ public interface ASTVisitor<T> {
     T visit(CaseOfNode caseOfNode);
 
     T visit(Branch branch);
+
+    T visit(BlockNode blockNode);
+
+    T visit(ParanthesesNode paranthesesNode);
+
+    T visit(NegationNode negationNode);
 }
