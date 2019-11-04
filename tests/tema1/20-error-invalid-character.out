@@ -1,23 +1,7 @@
 line 2:13 token recognition error at: '#'
-class : CLASS
-[@0,0:4='class',<9>,1:0]
-A : TYPE_ID
-[@1,6:6='A',<24>,1:6]
-{ : LBRACE
-[@2,8:8='{',<34>,1:8]
-x : ID
-[@3,14:14='x',<25>,2:4]
-: : COLON
-[@4,16:16=':',<29>,2:6]
-Int : TYPE
-[@5,18:20='Int',<22>,2:8]
-; : SEMI
-[@6,21:21=';',<28>,2:11]
-} : RBRACE
-[@7,25:25='}',<35>,3:0]
-; : SEMI
-[@8,26:26=';',<28>,3:1]
-<EOF> : EOF
-[@9,27:26='<EOF>',<-1>,3:2]
-"20-error-invalid-character.cl", line 2:9, Syntax error: mismatched input 'Int' expecting TYPE_ID
-Compilation halted
+program
+  class
+    A
+    attribute
+      x
+      Int

@@ -22,7 +22,7 @@ branch: declare_type RESULTS body=expr SEMI;
 
 expr:
     expression=expr (ANNOTATION upcast=TYPE_ID)? DOT name=expr LPAREN (params+=expr (COMMA params+=expr)*)? RPAREN # upCastCall
-    | name=expr LPAREN (arguments+=expr (COMMA arguments+=expr)*) RPAREN                                        # functionCall
+    | name=expr LPAREN (arguments+=expr (COMMA arguments+=expr)*)? RPAREN                                        # functionCall
     | IF condition=expr THEN then_branch=expr ELSE else_branch=expr FI                                          # if
     | WHILE condition=expr LOOP body=expr POOL                                                                  # while
     | LBRACE (expressions+=expr SEMI)+ RBRACE                                                                   # body

@@ -278,9 +278,11 @@ public interface CoolParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void enterLet(CoolParser.LetContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code let}
+
+    /**
+     * Exit a parse tree produced by the {@code let}
      * labeled alternative in {@link CoolParser#expr}.
+     *
      * @param ctx the parse tree
      */
     void exitLet(CoolParser.LetContext ctx);
@@ -295,7 +297,7 @@ public interface CoolParserListener extends ParseTreeListener {
 
     /**
      * Exit a parse tree produced by the {@code id}
-     * labeled alternative in {@link CoolParser#expr}.
+	 * labeled alternative in {@link CoolParser#expr}.
 	 * @param ctx the parse tree
 	 */
 	void exitId(CoolParser.IdContext ctx);

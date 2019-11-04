@@ -26,13 +26,14 @@ public class CoolParser extends Parser {
 	public static final int
             RULE_program = 0, RULE_class_def = 1, RULE_definition = 2, RULE_declare_type = 3,
             RULE_let_variables = 4, RULE_branch = 5, RULE_expr = 6;
+    public static final String[] ruleNames = makeRuleNames();
 	/**
 	 * @deprecated Use {@link #VOCABULARY} instead.
 	 */
 	@Deprecated
 	public static final String[] tokenNames;
 	public static final String _serializedATN =
-            "\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\60\u00c5\4\2\t\2" +
+            "\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\60\u00c6\4\2\t\2" +
                     "\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\3\2\3\2\3\2\6\2\24\n" +
                     "\2\r\2\16\2\25\3\2\3\2\3\3\3\3\3\3\3\3\5\3\36\n\3\3\3\3\3\3\3\3\3\7\3" +
                     "$\n\3\f\3\16\3\'\13\3\3\3\3\3\3\4\3\4\3\4\3\4\3\4\7\4\60\n\4\f\4\16\4" +
@@ -44,61 +45,60 @@ public class CoolParser extends Parser {
                     "\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\5\b\u0095" +
                     "\n\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\5\b\u00a3\n\b\3\b" +
                     "\3\b\3\b\3\b\3\b\3\b\7\b\u00ab\n\b\f\b\16\b\u00ae\13\b\5\b\u00b0\n\b\3" +
-                    "\b\3\b\3\b\3\b\3\b\3\b\3\b\7\b\u00b9\n\b\f\b\16\b\u00bc\13\b\3\b\3\b\7" +
-                    "\b\u00c0\n\b\f\b\16\b\u00c3\13\b\3\b\2\3\16\t\2\4\6\b\n\f\16\2\5\3\2(" +
-                    ")\3\2&\'\3\2+-\2\u00df\2\23\3\2\2\2\4\31\3\2\2\2\6B\3\2\2\2\bD\3\2\2\2" +
-                    "\nH\3\2\2\2\fM\3\2\2\2\16\u0094\3\2\2\2\20\21\5\4\3\2\21\22\7\36\2\2\22" +
-                    "\24\3\2\2\2\23\20\3\2\2\2\24\25\3\2\2\2\25\23\3\2\2\2\25\26\3\2\2\2\26" +
-                    "\27\3\2\2\2\27\30\7\2\2\3\30\3\3\2\2\2\31\32\7\13\2\2\32\35\7\31\2\2\33" +
-                    "\34\7\f\2\2\34\36\7\31\2\2\35\33\3\2\2\2\35\36\3\2\2\2\36\37\3\2\2\2\37" +
-                    "%\7$\2\2 !\5\6\4\2!\"\7\36\2\2\"$\3\2\2\2# \3\2\2\2$\'\3\2\2\2%#\3\2\2" +
-                    "\2%&\3\2\2\2&(\3\2\2\2\'%\3\2\2\2()\7%\2\2)\5\3\2\2\2*+\7\32\2\2+\64\7" +
-                    "\"\2\2,\61\5\b\5\2-.\7 \2\2.\60\5\b\5\2/-\3\2\2\2\60\63\3\2\2\2\61/\3" +
-                    "\2\2\2\61\62\3\2\2\2\62\65\3\2\2\2\63\61\3\2\2\2\64,\3\2\2\2\64\65\3\2" +
-                    "\2\2\65\66\3\2\2\2\66\67\7#\2\2\678\7\37\2\289\7\31\2\29:\7$\2\2:;\5\16" +
-                    "\b\2;<\7%\2\2<C\3\2\2\2=@\5\b\5\2>?\7!\2\2?A\5\16\b\2@>\3\2\2\2@A\3\2" +
-                    "\2\2AC\3\2\2\2B*\3\2\2\2B=\3\2\2\2C\7\3\2\2\2DE\7\32\2\2EF\7\37\2\2FG" +
-                    "\7\31\2\2G\t\3\2\2\2HK\5\b\5\2IJ\7!\2\2JL\5\16\b\2KI\3\2\2\2KL\3\2\2\2" +
-                    "L\13\3\2\2\2MN\5\b\5\2NO\7*\2\2OP\5\16\b\2PQ\7\36\2\2Q\r\3\2\2\2RS\b\b" +
-                    "\1\2ST\7\4\2\2TU\5\16\b\2UV\7\5\2\2VW\5\16\b\2WX\7\6\2\2XY\5\16\b\2YZ" +
-                    "\7\7\2\2Z\u0095\3\2\2\2[\\\7\17\2\2\\]\5\16\b\2]^\7\20\2\2^_\5\16\b\2" +
-                    "_`\7\21\2\2`\u0095\3\2\2\2ae\7$\2\2bc\5\16\b\2cd\7\36\2\2df\3\2\2\2eb" +
-                    "\3\2\2\2fg\3\2\2\2ge\3\2\2\2gh\3\2\2\2hi\3\2\2\2ij\7%\2\2j\u0095\3\2\2" +
-                    "\2kl\7\r\2\2lq\5\n\6\2mn\7 \2\2np\5\n\6\2om\3\2\2\2ps\3\2\2\2qo\3\2\2" +
-                    "\2qr\3\2\2\2rt\3\2\2\2sq\3\2\2\2tu\7\16\2\2uv\5\16\b\21v\u0095\3\2\2\2" +
-                    "wx\7\22\2\2xy\5\16\b\2y{\7\23\2\2z|\5\f\7\2{z\3\2\2\2|}\3\2\2\2}{\3\2" +
-                    "\2\2}~\3\2\2\2~\177\3\2\2\2\177\u0080\7\24\2\2\u0080\u0095\3\2\2\2\u0081" +
-                    "\u0082\7\n\2\2\u0082\u0095\7\31\2\2\u0083\u0084\7\32\2\2\u0084\u0085\7" +
-                    "!\2\2\u0085\u0095\5\16\b\f\u0086\u0087\7\b\2\2\u0087\u0095\5\16\b\13\u0088" +
-                    "\u0089\7\25\2\2\u0089\u0095\5\16\b\n\u008a\u008b\7\t\2\2\u008b\u0095\5" +
-                    "\16\b\b\u008c\u008d\7\"\2\2\u008d\u008e\5\16\b\2\u008e\u008f\7#\2\2\u008f" +
-                    "\u0095\3\2\2\2\u0090\u0095\7\32\2\2\u0091\u0095\7\26\2\2\u0092\u0095\7" +
-                    "\27\2\2\u0093\u0095\7\30\2\2\u0094R\3\2\2\2\u0094[\3\2\2\2\u0094a\3\2" +
-                    "\2\2\u0094k\3\2\2\2\u0094w\3\2\2\2\u0094\u0081\3\2\2\2\u0094\u0083\3\2" +
-                    "\2\2\u0094\u0086\3\2\2\2\u0094\u0088\3\2\2\2\u0094\u008a\3\2\2\2\u0094" +
-                    "\u008c\3\2\2\2\u0094\u0090\3\2\2\2\u0094\u0091\3\2\2\2\u0094\u0092\3\2" +
-                    "\2\2\u0094\u0093\3\2\2\2\u0095\u00c1\3\2\2\2\u0096\u0097\f\16\2\2\u0097" +
-                    "\u0098\t\2\2\2\u0098\u00c0\5\16\b\17\u0099\u009a\f\r\2\2\u009a\u009b\t" +
-                    "\3\2\2\u009b\u00c0\5\16\b\16\u009c\u009d\f\t\2\2\u009d\u009e\t\4\2\2\u009e" +
-                    "\u00c0\5\16\b\n\u009f\u00a2\f\26\2\2\u00a0\u00a1\7\35\2\2\u00a1\u00a3" +
-                    "\7\31\2\2\u00a2\u00a0\3\2\2\2\u00a2\u00a3\3\2\2\2\u00a3\u00a4\3\2\2\2" +
-                    "\u00a4\u00a5\7\34\2\2\u00a5\u00a6\5\16\b\2\u00a6\u00af\7\"\2\2\u00a7\u00ac" +
-                    "\5\16\b\2\u00a8\u00a9\7 \2\2\u00a9\u00ab\5\16\b\2\u00aa\u00a8\3\2\2\2" +
-                    "\u00ab\u00ae\3\2\2\2\u00ac\u00aa\3\2\2\2\u00ac\u00ad\3\2\2\2\u00ad\u00b0" +
-                    "\3\2\2\2\u00ae\u00ac\3\2\2\2\u00af\u00a7\3\2\2\2\u00af\u00b0\3\2\2\2\u00b0" +
-                    "\u00b1\3\2\2\2\u00b1\u00b2\7#\2\2\u00b2\u00c0\3\2\2\2\u00b3\u00b4\f\25" +
-                    "\2\2\u00b4\u00b5\7\"\2\2\u00b5\u00ba\5\16\b\2\u00b6\u00b7\7 \2\2\u00b7" +
-                    "\u00b9\5\16\b\2\u00b8\u00b6\3\2\2\2\u00b9\u00bc\3\2\2\2\u00ba\u00b8\3" +
-                    "\2\2\2\u00ba\u00bb\3\2\2\2\u00bb\u00bd\3\2\2\2\u00bc\u00ba\3\2\2\2\u00bd" +
-                    "\u00be\7#\2\2\u00be\u00c0\3\2\2\2\u00bf\u0096\3\2\2\2\u00bf\u0099\3\2" +
-                    "\2\2\u00bf\u009c\3\2\2\2\u00bf\u009f\3\2\2\2\u00bf\u00b3\3\2\2\2\u00c0" +
-                    "\u00c3\3\2\2\2\u00c1\u00bf\3\2\2\2\u00c1\u00c2\3\2\2\2\u00c2\17\3\2\2" +
-                    "\2\u00c3\u00c1\3\2\2\2\24\25\35%\61\64@BKgq}\u0094\u00a2\u00ac\u00af\u00ba" +
-                    "\u00bf\u00c1";
+                    "\b\3\b\3\b\3\b\3\b\3\b\3\b\7\b\u00b9\n\b\f\b\16\b\u00bc\13\b\5\b\u00be" +
+                    "\n\b\3\b\7\b\u00c1\n\b\f\b\16\b\u00c4\13\b\3\b\2\3\16\t\2\4\6\b\n\f\16" +
+                    "\2\5\3\2()\3\2&\'\3\2+-\2\u00e1\2\23\3\2\2\2\4\31\3\2\2\2\6B\3\2\2\2\b" +
+                    "D\3\2\2\2\nH\3\2\2\2\fM\3\2\2\2\16\u0094\3\2\2\2\20\21\5\4\3\2\21\22\7" +
+                    "\36\2\2\22\24\3\2\2\2\23\20\3\2\2\2\24\25\3\2\2\2\25\23\3\2\2\2\25\26" +
+                    "\3\2\2\2\26\27\3\2\2\2\27\30\7\2\2\3\30\3\3\2\2\2\31\32\7\13\2\2\32\35" +
+                    "\7\31\2\2\33\34\7\f\2\2\34\36\7\31\2\2\35\33\3\2\2\2\35\36\3\2\2\2\36" +
+                    "\37\3\2\2\2\37%\7$\2\2 !\5\6\4\2!\"\7\36\2\2\"$\3\2\2\2# \3\2\2\2$\'\3" +
+                    "\2\2\2%#\3\2\2\2%&\3\2\2\2&(\3\2\2\2\'%\3\2\2\2()\7%\2\2)\5\3\2\2\2*+" +
+                    "\7\32\2\2+\64\7\"\2\2,\61\5\b\5\2-.\7 \2\2.\60\5\b\5\2/-\3\2\2\2\60\63" +
+                    "\3\2\2\2\61/\3\2\2\2\61\62\3\2\2\2\62\65\3\2\2\2\63\61\3\2\2\2\64,\3\2" +
+                    "\2\2\64\65\3\2\2\2\65\66\3\2\2\2\66\67\7#\2\2\678\7\37\2\289\7\31\2\2" +
+                    "9:\7$\2\2:;\5\16\b\2;<\7%\2\2<C\3\2\2\2=@\5\b\5\2>?\7!\2\2?A\5\16\b\2" +
+                    "@>\3\2\2\2@A\3\2\2\2AC\3\2\2\2B*\3\2\2\2B=\3\2\2\2C\7\3\2\2\2DE\7\32\2" +
+                    "\2EF\7\37\2\2FG\7\31\2\2G\t\3\2\2\2HK\5\b\5\2IJ\7!\2\2JL\5\16\b\2KI\3" +
+                    "\2\2\2KL\3\2\2\2L\13\3\2\2\2MN\5\b\5\2NO\7*\2\2OP\5\16\b\2PQ\7\36\2\2" +
+                    "Q\r\3\2\2\2RS\b\b\1\2ST\7\4\2\2TU\5\16\b\2UV\7\5\2\2VW\5\16\b\2WX\7\6" +
+                    "\2\2XY\5\16\b\2YZ\7\7\2\2Z\u0095\3\2\2\2[\\\7\17\2\2\\]\5\16\b\2]^\7\20" +
+                    "\2\2^_\5\16\b\2_`\7\21\2\2`\u0095\3\2\2\2ae\7$\2\2bc\5\16\b\2cd\7\36\2" +
+                    "\2df\3\2\2\2eb\3\2\2\2fg\3\2\2\2ge\3\2\2\2gh\3\2\2\2hi\3\2\2\2ij\7%\2" +
+                    "\2j\u0095\3\2\2\2kl\7\r\2\2lq\5\n\6\2mn\7 \2\2np\5\n\6\2om\3\2\2\2ps\3" +
+                    "\2\2\2qo\3\2\2\2qr\3\2\2\2rt\3\2\2\2sq\3\2\2\2tu\7\16\2\2uv\5\16\b\21" +
+                    "v\u0095\3\2\2\2wx\7\22\2\2xy\5\16\b\2y{\7\23\2\2z|\5\f\7\2{z\3\2\2\2|" +
+                    "}\3\2\2\2}{\3\2\2\2}~\3\2\2\2~\177\3\2\2\2\177\u0080\7\24\2\2\u0080\u0095" +
+                    "\3\2\2\2\u0081\u0082\7\n\2\2\u0082\u0095\7\31\2\2\u0083\u0084\7\32\2\2" +
+                    "\u0084\u0085\7!\2\2\u0085\u0095\5\16\b\f\u0086\u0087\7\b\2\2\u0087\u0095" +
+                    "\5\16\b\13\u0088\u0089\7\25\2\2\u0089\u0095\5\16\b\n\u008a\u008b\7\t\2" +
+                    "\2\u008b\u0095\5\16\b\b\u008c\u008d\7\"\2\2\u008d\u008e\5\16\b\2\u008e" +
+                    "\u008f\7#\2\2\u008f\u0095\3\2\2\2\u0090\u0095\7\32\2\2\u0091\u0095\7\26" +
+                    "\2\2\u0092\u0095\7\27\2\2\u0093\u0095\7\30\2\2\u0094R\3\2\2\2\u0094[\3" +
+                    "\2\2\2\u0094a\3\2\2\2\u0094k\3\2\2\2\u0094w\3\2\2\2\u0094\u0081\3\2\2" +
+                    "\2\u0094\u0083\3\2\2\2\u0094\u0086\3\2\2\2\u0094\u0088\3\2\2\2\u0094\u008a" +
+                    "\3\2\2\2\u0094\u008c\3\2\2\2\u0094\u0090\3\2\2\2\u0094\u0091\3\2\2\2\u0094" +
+                    "\u0092\3\2\2\2\u0094\u0093\3\2\2\2\u0095\u00c2\3\2\2\2\u0096\u0097\f\16" +
+                    "\2\2\u0097\u0098\t\2\2\2\u0098\u00c1\5\16\b\17\u0099\u009a\f\r\2\2\u009a" +
+                    "\u009b\t\3\2\2\u009b\u00c1\5\16\b\16\u009c\u009d\f\t\2\2\u009d\u009e\t" +
+                    "\4\2\2\u009e\u00c1\5\16\b\n\u009f\u00a2\f\26\2\2\u00a0\u00a1\7\35\2\2" +
+                    "\u00a1\u00a3\7\31\2\2\u00a2\u00a0\3\2\2\2\u00a2\u00a3\3\2\2\2\u00a3\u00a4" +
+                    "\3\2\2\2\u00a4\u00a5\7\34\2\2\u00a5\u00a6\5\16\b\2\u00a6\u00af\7\"\2\2" +
+                    "\u00a7\u00ac\5\16\b\2\u00a8\u00a9\7 \2\2\u00a9\u00ab\5\16\b\2\u00aa\u00a8" +
+                    "\3\2\2\2\u00ab\u00ae\3\2\2\2\u00ac\u00aa\3\2\2\2\u00ac\u00ad\3\2\2\2\u00ad" +
+                    "\u00b0\3\2\2\2\u00ae\u00ac\3\2\2\2\u00af\u00a7\3\2\2\2\u00af\u00b0\3\2" +
+                    "\2\2\u00b0\u00b1\3\2\2\2\u00b1\u00b2\7#\2\2\u00b2\u00c1\3\2\2\2\u00b3" +
+                    "\u00b4\f\25\2\2\u00b4\u00bd\7\"\2\2\u00b5\u00ba\5\16\b\2\u00b6\u00b7\7" +
+                    " \2\2\u00b7\u00b9\5\16\b\2\u00b8\u00b6\3\2\2\2\u00b9\u00bc\3\2\2\2\u00ba" +
+                    "\u00b8\3\2\2\2\u00ba\u00bb\3\2\2\2\u00bb\u00be\3\2\2\2\u00bc\u00ba\3\2" +
+                    "\2\2\u00bd\u00b5\3\2\2\2\u00bd\u00be\3\2\2\2\u00be\u00bf\3\2\2\2\u00bf" +
+                    "\u00c1\7#\2\2\u00c0\u0096\3\2\2\2\u00c0\u0099\3\2\2\2\u00c0\u009c\3\2" +
+                    "\2\2\u00c0\u009f\3\2\2\2\u00c0\u00b3\3\2\2\2\u00c1\u00c4\3\2\2\2\u00c2" +
+                    "\u00c0\3\2\2\2\u00c2\u00c3\3\2\2\2\u00c3\17\3\2\2\2\u00c4\u00c2\3\2\2" +
+                    "\2\25\25\35%\61\64@BKgq}\u0094\u00a2\u00ac\u00af\u00ba\u00bd\u00c0\u00c2";
 	public static final ATN _ATN =
             new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	protected static final DFA[] _decisionToDFA;
-    public static final String[] ruleNames = makeRuleNames();
 	protected static final PredictionContextCache _sharedContextCache =
             new PredictionContextCache();
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
@@ -455,10 +455,6 @@ public class CoolParser extends Parser {
 		return _localctx;
 	}
 
-	public final ExprContext expr() throws RecognitionException {
-		return expr(0);
-	}
-
 	private ExprContext expr(int _p) throws RecognitionException {
 		ParserRuleContext _parentctx = _ctx;
 		int _parentState = getState();
@@ -697,17 +693,17 @@ public class CoolParser extends Parser {
                     break;
                 }
                 _ctx.stop = _input.LT(-1);
-                setState(191);
+                setState(192);
                 _errHandler.sync(this);
-                _alt = getInterpreter().adaptivePredict(_input, 17, _ctx);
+                _alt = getInterpreter().adaptivePredict(_input, 18, _ctx);
                 while (_alt != 2 && _alt != org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER) {
                     if (_alt == 1) {
                         if (_parseListeners != null) triggerExitRuleEvent();
                         _prevctx = _localctx;
                         {
-                            setState(189);
+                            setState(190);
                             _errHandler.sync(this);
-                            switch (getInterpreter().adaptivePredict(_input, 16, _ctx)) {
+                            switch (getInterpreter().adaptivePredict(_input, 17, _ctx)) {
                                 case 1: {
                                     _localctx = new MulDivContext(new ExprContext(_parentctx, _parentState));
                                     ((MulDivContext) _localctx).leftBranch = _prevctx;
@@ -837,38 +833,44 @@ public class CoolParser extends Parser {
                                         throw new FailedPredicateException(this, "precpred(_ctx, 19)");
                                     setState(178);
                                     match(LPAREN);
-                                    {
-                                        setState(179);
-                                        ((FunctionCallContext) _localctx).expr = expr(0);
-                                        ((FunctionCallContext) _localctx).arguments.add(((FunctionCallContext) _localctx).expr);
-                                        setState(184);
-                                        _errHandler.sync(this);
-                                        _la = _input.LA(1);
-                                        while (_la == COMMA) {
-                                            {
-                                                {
-                                                    setState(180);
-                                                    match(COMMA);
-                                                    setState(181);
-                                                    ((FunctionCallContext) _localctx).expr = expr(0);
-                                                    ((FunctionCallContext) _localctx).arguments.add(((FunctionCallContext) _localctx).expr);
-                                                }
-                                            }
-                                            setState(186);
+                                    setState(187);
+                                    _errHandler.sync(this);
+                                    _la = _input.LA(1);
+                                    if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << IF) | (1L << NEGATION) | (1L << NOT) | (1L << NEW) | (1L << LET) | (1L << WHILE) | (1L << CASE) | (1L << ISVOID) | (1L << BOOL) | (1L << STRING) | (1L << INT) | (1L << ID) | (1L << LPAREN) | (1L << LBRACE))) != 0)) {
+                                        {
+                                            setState(179);
+                                            ((FunctionCallContext) _localctx).expr = expr(0);
+                                            ((FunctionCallContext) _localctx).arguments.add(((FunctionCallContext) _localctx).expr);
+                                            setState(184);
                                             _errHandler.sync(this);
                                             _la = _input.LA(1);
+                                            while (_la == COMMA) {
+                                                {
+                                                    {
+                                                        setState(180);
+                                                        match(COMMA);
+                                                        setState(181);
+                                                        ((FunctionCallContext) _localctx).expr = expr(0);
+                                                        ((FunctionCallContext) _localctx).arguments.add(((FunctionCallContext) _localctx).expr);
+                                                    }
+                                                }
+                                                setState(186);
+                                                _errHandler.sync(this);
+                                                _la = _input.LA(1);
+                                            }
                                         }
                                     }
-                                    setState(187);
+
+                                    setState(189);
                                     match(RPAREN);
                                 }
                                 break;
                             }
                         }
                     }
-                    setState(193);
+                    setState(194);
                     _errHandler.sync(this);
-                    _alt = getInterpreter().adaptivePredict(_input, 17, _ctx);
+                    _alt = getInterpreter().adaptivePredict(_input, 18, _ctx);
                 }
             }
         } catch (RecognitionException re) {
@@ -1279,6 +1281,7 @@ public class CoolParser extends Parser {
         public int getRuleIndex() {
             return RULE_expr;
         }
+
 		public void copyFrom(ExprContext ctx) {
 			super.copyFrom(ctx);
 		}
@@ -1290,13 +1293,14 @@ public class CoolParser extends Parser {
         public NegationContext(ExprContext ctx) {
             copyFrom(ctx);
         }
-		public ExprContext expr() {
-			return getRuleContext(ExprContext.class,0);
-		}
 
         public TerminalNode NOT() {
             return getToken(CoolParser.NOT, 0);
         }
+
+		public ExprContext expr() {
+			return getRuleContext(ExprContext.class,0);
+		}
 
 		@Override
 		public void enterRule(ParseTreeListener listener) {
@@ -1318,13 +1322,14 @@ public class CoolParser extends Parser {
 		public ExprContext leftBranch;
 		public Token op;
 		public ExprContext rightBranch;
-		public List<ExprContext> expr() {
-			return getRuleContexts(ExprContext.class);
-		}
 
         public CompareContext(ExprContext ctx) {
             copyFrom(ctx);
         }
+
+		public List<ExprContext> expr() {
+			return getRuleContexts(ExprContext.class);
+		}
 
 		public ExprContext expr(int i) {
             return getRuleContext(ExprContext.class, i);
@@ -1369,13 +1374,14 @@ public class CoolParser extends Parser {
         public TerminalNode ASSIGN() {
             return getToken(CoolParser.ASSIGN, 0);
         }
-		public ExprContext expr() {
-			return getRuleContext(ExprContext.class,0);
-		}
 
         public TerminalNode ID() {
             return getToken(CoolParser.ID, 0);
         }
+
+		public ExprContext expr() {
+			return getRuleContext(ExprContext.class,0);
+		}
 
 		@Override
 		public void enterRule(ParseTreeListener listener) {
@@ -1399,13 +1405,14 @@ public class CoolParser extends Parser {
         public VoidContext(ExprContext ctx) {
             copyFrom(ctx);
         }
-		public ExprContext expr() {
-			return getRuleContext(ExprContext.class,0);
-		}
 
         public TerminalNode ISVOID() {
             return getToken(CoolParser.ISVOID, 0);
         }
+
+		public ExprContext expr() {
+			return getRuleContext(ExprContext.class,0);
+		}
 
 		@Override
 		public void enterRule(ParseTreeListener listener) {
@@ -1451,13 +1458,14 @@ public class CoolParser extends Parser {
 		public ExprContext leftBranch;
 		public Token op;
 		public ExprContext rightBranch;
-		public List<ExprContext> expr() {
-			return getRuleContexts(ExprContext.class);
-		}
 
         public MinusPlusContext(ExprContext ctx) {
             copyFrom(ctx);
         }
+
+		public List<ExprContext> expr() {
+			return getRuleContexts(ExprContext.class);
+		}
 
 		public ExprContext expr(int i) {
             return getRuleContext(ExprContext.class, i);
@@ -1497,13 +1505,14 @@ public class CoolParser extends Parser {
         public TerminalNode LPAREN() {
             return getToken(CoolParser.LPAREN, 0);
         }
-		public ExprContext expr() {
-			return getRuleContext(ExprContext.class,0);
-		}
 
         public TerminalNode RPAREN() {
             return getToken(CoolParser.RPAREN, 0);
         }
+
+		public ExprContext expr() {
+			return getRuleContext(ExprContext.class,0);
+		}
 
 		@Override
 		public void enterRule(ParseTreeListener listener) {
@@ -1536,16 +1545,18 @@ public class CoolParser extends Parser {
         public TerminalNode LOOP() {
             return getToken(CoolParser.LOOP, 0);
         }
-		public List<ExprContext> expr() {
-			return getRuleContexts(ExprContext.class);
-		}
-		public ExprContext expr(int i) {
-			return getRuleContext(ExprContext.class,i);
-		}
 
         public TerminalNode POOL() {
             return getToken(CoolParser.POOL, 0);
         }
+
+		public List<ExprContext> expr() {
+			return getRuleContexts(ExprContext.class);
+		}
+
+		public ExprContext expr(int i) {
+			return getRuleContext(ExprContext.class,i);
+		}
 
 		@Override
 		public void enterRule(ParseTreeListener listener) {
@@ -1578,19 +1589,22 @@ public class CoolParser extends Parser {
         public TerminalNode RBRACE() {
             return getToken(CoolParser.RBRACE, 0);
         }
-		public TerminalNode SEMI(int i) {
-			return getToken(CoolParser.SEMI, i);
-		}
-		public List<ExprContext> expr() {
-			return getRuleContexts(ExprContext.class);
-		}
-		public ExprContext expr(int i) {
-			return getRuleContext(ExprContext.class,i);
-		}
 
         public List<TerminalNode> SEMI() {
             return getTokens(CoolParser.SEMI);
         }
+
+		public TerminalNode SEMI(int i) {
+			return getToken(CoolParser.SEMI, i);
+		}
+
+		public List<ExprContext> expr() {
+			return getRuleContexts(ExprContext.class);
+		}
+
+		public ExprContext expr(int i) {
+			return getRuleContext(ExprContext.class,i);
+		}
 
 		@Override
 		public void enterRule(ParseTreeListener listener) {
@@ -1635,13 +1649,14 @@ public class CoolParser extends Parser {
 		public ExprContext leftBranch;
 		public Token op;
 		public ExprContext rightBranch;
-		public List<ExprContext> expr() {
-			return getRuleContexts(ExprContext.class);
-		}
 
         public MulDivContext(ExprContext ctx) {
             copyFrom(ctx);
         }
+
+		public List<ExprContext> expr() {
+			return getRuleContexts(ExprContext.class);
+		}
 
 		public ExprContext expr(int i) {
             return getRuleContext(ExprContext.class, i);
@@ -1773,24 +1788,26 @@ public class CoolParser extends Parser {
         public TerminalNode LPAREN() {
             return getToken(CoolParser.LPAREN, 0);
         }
-		public List<ExprContext> expr() {
-			return getRuleContexts(ExprContext.class);
-		}
 
         public TerminalNode RPAREN() {
             return getToken(CoolParser.RPAREN, 0);
         }
 
+		public List<ExprContext> expr() {
+			return getRuleContexts(ExprContext.class);
+		}
+
 		public ExprContext expr(int i) {
             return getRuleContext(ExprContext.class, i);
-		}
-		public TerminalNode COMMA(int i) {
-			return getToken(CoolParser.COMMA, i);
-		}
+        }
 
         public List<TerminalNode> COMMA() {
             return getTokens(CoolParser.COMMA);
         }
+
+		public TerminalNode COMMA(int i) {
+			return getToken(CoolParser.COMMA, i);
+		}
 
 		@Override
 		public void enterRule(ParseTreeListener listener) {
@@ -1808,19 +1825,24 @@ public class CoolParser extends Parser {
 		}
 	}
 
+    public final ExprContext expr() throws RecognitionException {
+        return expr(0);
+    }
+
 	public static class UnaryNegationContext extends ExprContext {
 		public ExprContext expression;
 
         public UnaryNegationContext(ExprContext ctx) {
             copyFrom(ctx);
         }
-		public ExprContext expr() {
-			return getRuleContext(ExprContext.class,0);
-		}
 
         public TerminalNode NEGATION() {
             return getToken(CoolParser.NEGATION, 0);
         }
+
+		public ExprContext expr() {
+			return getRuleContext(ExprContext.class,0);
+		}
 
 		@Override
 		public void enterRule(ParseTreeListener listener) {
@@ -1850,13 +1872,14 @@ public class CoolParser extends Parser {
         public TerminalNode LET() {
             return getToken(CoolParser.LET, 0);
         }
-		public List<Let_variablesContext> let_variables() {
-			return getRuleContexts(Let_variablesContext.class);
-		}
 
         public TerminalNode IN() {
             return getToken(CoolParser.IN, 0);
         }
+
+		public List<Let_variablesContext> let_variables() {
+			return getRuleContexts(Let_variablesContext.class);
+		}
 
 		public Let_variablesContext let_variables(int i) {
             return getRuleContext(Let_variablesContext.class, i);
@@ -1864,14 +1887,15 @@ public class CoolParser extends Parser {
 
 		public ExprContext expr() {
             return getRuleContext(ExprContext.class, 0);
-		}
-		public TerminalNode COMMA(int i) {
-			return getToken(CoolParser.COMMA, i);
-		}
+        }
 
         public List<TerminalNode> COMMA() {
             return getTokens(CoolParser.COMMA);
         }
+
+		public TerminalNode COMMA(int i) {
+			return getToken(CoolParser.COMMA, i);
+		}
 
 		@Override
 		public void enterRule(ParseTreeListener listener) {
@@ -1932,16 +1956,18 @@ public class CoolParser extends Parser {
         public TerminalNode ELSE() {
             return getToken(CoolParser.ELSE, 0);
         }
-		public List<ExprContext> expr() {
-			return getRuleContexts(ExprContext.class);
-		}
-		public ExprContext expr(int i) {
-			return getRuleContext(ExprContext.class,i);
-		}
 
         public TerminalNode FI() {
             return getToken(CoolParser.FI, 0);
         }
+
+		public List<ExprContext> expr() {
+			return getRuleContexts(ExprContext.class);
+		}
+
+		public ExprContext expr(int i) {
+			return getRuleContext(ExprContext.class,i);
+		}
 
 		@Override
 		public void enterRule(ParseTreeListener listener) {
@@ -1978,12 +2004,13 @@ public class CoolParser extends Parser {
         public TerminalNode ESAC() {
             return getToken(CoolParser.ESAC, 0);
         }
-		public List<BranchContext> branch() {
-			return getRuleContexts(BranchContext.class);
-		}
 
         public ExprContext expr() {
             return getRuleContext(ExprContext.class, 0);
+        }
+
+        public List<BranchContext> branch() {
+            return getRuleContexts(BranchContext.class);
         }
 
 		public BranchContext branch(int i) {

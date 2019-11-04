@@ -1,68 +1,23 @@
-class : CLASS
-[@0,0:4='class',<9>,1:0]
-A : TYPE_ID
-[@1,6:6='A',<24>,1:6]
-{ : LBRACE
-[@2,8:8='{',<34>,1:8]
-n : ID
-[@3,14:14='n',<25>,2:4]
-: : COLON
-[@4,16:16=':',<29>,2:6]
-Int : TYPE
-[@5,18:20='Int',<22>,2:8]
-; : SEMI
-[@6,21:21=';',<28>,2:11]
-b : ID
-[@7,27:27='b',<25>,3:4]
-: : COLON
-[@8,29:29=':',<29>,3:6]
-Bool : TYPE
-[@9,31:34='Bool',<22>,3:8]
-<- : ASSIGN
-[@10,36:37='<-',<31>,3:13]
-not : NOT
-[@11,39:41='not',<7>,3:16]
-2 : INT
-[@12,43:43='2',<23>,3:20]
-<= : LE
-[@13,45:46='<=',<43>,3:22]
-n : ID
-[@14,48:48='n',<25>,3:25]
-; : SEMI
-[@15,49:49=';',<28>,3:26]
-c : ID
-[@16,55:55='c',<25>,4:4]
-: : COLON
-[@17,57:57=':',<29>,4:6]
-Bool : TYPE
-[@18,59:62='Bool',<22>,4:8]
-<- : ASSIGN
-[@19,64:65='<-',<31>,4:13]
-2 : INT
-[@20,67:67='2',<23>,4:16]
-< : LT
-[@21,69:69='<',<42>,4:18]
-n : ID
-[@22,71:71='n',<25>,4:20]
-+ : PLUS
-[@23,73:73='+',<36>,4:22]
-1 : INT
-[@24,75:75='1',<23>,4:24]
-= : EQUAL
-[@25,77:77='=',<41>,4:26]
-false : BOOL
-[@26,79:83='false',<21>,4:28]
-; : SEMI
-[@27,84:84=';',<28>,4:33]
-} : RBRACE
-[@28,86:86='}',<35>,5:0]
-; : SEMI
-[@29,87:87=';',<28>,5:1]
-<EOF> : EOF
-[@30,88:87='<EOF>',<-1>,5:2]
-"07-relational.cl", line 2:9, Syntax error: mismatched input 'Int' expecting TYPE_ID
-"07-relational.cl", line 3:9, Syntax error: mismatched input 'Bool' expecting TYPE_ID
-"07-relational.cl", line 3:27, Syntax error: no viable alternative at input 'n;'
-"07-relational.cl", line 4:9, Syntax error: mismatched input 'Bool' expecting TYPE_ID
-"07-relational.cl", line 4:23, Syntax error: no viable alternative at input 'n+'
-Compilation halted
+program
+  class
+    A
+    attribute
+      n
+      Int
+    attribute
+      b
+      Bool
+      not
+        <=
+          2
+          n
+    attribute
+      c
+      Bool
+      =
+        <
+          2
+          +
+            n
+            1
+        false

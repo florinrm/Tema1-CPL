@@ -1,38 +1,10 @@
-class : CLASS
-[@0,0:4='class',<9>,1:0]
-A : TYPE_ID
-[@1,6:6='A',<24>,1:6]
-{ : LBRACE
-[@2,8:8='{',<34>,1:8]
-f : ID
-[@3,14:14='f',<25>,2:4]
-( : LPAREN
-[@4,15:15='(',<32>,2:5]
-) : RPAREN
-[@5,16:16=')',<33>,2:6]
-: : COLON
-[@6,18:18=':',<29>,2:8]
-Bool : TYPE
-[@7,20:23='Bool',<22>,2:10]
-{ : LBRACE
-[@8,25:25='{',<34>,2:15]
-not : NOT
-[@9,35:37='not',<7>,3:8]
-isvoid : ISVOID
-[@10,39:44='isvoid',<20>,3:12]
-new : NEW
-[@11,46:48='new',<8>,3:19]
-A : TYPE_ID
-[@12,50:50='A',<24>,3:23]
-} : RBRACE
-[@13,56:56='}',<35>,4:4]
-; : SEMI
-[@14,57:57=';',<28>,4:5]
-} : RBRACE
-[@15,59:59='}',<35>,5:0]
-; : SEMI
-[@16,60:60=';',<28>,5:1]
-<EOF> : EOF
-[@17,61:60='<EOF>',<-1>,5:2]
-"09-new-isvoid.cl", line 2:11, Syntax error: mismatched input 'Bool' expecting TYPE_ID
-Compilation halted
+program
+  class
+    A
+    method
+      f
+      Bool
+      not
+        isvoid
+          new
+            A

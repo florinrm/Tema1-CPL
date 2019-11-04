@@ -1,58 +1,16 @@
-there are no strings in CPLang, but shhh..
-class : CLASS
-[@0,0:4='class',<9>,1:0]
-A : TYPE_ID
-[@1,6:6='A',<24>,1:6]
-{ : LBRACE
-[@2,8:8='{',<34>,1:8]
-f : ID
-[@3,14:14='f',<25>,2:4]
-( : LPAREN
-[@4,15:15='(',<32>,2:5]
-x : ID
-[@5,16:16='x',<25>,2:6]
-: : COLON
-[@6,18:18=':',<29>,2:8]
-Int : TYPE
-[@7,20:22='Int',<22>,2:10]
-) : RPAREN
-[@8,23:23=')',<33>,2:13]
-: : COLON
-[@9,25:25=':',<29>,2:15]
-String : TYPE_ID
-[@10,27:32='String',<24>,2:17]
-{ : LBRACE
-[@11,34:34='{',<34>,2:24]
-{ : LBRACE
-[@12,44:44='{',<34>,3:8]
-x : ID
-[@13,58:58='x',<25>,4:12]
-<- : ASSIGN
-[@14,60:61='<-',<31>,4:14]
-x : ID
-[@15,63:63='x',<25>,4:17]
-+ : PLUS
-[@16,65:65='+',<36>,4:19]
-1 : INT
-[@17,67:67='1',<23>,4:21]
-; : SEMI
-[@18,68:68=';',<28>,4:22]
-"Done!" : STRING
-[@19,82:88='"Done!"',<27>,5:12]
-; : SEMI
-[@20,89:89=';',<28>,5:19]
-} : RBRACE
-[@21,99:99='}',<35>,6:8]
-} : RBRACE
-[@22,105:105='}',<35>,7:4]
-; : SEMI
-[@23,106:106=';',<28>,7:5]
-} : RBRACE
-[@24,108:108='}',<35>,8:0]
-; : SEMI
-[@25,109:109=';',<28>,8:1]
-<EOF> : EOF
-[@26,110:109='<EOF>',<-1>,8:2]
-"15-block.cl", line 2:11, Syntax error: mismatched input 'Int' expecting TYPE_ID
-"15-block.cl", line 4:20, Syntax error: no viable alternative at input 'x+'
-Compilation halted
+program
+  class
+    A
+    method
+      f
+      formal
+        x
+        Int
+      String
+      block
+        <-
+          x
+          +
+            x
+            1
+        Done!

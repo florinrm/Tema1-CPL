@@ -1,60 +1,18 @@
-class : CLASS
-[@0,0:4='class',<9>,1:0]
-A : TYPE_ID
-[@1,6:6='A',<24>,1:6]
-{ : LBRACE
-[@2,8:8='{',<34>,1:8]
-f : ID
-[@3,14:14='f',<25>,2:4]
-( : LPAREN
-[@4,15:15='(',<32>,2:5]
-x : ID
-[@5,16:16='x',<25>,2:6]
-: : COLON
-[@6,18:18=':',<29>,2:8]
-Int : TYPE
-[@7,20:22='Int',<22>,2:10]
-) : RPAREN
-[@8,23:23=')',<33>,2:13]
-: : COLON
-[@9,25:25=':',<29>,2:15]
-Object : TYPE_ID
-[@10,27:32='Object',<24>,2:17]
-{ : LBRACE
-[@11,34:34='{',<34>,2:24]
-while : WHILE
-[@12,44:48='while',<14>,3:8]
-0 : INT
-[@13,50:50='0',<23>,3:14]
-< : LT
-[@14,52:52='<',<42>,3:16]
-x : ID
-[@15,54:54='x',<25>,3:18]
-loop : LOOP
-[@16,56:59='loop',<15>,3:20]
-x : ID
-[@17,73:73='x',<25>,4:12]
-<- : ASSIGN
-[@18,75:76='<-',<31>,4:14]
-x : ID
-[@19,78:78='x',<25>,4:17]
-- : MINUS
-[@20,80:80='-',<37>,4:19]
-1 : INT
-[@21,82:82='1',<23>,4:21]
-pool : POOL
-[@22,92:95='pool',<16>,5:8]
-} : RBRACE
-[@23,101:101='}',<35>,6:4]
-; : SEMI
-[@24,102:102=';',<28>,6:5]
-} : RBRACE
-[@25,104:104='}',<35>,7:0]
-; : SEMI
-[@26,105:105=';',<28>,7:1]
-<EOF> : EOF
-[@27,106:105='<EOF>',<-1>,7:2]
-"12-while.cl", line 2:11, Syntax error: mismatched input 'Int' expecting TYPE_ID
-"12-while.cl", line 3:21, Syntax error: no viable alternative at input 'xloop'
-"12-while.cl", line 4:20, Syntax error: no viable alternative at input 'x-'
-Compilation halted
+program
+  class
+    A
+    method
+      f
+      formal
+        x
+        Int
+      Object
+      while
+        <
+          0
+          x
+        <-
+          x
+          -
+            x
+            1

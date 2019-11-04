@@ -1,84 +1,23 @@
-there are no strings in CPLang, but shhh..
-there are no strings in CPLang, but shhh..
-there are no strings in CPLang, but shhh..
-class : CLASS
-[@0,0:4='class',<9>,1:0]
-A : TYPE_ID
-[@1,6:6='A',<24>,1:6]
-{ : LBRACE
-[@2,8:8='{',<34>,1:8]
-f : ID
-[@3,14:14='f',<25>,2:4]
-( : LPAREN
-[@4,15:15='(',<32>,2:5]
-x : ID
-[@5,16:16='x',<25>,2:6]
-: : COLON
-[@6,18:18=':',<29>,2:8]
-Object : TYPE_ID
-[@7,20:25='Object',<24>,2:10]
-) : RPAREN
-[@8,26:26=')',<33>,2:16]
-: : COLON
-[@9,28:28=':',<29>,2:18]
-String : TYPE_ID
-[@10,30:35='String',<24>,2:20]
-{ : LBRACE
-[@11,37:37='{',<34>,2:27]
-case : CASE
-[@12,47:50='case',<17>,3:8]
-x : ID
-[@13,52:52='x',<25>,3:13]
-of : OF
-[@14,54:55='of',<18>,3:15]
-s : ID
-[@15,69:69='s',<25>,4:12]
-: : COLON
-[@16,71:71=':',<29>,4:14]
-String : TYPE_ID
-[@17,73:78='String',<24>,4:16]
-=> : RESULTS
-[@18,80:81='=>',<40>,4:23]
-"String" : STRING
-[@19,83:90='"String"',<27>,4:26]
-; : SEMI
-[@20,91:91=';',<28>,4:34]
-i : ID
-[@21,105:105='i',<25>,5:12]
-: : COLON
-[@22,107:107=':',<29>,5:14]
-Int : TYPE
-[@23,109:111='Int',<22>,5:16]
-=> : RESULTS
-[@24,116:117='=>',<40>,5:23]
-"Int" : STRING
-[@25,119:123='"Int"',<27>,5:26]
-; : SEMI
-[@26,124:124=';',<28>,5:31]
-o : ID
-[@27,138:138='o',<25>,6:12]
-: : COLON
-[@28,140:140=':',<29>,6:14]
-Object : TYPE_ID
-[@29,142:147='Object',<24>,6:16]
-=> : RESULTS
-[@30,149:150='=>',<40>,6:23]
-"Oops" : STRING
-[@31,152:157='"Oops"',<27>,6:26]
-; : SEMI
-[@32,158:158=';',<28>,6:32]
-esac : ESAC
-[@33,168:171='esac',<19>,7:8]
-} : RBRACE
-[@34,177:177='}',<35>,8:4]
-; : SEMI
-[@35,178:178=';',<28>,8:5]
-} : RBRACE
-[@36,180:180='}',<35>,9:0]
-; : SEMI
-[@37,181:181=';',<28>,9:1]
-<EOF> : EOF
-[@38,182:181='<EOF>',<-1>,9:2]
-"14-case.cl", line 3:16, Syntax error: no viable alternative at input 'xof'
-"14-case.cl", line 5:17, Syntax error: mismatched input 'Int' expecting TYPE_ID
-Compilation halted
+program
+  class
+    A
+    method
+      f
+      formal
+        x
+        Object
+      String
+      case
+        x
+        case branch
+          s
+          String
+          String
+        case branch
+          i
+          Int
+          Int
+        case branch
+          o
+          Object
+          Oops

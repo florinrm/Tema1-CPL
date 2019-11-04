@@ -40,7 +40,18 @@ ISVOID: 'isvoid';
 
 BOOL : 'true' | 'false';
 
-STRING : '"' ('\\"' | .)*? '"';
+fragment HEX
+   : [0-9a-fA-F]
+   ;
+fragment UNICODE
+   : 'u' HEX HEX HEX HEX
+   ;
+fragment ESC
+   : '\\' (["\\/bfnrt] | UNICODE)
+   ;
+STRING
+   : '"' (ESC | ~ ["\\])* '"' | '"' ('\\"' | .)*? '"'
+   ;
 
 fragment TYPE : 'Int' | 'Float' | 'Bool' | 'String';
 
@@ -115,12 +126,12 @@ LE : '<=';
 
 fragment NEW_LINE : '\r'? '\n';
 
-LINE_COMMENT: '//' .*? (NEW_LINE | EOF) -> skip;
+LINE_COMMENT: '--' .*? (NEW_LINE | EOF) -> skip;
 
 BLOCK_COMMENT
-    : '/*'
+    : '(*'
       (BLOCK_COMMENT | .)*?
-      ('*/' | EOF { System.err.println("EOF in comment"); }) -> skip
+      ('*)' | EOF { System.err.println("EOF in comment"); }) -> skip
     ;
 
 /* Spații albe.

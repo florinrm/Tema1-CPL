@@ -158,12 +158,15 @@ public class Compiler {
 
                 @Override
                 public ASTNode visitFunctionDefinition(CoolParser.FunctionDefinitionContext ctx) {
-                    FuncDefNode node = new FuncDefNode(ctx.nameFunc, ctx.returnType, (Expression) visit(ctx.body), ctx.start);
-                    var params = ctx.params;
-                    for (var param : params) {
-                        var def = new VarDef(param.name, param.type, ctx.start);
-                        def.setType("formal");
-                        node.addParam(def);
+                    FuncDefNode node = new FuncDefNode(ctx.nameFunc, ctx.returnType,
+                            (Expression) visit(ctx.body), ctx.start);
+                    if (ctx.params != null) {
+                        var params = ctx.params;
+                        for (var param : params) {
+                            var def = new VarDef(param.name, param.type, ctx.start);
+                            def.setType("formal");
+                            node.addParam(def);
+                        }
                     }
                     return node;
                 }
@@ -271,12 +274,12 @@ public class Compiler {
                 @Override
                 public ASTNode visitUpCastCall(CoolParser.UpCastCallContext ctx) {
                     FunctionCall node = null;
-                    if (ctx.expr != null) {
+                    if (ctx.upcast != null) {
                         node = new FunctionCall((Expression) visit(ctx.name),
-                                (Expression) visit(ctx.expr), ctx.upcast.getText(), ctx.start);
+                                (Expression) visit(ctx.expression), ctx.upcast.getText(), ctx.start);
                     } else {
                         node = new FunctionCall((Expression) visit(ctx.name),
-                                null, ctx.upcast.getText(), ctx.start);
+                                (Expression) visit(ctx.expression), null, ctx.start);
                     }
 
                     for (var param : ctx.params) {
@@ -338,7 +341,7 @@ public class Compiler {
 
                 private void printIndent(String str) {
                     for (int i = 0; i < indent; i++)
-                        System.out.print("\t");
+                        System.out.print("  ");
                     System.out.println(str);
                 }
 
@@ -404,13 +407,26 @@ public class Compiler {
 
                 @Override
                 public Void visit(FunctionCall call) {
-                    printIndent("implicit dispatch");
+                    if (call.getExpression() == null) {
+                        printIndent("implicit dispatch");
+                    } else {
+                        printIndent(".");
+                        indent++;
+                        call.getExpression().accept(this);
+                        indent--;
+                    }
+
                     indent++;
+                    if (call.getUpcast() != null) {
+                        printIndent(call.getUpcast());
+                    }
                     call.getName().accept(this);
+
                     for (var param : call.getParams()) {
                         param.accept(this);
                     }
                     indent--;
+
                     return null;
                 }
 
@@ -511,6 +527,11 @@ public class Compiler {
 
                 @Override
                 public Void visit(StringNode stringNode) {
+                    if (stringNode.token.getText().equals("\"\"")) {
+                        //System.out.println("fac sex anal");
+                        printIndent("");
+                        return null;
+                    }
                     String toPrint = stringNode.token.getText()
                             .replace("\"", "")
                             .replace("\\n", "\n")
@@ -570,7 +591,9 @@ public class Compiler {
                     indent++;
                     printIndent(listVariables.getName());
                     printIndent(listVariables.getType());
-                    listVariables.getExpression().accept(this);
+                    if (listVariables.getExpression() != null) {
+                        listVariables.getExpression().accept(this);
+                    }
                     indent--;
                     return null;
                 }

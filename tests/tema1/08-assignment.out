@@ -1,26 +1,29 @@
-"08-assignment.cl", line 6:5, Syntax error: no viable alternative at input 'y}'
-"08-assignment.cl", line 10:5, Syntax error: no viable alternative at input 'z}'
 program
-	class
-		A
-		attribute
-			x
-			Int
-		method
-			f
-			formal
-				y
-				Int
-			Int
-Exception in thread "main" java.lang.NullPointerException
-	at cool.compiler.Compiler$3.visit(Compiler.java:351)
-	at cool.compiler.Compiler$3.visit(Compiler.java:269)
-	at cool.compiler.FuncDefNode.accept(FuncDefNode.java:59)
-	at cool.compiler.Compiler$3.visit(Compiler.java:395)
-	at cool.compiler.Compiler$3.visit(Compiler.java:269)
-	at cool.compiler.ClassNode.accept(ClassNode.java:53)
-	at cool.compiler.Compiler$3.visit(Compiler.java:304)
-	at cool.compiler.Compiler$3.visit(Compiler.java:269)
-	at cool.compiler.Program.accept(Program.java:26)
-	at cool.compiler.Compiler.main(Compiler.java:403)
-	at cool.tester.Tester1.main(Tester1.java:31)
+  class
+    A
+    attribute
+      x
+      Int
+    method
+      f
+      formal
+        y
+        Int
+      Int
+      <-
+        x
+        y
+    method
+      f
+      formal
+        y
+        Int
+      formal
+        z
+        Int
+      Int
+      <-
+        x
+        <-
+          y
+          z

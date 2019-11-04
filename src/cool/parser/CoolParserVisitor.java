@@ -168,8 +168,8 @@ public interface CoolParserVisitor<T> extends ParseTreeVisitor<T> {
 	 * Visit a parse tree produced by the {@code let}
 	 * labeled alternative in {@link CoolParser#expr}.
 	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
+     * @return the visitor result
+     */
     T visitLet(CoolParser.LetContext ctx);
 
     /**
@@ -185,8 +185,8 @@ public interface CoolParserVisitor<T> extends ParseTreeVisitor<T> {
      * Visit a parse tree produced by the {@code if}
      * labeled alternative in {@link CoolParser#expr}.
      * @param ctx the parse tree
-     * @return the visitor result
-     */
+	 * @return the visitor result
+	 */
 	T visitIf(CoolParser.IfContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code case}

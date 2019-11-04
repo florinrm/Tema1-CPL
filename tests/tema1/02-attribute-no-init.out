@@ -1,45 +1,12 @@
-class : CLASS
-[@0,0:4='class',<9>,1:0]
-A : TYPE_ID
-[@1,6:6='A',<24>,1:6]
-{ : LBRACE
-[@2,8:8='{',<34>,1:8]
-x : ID
-[@3,14:14='x',<25>,2:4]
-: : COLON
-[@4,16:16=':',<29>,2:6]
-SELF_TYPE : SELFTYPE
-[@5,18:26='SELF_TYPE',<13>,2:8]
-; : SEMI
-[@6,27:27=';',<28>,2:17]
-} : RBRACE
-[@7,29:29='}',<35>,3:0]
-; : SEMI
-[@8,30:30=';',<28>,3:1]
-class : CLASS
-[@9,33:37='class',<9>,5:0]
-B : TYPE_ID
-[@10,39:39='B',<24>,5:6]
-inherits : INHERITS
-[@11,41:48='inherits',<10>,5:8]
-A : TYPE_ID
-[@12,50:50='A',<24>,5:17]
-{ : LBRACE
-[@13,52:52='{',<34>,5:19]
-y : ID
-[@14,58:58='y',<25>,6:4]
-: : COLON
-[@15,60:60=':',<29>,6:6]
-Int : TYPE
-[@16,62:64='Int',<22>,6:8]
-; : SEMI
-[@17,65:65=';',<28>,6:11]
-} : RBRACE
-[@18,67:67='}',<35>,7:0]
-; : SEMI
-[@19,68:68=';',<28>,7:1]
-<EOF> : EOF
-[@20,69:68='<EOF>',<-1>,7:2]
-"02-attribute-no-init.cl", line 2:9, Syntax error: mismatched input 'SELF_TYPE' expecting TYPE_ID
-"02-attribute-no-init.cl", line 6:9, Syntax error: mismatched input 'Int' expecting TYPE_ID
-Compilation halted
+program
+  class
+    A
+    attribute
+      x
+      SELF_TYPE
+  class
+    B
+    A
+    attribute
+      y
+      Int
