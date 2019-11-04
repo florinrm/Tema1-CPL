@@ -40,4 +40,10 @@ public interface ASTVisitor<T> {
     T visit(NewNode newNode);
 
     T visit(LetNode letNode);
+
+    T visit(ListVariables listVariables);
+
+    T visit(CaseOfNode caseOfNode);
+
+    T visit(Branch branch);
 }

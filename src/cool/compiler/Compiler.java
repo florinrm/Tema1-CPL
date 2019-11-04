@@ -126,6 +126,17 @@ public class Compiler {
                 }
 
                 @Override
+                public ASTNode visitLet_variables(CoolParser.Let_variablesContext ctx) {
+                    if (ctx.expr() == null) {
+                        return new ListVariables(ctx.declare_type().name.getText(),
+                                ctx.declare_type().type.getText(), ctx.start);
+                    }
+                    return new ListVariables(ctx.start, ctx.declare_type().name.getText(),
+                            ctx.declare_type().type.getText(), (Expression) visit(ctx.expr()));
+
+                }
+
+                @Override
                 public ASTNode visitId(CoolParser.IdContext ctx) {
                     return new Id(ctx.ID().getSymbol());
                 }
@@ -255,7 +266,12 @@ public class Compiler {
 
                 @Override
                 public ASTNode visitLet(CoolParser.LetContext ctx) {
-                    return super.visitLet(ctx);
+                    var variables = ctx.variables;
+                    LetNode node = new LetNode((Expression) visit(ctx.body), ctx.start);
+                    for (var variable : variables) {
+                        node.addVariable((ListVariables) variable.accept(this));
+                    }
+                    return node;
                 }
 
                 @Override
@@ -275,6 +291,12 @@ public class Compiler {
                 @Override
                 public ASTNode visitInstantiation(CoolParser.InstantiationContext ctx) {
                     return new NewNode(ctx.start, ctx.TYPE_ID().getText());
+                }
+
+                @Override
+                public ASTNode visitBranch(CoolParser.BranchContext ctx) {
+                    return new Branch(ctx.start, ctx.declare_type().name.getText(),
+                            ctx.declare_type().type.getText(), (Expression) visit(ctx.body));
                 }
             };
 
@@ -474,6 +496,39 @@ public class Compiler {
                     indent++;
                     printIndent(newNode.getType());
                     indent--;
+                    return null;
+                }
+
+                @Override
+                public Void visit(LetNode letNode) {
+                    printIndent("let");
+                    indent++;
+                    for (var variable : letNode.getVariables()) {
+                        variable.accept(this);
+                    }
+                    letNode.getBody().accept(this);
+                    indent--;
+                    return null;
+                }
+
+                @Override
+                public Void visit(ListVariables listVariables) {
+                    printIndent("local");
+                    indent++;
+                    printIndent(listVariables.getName());
+                    printIndent(listVariables.getType());
+                    listVariables.getExpression().accept(this);
+                    indent--;
+                    return null;
+                }
+
+                @Override
+                public Void visit(CaseOfNode caseOfNode) {
+                    return null;
+                }
+
+                @Override
+                public Void visit(Branch branch) {
                     return null;
                 }
             };

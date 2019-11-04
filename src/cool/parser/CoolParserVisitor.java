@@ -43,6 +43,21 @@ public interface CoolParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitDeclare_type(CoolParser.Declare_typeContext ctx);
 	/**
+     * Visit a parse tree produced by {@link CoolParser#let_variables}.
+     * @param ctx the parse tree
+     * @return the visitor result
+     */
+    T visitLet_variables(CoolParser.Let_variablesContext ctx);
+
+    /**
+     * Visit a parse tree produced by {@link CoolParser#branch}.
+     *
+     * @param ctx the parse tree
+     * @return the visitor result
+     */
+    T visitBranch(CoolParser.BranchContext ctx);
+
+    /**
 	 * Visit a parse tree produced by the {@code negation}
 	 * labeled alternative in {@link CoolParser#expr}.
 	 * @param ctx the parse tree
@@ -147,9 +162,11 @@ public interface CoolParserVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitLet(CoolParser.LetContext ctx);
-	/**
+
+    /**
      * Visit a parse tree produced by the {@code id}
      * labeled alternative in {@link CoolParser#expr}.
+     *
      * @param ctx the parse tree
      * @return the visitor result
      */
@@ -158,6 +175,7 @@ public interface CoolParserVisitor<T> extends ParseTreeVisitor<T> {
     /**
      * Visit a parse tree produced by the {@code if}
      * labeled alternative in {@link CoolParser#expr}.
+     *
      * @param ctx the parse tree
      * @return the visitor result
      */

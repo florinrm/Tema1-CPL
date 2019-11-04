@@ -16,12 +16,14 @@ definition
 
 declare_type: name=ID COLON type=TYPE_ID;
 
+let_variables: declare_type (ASSIGN expr)?;
+
 expr:
-    name=ID LPAREN (arguments+=expr (COMMA arguments+=expr)?) RPAREN                                          # functionCall
+    name=ID LPAREN (arguments+=expr (COMMA arguments+=expr)*) RPAREN                                            # functionCall
     | IF condition=expr THEN then_branch=expr ELSE else_branch=expr FI                                          # if
     | WHILE condition=expr LOOP body=expr POOL                                                                  # while
     | LBRACE (expressios+=expr SEMI)+ RBRACE                                                                    # body
-    | LET variables+=declare_type (ASSIGN expr)? (COMMA variables+=declare_type (ASSIGN expr))* IN body=expr    # let
+    | LET variables+=let_variables (COMMA variables+=let_variables)* IN body=expr                               # let
     | CASE expression=expr OF (branches+=declare_type RESULTS body=expr SEMI)+ ESAC                             # case
     | NEW TYPE_ID                                                                                               # instantiation
     | leftBranch=expr op=(MUL | DIV) rightBranch=expr                                                           # mulDiv
