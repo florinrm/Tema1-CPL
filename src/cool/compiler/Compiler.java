@@ -285,7 +285,12 @@ public class Compiler {
 
                 @Override
                 public ASTNode visitCase(CoolParser.CaseContext ctx) {
-                    return super.visitCase(ctx);
+                    CaseOfNode node = new CaseOfNode((Expression) visit(ctx.expression), ctx.start);
+                    var branches = ctx.branches;
+                    for (var branch : branches) {
+                        node.addBranch((Branch) branch.accept(this));
+                    }
+                    return node;
                 }
 
                 @Override
@@ -524,11 +529,24 @@ public class Compiler {
 
                 @Override
                 public Void visit(CaseOfNode caseOfNode) {
+                    printIndent("case");
+                    indent++;
+                    caseOfNode.getExpression().accept(this);
+                    for (var branch : caseOfNode.getBranches()) {
+                        branch.accept(this);
+                    }
+                    indent--;
                     return null;
                 }
 
                 @Override
                 public Void visit(Branch branch) {
+                    printIndent("case branch");
+                    indent++;
+                    printIndent(branch.getName());
+                    printIndent(branch.getType());
+                    branch.getExpression().accept(this);
+                    indent--;
                     return null;
                 }
             };
