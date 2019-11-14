@@ -62,33 +62,26 @@ public interface CoolParserListener extends ParseTreeListener {
 	 */
 	void exitDeclare_type(CoolParser.Declare_typeContext ctx);
 	/**
-     * Enter a parse tree produced by {@link CoolParser#let_variables}.
-     * @param ctx the parse tree
-     */
-    void enterLet_variables(CoolParser.Let_variablesContext ctx);
-
-    /**
-     * Exit a parse tree produced by {@link CoolParser#let_variables}.
-     *
-     * @param ctx the parse tree
-     */
-    void exitLet_variables(CoolParser.Let_variablesContext ctx);
-
-    /**
-     * Enter a parse tree produced by {@link CoolParser#branch}.
-     *
-     * @param ctx the parse tree
-     */
-    void enterBranch(CoolParser.BranchContext ctx);
-
-    /**
-     * Exit a parse tree produced by {@link CoolParser#branch}.
-     *
-     * @param ctx the parse tree
-     */
-    void exitBranch(CoolParser.BranchContext ctx);
-
-    /**
+	 * Enter a parse tree produced by {@link CoolParser#let_variables}.
+	 * @param ctx the parse tree
+	 */
+	void enterLet_variables(CoolParser.Let_variablesContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CoolParser#let_variables}.
+	 * @param ctx the parse tree
+	 */
+	void exitLet_variables(CoolParser.Let_variablesContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CoolParser#branch}.
+	 * @param ctx the parse tree
+	 */
+	void enterBranch(CoolParser.BranchContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CoolParser#branch}.
+	 * @param ctx the parse tree
+	 */
+	void exitBranch(CoolParser.BranchContext ctx);
+	/**
 	 * Enter a parse tree produced by the {@code negation}
 	 * labeled alternative in {@link CoolParser#expr}.
 	 * @param ctx the parse tree
@@ -232,22 +225,18 @@ public interface CoolParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitBoolean(CoolParser.BooleanContext ctx);
-
-    /**
-     * Enter a parse tree produced by the {@code upCastCall}
-     * labeled alternative in {@link CoolParser#expr}.
-     *
-     * @param ctx the parse tree
-     */
-    void enterUpCastCall(CoolParser.UpCastCallContext ctx);
-
-    /**
-     * Exit a parse tree produced by the {@code upCastCall}
-     * labeled alternative in {@link CoolParser#expr}.
-     *
-     * @param ctx the parse tree
-     */
-    void exitUpCastCall(CoolParser.UpCastCallContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code upCastCall}
+	 * labeled alternative in {@link CoolParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterUpCastCall(CoolParser.UpCastCallContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code upCastCall}
+	 * labeled alternative in {@link CoolParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitUpCastCall(CoolParser.UpCastCallContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code functionCall}
 	 * labeled alternative in {@link CoolParser#expr}.
@@ -278,25 +267,20 @@ public interface CoolParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void enterLet(CoolParser.LetContext ctx);
-
-    /**
-     * Exit a parse tree produced by the {@code let}
-     * labeled alternative in {@link CoolParser#expr}.
-     *
-     * @param ctx the parse tree
-     */
-    void exitLet(CoolParser.LetContext ctx);
-
-    /**
-     * Enter a parse tree produced by the {@code id}
-     * labeled alternative in {@link CoolParser#expr}.
-     *
-     * @param ctx the parse tree
-     */
-    void enterId(CoolParser.IdContext ctx);
-
-    /**
-     * Exit a parse tree produced by the {@code id}
+	/**
+	 * Exit a parse tree produced by the {@code let}
+	 * labeled alternative in {@link CoolParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitLet(CoolParser.LetContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code id}
+	 * labeled alternative in {@link CoolParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterId(CoolParser.IdContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code id}
 	 * labeled alternative in {@link CoolParser#expr}.
 	 * @param ctx the parse tree
 	 */

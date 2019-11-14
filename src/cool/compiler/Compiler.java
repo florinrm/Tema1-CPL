@@ -77,7 +77,7 @@ public class Compiler {
                                         String msg,
                                         RecognitionException e) {
                     String newMsg = "\"" + new File(fileName).getName() + "\", line " +
-                            line + ":" + (charPositionInLine + 1) + ", ";
+                            line + ":" + (charPositionInLine) + ", ";
 
                     Token token = (Token) offendingSymbol;
                     if (token.getType() == CoolLexer.ERROR)
@@ -110,6 +110,14 @@ public class Compiler {
                 // are class nodes.
                 if (child instanceof ParserRuleContext)
                     fileNames.put(child, fileName);
+            }
+
+            // Record any lexical or syntax errors.
+            lexicalSyntaxErrors |= errorListener.errors;
+
+            if (lexicalSyntaxErrors) {
+                System.err.println("Compilation halted");
+                return;
             }
 
             var astVisitor = new CoolParserBaseVisitor<ASTNode>() {
@@ -642,14 +650,11 @@ public class Compiler {
             var ast = astVisitor.visit(tree);
             ast.accept(printTree);
 
+
             // Record any lexical or syntax errors.
-            lexicalSyntaxErrors |= errorListener.errors;
+
         }
 
-        // Stop before semantic analysis phase, in case errors occurred.
-        if (lexicalSyntaxErrors) {
-            System.err.println("Compilation halted");
-            return;
-        }
+
     }
 }

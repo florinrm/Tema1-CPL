@@ -3,6 +3,15 @@ lexer grammar CoolLexer;
 tokens { ERROR } 
 
 @members{
+    int total_chars = 0;
+    final int charsLimit = 1024;
+    final String tooLong = "String constant too long";
+    final String unterminatedString = "Unterminated string constant";
+    final String eofInString = "EOF in string constant";
+    final String hasNullChars = "String contains null character";
+    final String eofComment = "EOF in comment";
+    final String unmatchedComment = "Unmatched *)";
+    final String invalidChar = "Invalid character: ";
     private void raiseError(String msg) {
         setText(msg);
         setType(ERROR);
@@ -40,6 +49,7 @@ ISVOID: 'isvoid';
 
 BOOL : 'true' | 'false';
 
+/*
 fragment HEX
    : [0-9a-fA-F]
    ;
@@ -52,6 +62,36 @@ fragment ESC
 STRING
    : '"' (ESC | ~ ["\\])* '"' | '"' ('\\"' | .)*? '"'
    ;
+*/
+
+fragment NULLCHAR: '\u0000';
+fragment UNTERMINATEDSTRING: '\r\n';
+fragment SPECIALCHARS: '\\"' | '\\b' | '\\t' | '\\n' | '\\f' | '\\\\';
+
+STRING : '"'
+            (
+            (SPECIALCHARS {
+                total_chars++;
+            })
+            | '\\\r\n'
+            | '\\'
+            | (NULLCHAR {
+                raiseError(hasNullChars);
+            })
+            |
+            (. { total_chars++; }))*?
+            (('"' {
+                if(total_chars > charsLimit)
+                    raiseError(tooLong);
+                total_chars = 0;
+            })
+            | (UNTERMINATEDSTRING {
+                raiseError(unterminatedString);
+            })
+            | (EOF {
+                raiseError(eofInString);
+                total_chars = 0;
+            }));
 
 fragment TYPE : 'Int' | 'Float' | 'Bool' | 'String';
 
@@ -129,16 +169,30 @@ fragment NEW_LINE : '\r'? '\n';
 LINE_COMMENT: '--' .*? (NEW_LINE | EOF) -> skip;
 
 BLOCK_COMMENT
+        : '(*'
+          (BLOCK_COMMENT | .)*?
+          '*)' -> skip;
+
+BLOCK_COMMENT_ERROR
+    : '*)' { raiseError(unmatchedComment); };
+
+BLOCK_COMMENT_END_OF_LINE
     : '(*'
-      (BLOCK_COMMENT | .)*?
-      ('*)' | EOF { System.err.println("EOF in comment"); }) -> skip
-    ;
+       (BLOCK_COMMENT | ~([*)]).)*?
+       (EOF {
+            raiseError(eofComment);
+       });
 
 /* Spații albe.
  *
  * skip spune că nu este creat niciun token pentru lexemul depistat.
  */
 WS : [ \n\r\t]+ -> skip;
+
+CHAR_ERR: . {
+    setCharPositionInLine(getCharPositionInLine() - 1);
+    raiseError(invalidChar + getText());
+};
 
 /* Modalitate alternativă de recunoaștere a șirurilor de caractere, folosind
  * moduri lexicale.
